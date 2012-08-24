@@ -5,7 +5,7 @@ import net.minecraftforge.client.MinecraftForgeClient;
 
 public class ClientProxy extends CommonProxy
 {
-	public void addNames () 
+    public void addNames () 
     {
         LanguageRegistry.addName(UsefulFoodContent.milkbowl, "Milk");
         LanguageRegistry.addName(UsefulFoodContent.cacaobowl, "Cocoa");

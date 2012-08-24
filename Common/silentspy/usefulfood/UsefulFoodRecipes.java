@@ -7,14 +7,14 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class UsefulFoodRecipes {
 	
-	public static void init()
-	{
-	    AddSmeltingRecipes();
-	    AddRecipes();
-	    AddShapelessRecipes();
-	}
+    public static void init()
+    {
+        AddSmeltingRecipes();
+        AddRecipes();
+        AddShapelessRecipes();
+    }
 
-	public static void AddSmeltingRecipes()
+    public static void AddSmeltingRecipes()
     {
         GameRegistry.addSmelting(UsefulFoodContent.milkbowl.shiftedIndex, new ItemStack(UsefulFoodContent.cheese, 1), 0.3F);
         GameRegistry.addSmelting(UsefulFoodContent.cacaobowl.shiftedIndex, new ItemStack(UsefulFoodContent.chocolate, 1), 0.3F);
