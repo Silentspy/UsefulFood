@@ -31,7 +31,6 @@ public class UsefulFoodRecipes {
     public static void AddRecipes() 
     {
         GameRegistry.addRecipe(new ItemStack(UsefulFoodContent.cacaobowl, 1), new Object[] {"#", "%", '#', new ItemStack(Item.dyePowder, 1, 3), '%', UsefulFoodContent.milkbowl});
-        GameRegistry.addShapelessRecipe(new ItemStack(UsefulFoodContent.fruitsalad, 1), new Object[] {Item.bowlEmpty, Item.melon, Item.appleRed});
         GameRegistry.addRecipe(new ItemStack(UsefulFoodContent.porkwich, 1), new Object[] {"#", "%", "#", '#', UsefulFoodContent.toast, '%', Item.porkCooked});
         GameRegistry.addRecipe(new ItemStack(UsefulFoodContent.steakwich, 1), new Object[] {"#", "%", "#", '#', UsefulFoodContent.toast, '%', Item.beefCooked});
         GameRegistry.addRecipe(new ItemStack(UsefulFoodContent.fishwich, 1), new Object[] {"#", "%", "#", '#', UsefulFoodContent.toast, '%', Item.fishCooked});
@@ -52,6 +51,7 @@ public class UsefulFoodRecipes {
         GameRegistry.addShapelessRecipe(new ItemStack(UsefulFoodContent.caramelapple, 1), new Object[] {Item.stick, UsefulFoodContent.caramel, Item.appleRed});
         GameRegistry.addShapelessRecipe(new ItemStack(UsefulFoodContent.pumpkinsoup, 1), new Object[] {Item.bowlEmpty, Block.pumpkin});
         GameRegistry.addShapelessRecipe(new ItemStack(UsefulFoodContent.salad, 1), new Object[] {Block.plantRed, Block.plantYellow, Item.bowlEmpty, Item.seeds});
+        GameRegistry.addShapelessRecipe(new ItemStack(UsefulFoodContent.fruitsalad, 1), new Object[] {Item.bowlEmpty, Item.melon, Item.appleRed});
         GameRegistry.addShapelessRecipe(new ItemStack(UsefulFoodContent.seedsalad, 1), new Object[] {Item.bowlEmpty, Item.seeds, Item.seeds, Item.seeds, Item.seeds, Item.seeds, Item.seeds});
         GameRegistry.addShapelessRecipe(new ItemStack(UsefulFoodContent.jelly, 1), new Object[] {Item.bowlEmpty, Item.slimeBall, Item.sugar});
         GameRegistry.addShapelessRecipe(new ItemStack(UsefulFoodContent.marshmallow, 1), new Object[] {Item.stick, Item.bucketWater, Item.sugar, Item.sugar, Item.sugar});
