@@ -16,6 +16,6 @@ public class ItemUsefulFood extends ItemFood
 	
 	public String getTextureFile()
     {
-		return mod_usefulfood.itemtextures;
+        return mod_usefulfood.itemtextures;
     }
 }

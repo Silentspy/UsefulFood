@@ -5,6 +5,7 @@ import java.util.*;
 import net.minecraft.src.*;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
+import net.minecraftforge.event.CommandEvent;
 
 public class CustomLoot 
 {
@@ -27,4 +28,11 @@ public class CustomLoot
             }
         }
     }
+    
+    @ForgeSubscribe
+    public void CommandEvent(CommandEvent event)
+    {
+    	
+    }
+    
 }

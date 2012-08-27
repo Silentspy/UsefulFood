@@ -53,6 +53,8 @@ public class UsefulFoodConfig
     static int ShococakeBlockID;
     static int MagiccakeBlockID;
     static int HayBallBlockID;
+    static int PlantsBlockID;
+    static int LogsBlockID;
     
     static boolean DebugMode;
     
@@ -111,6 +113,8 @@ public class UsefulFoodConfig
             ShococakeBlockID = cfg.getOrCreateIntProperty("Shococake", cfg.CATEGORY_BLOCK, 185).getInt(185);
             MagiccakeBlockID = cfg.getOrCreateIntProperty("Magiccake", cfg.CATEGORY_BLOCK, 186).getInt(186);
             HayBallBlockID = cfg.getOrCreateIntProperty("Hayball", cfg.CATEGORY_BLOCK, 187).getInt(187);
+            PlantsBlockID = cfg.getOrCreateIntProperty("Plants", cfg.CATEGORY_BLOCK, 188).getInt(188);
+            LogsBlockID = cfg.getOrCreateIntProperty("Logs", cfg.CATEGORY_BLOCK, 189).getInt(189);
             
             // Options
             DebugMode = cfg.getOrCreateBooleanProperty("Debug", cfg.CATEGORY_GENERAL, false).getBoolean(false);

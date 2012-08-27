@@ -54,6 +54,7 @@ public class ClientProxy extends CommonProxy
         LanguageRegistry.addName(UsefulFoodContent.peach, "Peach");
         LanguageRegistry.addName(UsefulFoodContent.pear, "Pear");
         LanguageRegistry.addName(UsefulFoodContent.strawberry, "Strawberry");
+        
     }
 	
     public void registerRenderInformation() 

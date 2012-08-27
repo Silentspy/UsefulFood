@@ -46,5 +46,6 @@ public class mod_usefulfood
         UsefulFoodRecipes.init();
         FMLLog.fine("[UsefulFood] mod_usefulfood recipes initialized");
         proxy.addNames();
+        GameRegistry.registerWorldGenerator(new silentspy.usefulfood.world.WorldGenerator());
     }
 }

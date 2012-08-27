@@ -55,6 +55,8 @@ public class UsefulFoodContent
     public static Block Shococake;
     public static Block Magiccake;
     public static Block Hayball;
+    public static Block Plants;
+    public static Block Logs;
     
     public void init()
     {
@@ -67,13 +69,14 @@ public class UsefulFoodContent
         Applecake = new BlockAppleCake(UsefulFoodConfig.ApplecakeBlockID).setHardness(0.5F).setStepSound(Block.soundClothFootstep).setBlockName("AppleCake");
         Shococake = new BlockShocoCake(UsefulFoodConfig.ShococakeBlockID).setHardness(0.5F).setStepSound(Block.soundClothFootstep).setBlockName("ShocoCake");
         Magiccake = new BlockMagicCake(UsefulFoodConfig.MagiccakeBlockID).setHardness(0.5F).setStepSound(Block.soundClothFootstep).setBlockName("MagicCake");
-        Hayball = new BlockHayBall(UsefulFoodConfig.HayBallBlockID).setHardness(0.8F).setStepSound(Block.soundWoodFootstep).setBlockName("HayBall");
+        Hayball = new BlockHayball(UsefulFoodConfig.HayBallBlockID).setHardness(0.8F).setStepSound(Block.soundClothFootstep).setBlockName("HayBall");
         
         //registry
         GameRegistry.registerBlock(Applecake);
         GameRegistry.registerBlock(Shococake);
         GameRegistry.registerBlock(Magiccake);
         GameRegistry.registerBlock(Hayball);
+        
     }
     
     public void setupItems()
