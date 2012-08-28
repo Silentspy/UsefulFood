@@ -31,15 +31,15 @@ public class ClientProxy extends CommonProxy
         LanguageRegistry.addName(UsefulFoodContent.fishwich, "Fish Sandwich");
         LanguageRegistry.addName(UsefulFoodContent.chickenwich, "Chicken Sandwich");
         LanguageRegistry.addName(UsefulFoodContent.eggwich, "Egg Sandwich");
-        LanguageRegistry.addName(UsefulFoodContent.Applecake, "Apple Cake");
+        LanguageRegistry.addName(UsefulFoodContent.applecake, "Apple Cake");
         LanguageRegistry.addName(UsefulFoodContent.applecakeitem, "Apple Cake");
-        LanguageRegistry.addName(UsefulFoodContent.Shococake, "Chocolate Cake");
+        LanguageRegistry.addName(UsefulFoodContent.shococake, "Chocolate Cake");
         LanguageRegistry.addName(UsefulFoodContent.shococakeitem, "Chocolate Cake");
         LanguageRegistry.addName(UsefulFoodContent.bisquit, "Bisquit");
         LanguageRegistry.addName(UsefulFoodContent.trailmix, "Trail Mix");
-        LanguageRegistry.addName(UsefulFoodContent.Magiccake, "Magic Cake");
+        LanguageRegistry.addName(UsefulFoodContent.magiccake, "Magic Cake");
         LanguageRegistry.addName(UsefulFoodContent.magiccakeitem, "Magic Cake");
-        LanguageRegistry.addName(UsefulFoodContent.Hayball, "HayBall");
+        LanguageRegistry.addName(UsefulFoodContent.hayball, "HayBall");
         LanguageRegistry.addName(UsefulFoodContent.mutton, "Cooked Mutton");
         LanguageRegistry.addName(UsefulFoodContent.muttonraw, "Raw Mutton");
         LanguageRegistry.addName(UsefulFoodContent.muttonwich, "Mutton Sandwich");
@@ -54,6 +54,7 @@ public class ClientProxy extends CommonProxy
         LanguageRegistry.addName(UsefulFoodContent.peach, "Peach");
         LanguageRegistry.addName(UsefulFoodContent.pear, "Pear");
         LanguageRegistry.addName(UsefulFoodContent.strawberry, "Strawberry");
+        LanguageRegistry.addName(UsefulFoodContent.bush, "Bush");
         
     }
 	

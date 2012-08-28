@@ -53,8 +53,18 @@ public class UsefulFoodConfig
     static int ShococakeBlockID;
     static int MagiccakeBlockID;
     static int HayBallBlockID;
-    static int PlantsBlockID;
+    static int BushBlockID;
     static int LogsBlockID;
+    static int BlueberryBushID;
+    static int StrawberryBushID;
+    
+    static int bananasaplingID;
+    static int orangesaplingID;
+    static int peachsaplingID;
+    static int pearsaplingID;
+    
+    static int blueberryseedID;
+    static int strawberryseedID;
     
     static boolean DebugMode;
     
@@ -107,14 +117,25 @@ public class UsefulFoodConfig
             peachID = cfg.getOrCreateIntProperty("peach", cfg.CATEGORY_ITEM, 5088).getInt(5088);
             pearID = cfg.getOrCreateIntProperty("pear", cfg.CATEGORY_ITEM, 5089).getInt(5089);
             strawberryID = cfg.getOrCreateIntProperty("strawberry", cfg.CATEGORY_ITEM, 5090).getInt(5090);
+
+            bananasaplingID = cfg.getOrCreateIntProperty("bananasapling", cfg.CATEGORY_ITEM, 5091).getInt(5091);
+            orangesaplingID = cfg.getOrCreateIntProperty("orangesapling", cfg.CATEGORY_ITEM, 5092).getInt(5092);
+            peachsaplingID = cfg.getOrCreateIntProperty("peachsapling", cfg.CATEGORY_ITEM, 5093).getInt(5093);
+            pearsaplingID = cfg.getOrCreateIntProperty("pearsapling", cfg.CATEGORY_ITEM, 5094).getInt(5094);
+            
+            blueberryseedID = cfg.getOrCreateIntProperty("blueberryseed", cfg.CATEGORY_ITEM, 5095).getInt(5095);
+            strawberryseedID = cfg.getOrCreateIntProperty("strawberryseed", cfg.CATEGORY_ITEM, 5096).getInt(5096);
             
             // Blocks
             ApplecakeBlockID = cfg.getOrCreateIntProperty("Applecake", cfg.CATEGORY_BLOCK, 184).getInt(184);
             ShococakeBlockID = cfg.getOrCreateIntProperty("Shococake", cfg.CATEGORY_BLOCK, 185).getInt(185);
             MagiccakeBlockID = cfg.getOrCreateIntProperty("Magiccake", cfg.CATEGORY_BLOCK, 186).getInt(186);
             HayBallBlockID = cfg.getOrCreateIntProperty("Hayball", cfg.CATEGORY_BLOCK, 187).getInt(187);
-            PlantsBlockID = cfg.getOrCreateIntProperty("Plants", cfg.CATEGORY_BLOCK, 188).getInt(188);
+            BushBlockID = cfg.getOrCreateIntProperty("Bush", cfg.CATEGORY_BLOCK, 188).getInt(188);
             LogsBlockID = cfg.getOrCreateIntProperty("Logs", cfg.CATEGORY_BLOCK, 189).getInt(189);
+            
+            BlueberryBushID = cfg.getOrCreateIntProperty("BlueBerryBush", cfg.CATEGORY_BLOCK, 190).getInt(190);
+            StrawberryBushID = cfg.getOrCreateIntProperty("StrawberryBush", cfg.CATEGORY_BLOCK, 191).getInt(191);
             
             // Options
             DebugMode = cfg.getOrCreateBooleanProperty("Debug", cfg.CATEGORY_GENERAL, false).getBoolean(false);

@@ -9,9 +9,9 @@ import cpw.mods.fml.common.Side;
 import cpw.mods.fml.common.asm.SideOnly;
 import net.minecraft.src.*;
 
-public class BlockHayball extends Block{
+public class BlockHayBall extends Block{
 
-	public BlockHayball(int var1) {
+	public BlockHayBall(int var1) {
 		super(var1, Material.cloth);
 		this.setCreativeTab(CreativeTabs.tabFood);
 	}

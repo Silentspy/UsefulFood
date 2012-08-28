@@ -2,12 +2,15 @@ package silentspy.usefulfood;
 
 import java.util.*;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.src.*;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
+import net.minecraftforge.event.entity.player.BonemealEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.CommandEvent;
 
-public class CustomLoot 
+public class UsefulFoodEvent 
 {
     @ForgeSubscribe
     public void LivingDropsEvent(LivingDropsEvent event)
@@ -30,9 +33,30 @@ public class CustomLoot
     }
     
     @ForgeSubscribe
+    public void PlayerEvent(PlayerEvent event)
+    {
+    	
+    }
+    
+    @ForgeSubscribe
     public void CommandEvent(CommandEvent event)
     {
     	
     }
     
+    @ForgeSubscribe
+    public void BonemealEvent(BonemealEvent event)
+    {	
+    	if(event.ID == UsefulFoodContent.blueberrycrop.blockID || event.ID == UsefulFoodContent.strawberrycrop.blockID) {
+    		int metadata = event.world.getBlockMetadata(event.X, event.Y, event.Z);
+    		
+    		if(metadata < 3)
+    		{
+    			if(event.world.setBlockMetadata(event.X, event.Y, event.Z, 3)) 
+    			{
+    				event.setHandeled();
+    			}
+    		}
+    	}
+    }
 }

@@ -39,7 +39,7 @@ public class UsefulFoodRecipes {
         GameRegistry.addRecipe(new ItemStack(UsefulFoodContent.applecakeitem, 1), new Object[] {"AAA", "BBB", "CCC", 'A', Item.bucketMilk, 'B', Item.appleRed, 'C', Item.wheat});
         GameRegistry.addRecipe(new ItemStack(UsefulFoodContent.shococakeitem, 1), new Object[] {"AAA", "BBB", "CCC", 'A', Item.bucketMilk, 'B', new ItemStack(Item.dyePowder, 1, 3), 'C', Item.wheat});
         GameRegistry.addRecipe(new ItemStack(UsefulFoodContent.magiccakeitem, 1), new Object[] {"AAA", "BDB", "CCC", 'A', Item.bucketMilk, 'B', new ItemStack(Item.appleGold, 1, 1), 'C', Item.wheat, 'D', Item.speckledMelon});
-        GameRegistry.addRecipe(new ItemStack(UsefulFoodContent.Hayball, 1), new Object[] {"###", "###", "###", '#', Item.wheat});
+        GameRegistry.addRecipe(new ItemStack(UsefulFoodContent.hayball, 1), new Object[] {"###", "###", "###", '#', Item.wheat});
         GameRegistry.addRecipe(new ItemStack(UsefulFoodContent.muttonwich, 1), new Object[] {"#", "%", "#", '#', UsefulFoodContent.toast, '%', UsefulFoodContent.mutton});
     }
     
@@ -59,6 +59,6 @@ public class UsefulFoodRecipes {
         GameRegistry.addShapelessRecipe(new ItemStack(UsefulFoodContent.toast, 5), new Object[] {Item.bread});
         GameRegistry.addShapelessRecipe(new ItemStack(UsefulFoodContent.bisquit, 3), new Object[] {Item.wheat, Item.wheat});
         GameRegistry.addShapelessRecipe(new ItemStack(UsefulFoodContent.trailmix, 1), new Object[] {Item.bowlEmpty, Item.pumpkinSeeds, Item.seeds, Item.melonSeeds});
-        GameRegistry.addShapelessRecipe(new ItemStack(Item.wheat, 9), new Object[] {new ItemStack(UsefulFoodContent.Hayball, 1)});
+        GameRegistry.addShapelessRecipe(new ItemStack(Item.wheat, 9), new Object[] {new ItemStack(UsefulFoodContent.hayball, 1)});
     }
 }

@@ -2,6 +2,8 @@ package silentspy.usefulfood.world;
 
 import java.util.Random;
 
+import silentspy.usefulfood.UsefulFoodContent;
+
 import net.minecraft.src.BiomeGenBase;
 import net.minecraft.src.Block;
 import net.minecraft.src.ChunkProviderEnd;
@@ -33,25 +35,11 @@ public class WorldGenerator implements IWorldGenerator {
     
     public void generateSurface(World world, Random random, int chunkX, int chunkZ)
 	{
-    	//Generate Blueberry bushes
-    	
-    	BiomeGenBase b = world.getBiomeGenForCoords(chunkX, chunkZ);
-    	
-    	int chunkY = world.getHeightValue(chunkX, chunkZ);
-    	
-    	int var7 = chunkX + random.nextInt(8) - random.nextInt(8);
-        int var8 = chunkY + random.nextInt(4) - random.nextInt(4);
-        int var9 = chunkZ + random.nextInt(8) - random.nextInt(8);
-        
-    	if(world.isAirBlock(var7, var8, var9) && Block.blocksList[37].canBlockStay(world, var7, var8, var9)) 
-    	{
-    		int chance =  random.nextInt(5);
-    		
-    		if(chance < 3) {
-    			world.setBlock(var7, var8, var9, 5);
-    		}
-    	}
-    }
+    	// Generate Blueberry Bush
+    	WorldGenBush.generate(world, random, chunkX, chunkZ, 0);
+    	// Generate Strawberry Bush
+    	WorldGenBush.generate(world, random, chunkX, chunkZ, 1);
+	}
     
     public void generateNether(World world, Random random, int chunkX, int chunkZ)
     {
@@ -61,5 +49,5 @@ public class WorldGenerator implements IWorldGenerator {
 	public void generateEnd(World world, Random random, int chunkX, int chunkZ)
 	{
 		
-	}	
+	}
 }

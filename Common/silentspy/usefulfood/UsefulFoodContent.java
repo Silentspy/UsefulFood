@@ -51,12 +51,18 @@ public class UsefulFoodContent
     public static Item pear;
     public static Item strawberry;
     
-    public static Block Applecake;
-    public static Block Shococake;
-    public static Block Magiccake;
-    public static Block Hayball;
-    public static Block Plants;
-    public static Block Logs;
+    public static Item blueberryseed;
+    public static Item strawberryseed;
+    
+    public static Block applecake;
+    public static Block shococake;
+    public static Block magiccake;
+    public static Block hayball;
+    public static Block bush;
+    public static Block logs;
+    
+    public static Block blueberrycrop;
+    public static Block strawberrycrop;
     
     public void init()
     {
@@ -66,16 +72,21 @@ public class UsefulFoodContent
     
     public void setupBlocks()
     {
-        Applecake = new BlockAppleCake(UsefulFoodConfig.ApplecakeBlockID).setHardness(0.5F).setStepSound(Block.soundClothFootstep).setBlockName("AppleCake");
-        Shococake = new BlockShocoCake(UsefulFoodConfig.ShococakeBlockID).setHardness(0.5F).setStepSound(Block.soundClothFootstep).setBlockName("ShocoCake");
-        Magiccake = new BlockMagicCake(UsefulFoodConfig.MagiccakeBlockID).setHardness(0.5F).setStepSound(Block.soundClothFootstep).setBlockName("MagicCake");
-        Hayball = new BlockHayball(UsefulFoodConfig.HayBallBlockID).setHardness(0.8F).setStepSound(Block.soundClothFootstep).setBlockName("HayBall");
+        applecake = new BlockAppleCake(UsefulFoodConfig.ApplecakeBlockID).setHardness(0.5F).setStepSound(Block.soundClothFootstep).setBlockName("AppleCake");
+        shococake = new BlockShocoCake(UsefulFoodConfig.ShococakeBlockID).setHardness(0.5F).setStepSound(Block.soundClothFootstep).setBlockName("ShocoCake");
+        magiccake = new BlockMagicCake(UsefulFoodConfig.MagiccakeBlockID).setHardness(0.5F).setStepSound(Block.soundClothFootstep).setBlockName("MagicCake");
+        hayball = new BlockHayBall(UsefulFoodConfig.HayBallBlockID).setHardness(0.8F).setStepSound(Block.soundClothFootstep).setBlockName("HayBall");
+        bush = new BlockBush(UsefulFoodConfig.BushBlockID).setBlockName("Bush");
+        blueberrycrop = new BlockBlueberryCrop(UsefulFoodConfig.BlueberryBushID, 18).setBlockName("BlueberryCrop");
+        strawberrycrop = new BlockBlueberryCrop(UsefulFoodConfig.StrawberryBushID, 21).setBlockName("StrawberryCrop");
         
         //registry
-        GameRegistry.registerBlock(Applecake);
-        GameRegistry.registerBlock(Shococake);
-        GameRegistry.registerBlock(Magiccake);
-        GameRegistry.registerBlock(Hayball);
+        GameRegistry.registerBlock(applecake);
+        GameRegistry.registerBlock(shococake);
+        GameRegistry.registerBlock(magiccake);
+        GameRegistry.registerBlock(hayball);
+        GameRegistry.registerBlock(bush);
+        GameRegistry.registerBlock(blueberrycrop);
         
     }
     
@@ -108,9 +119,9 @@ public class UsefulFoodContent
         bisquit = new ItemUsefulFood(UsefulFoodConfig.bisquitID, 1, 0.1F, true).setIconIndex(18).setItemName("Bisquit");
         trailmix = new ItemFruitBowl(UsefulFoodConfig.trailmixID, 4, 0.0F, false).setIconIndex(7).setItemName("TrailMix");
 
-        applecakeitem = new ItemCake(UsefulFoodConfig.applecakeitemID, Applecake).setIconIndex(26).setMaxStackSize(1).setItemName("AppleCake");
-        shococakeitem = new ItemCake(UsefulFoodConfig.shococakeitemID, Shococake).setIconIndex(27).setMaxStackSize(1).setItemName("ShocoCake");
-        magiccakeitem = new ItemCake(UsefulFoodConfig.magiccakeitemID, Magiccake).setIconIndex(28).setMaxStackSize(1).setItemName("MagicCake");
+        applecakeitem = new ItemCake(UsefulFoodConfig.applecakeitemID, applecake).setIconIndex(26).setMaxStackSize(1).setItemName("AppleCake");
+        shococakeitem = new ItemCake(UsefulFoodConfig.shococakeitemID, shococake).setIconIndex(27).setMaxStackSize(1).setItemName("ShocoCake");
+        magiccakeitem = new ItemCake(UsefulFoodConfig.magiccakeitemID, magiccake).setIconIndex(28).setMaxStackSize(1).setItemName("MagicCake");
 
         // 1.0
         mutton = new ItemUsefulFood(UsefulFoodConfig.muttonitemID, 7, 0.3F, true).setIconIndex(30).setItemName("CookedMutton");
@@ -123,6 +134,7 @@ public class UsefulFoodContent
             debugfood = new ItemFoodDebug(UsefulFoodConfig.debugfoodID).setIconIndex(32).setItemName("DebugFood");
         }
         
+        // 1.2
         banana = new ItemBanana(UsefulFoodConfig.bananaID).setIconIndex(33).setItemName("Banana");
         bananapeeled = new ItemUsefulFood(UsefulFoodConfig.bananapeeledID, 4, 0.3F, false).setPotionEffect(Potion.moveSpeed.id, 10, 0, 0.5F).setIconIndex(34).setItemName("PeeledBanana");
         blueberry = new ItemUsefulFood(UsefulFoodConfig.blueberryID, 4, 0.3F, false).setIconIndex(35).setItemName("Blueberry");
@@ -130,6 +142,13 @@ public class UsefulFoodContent
         peach = new ItemUsefulFood(UsefulFoodConfig.peachID, 4, 0.3F, false).setIconIndex(37).setItemName("Peach");
         pear = new ItemUsefulFood(UsefulFoodConfig.pearID, 4, 0.3F, false).setIconIndex(38).setItemName("Pear");
         strawberry = new ItemUsefulFood(UsefulFoodConfig.strawberryID, 4, 0.3F, false).setIconIndex(39).setItemName("Strawberry");
+        
+        // bananasapling 
+        blueberryseed = new ItemUsefulFoodSeed(UsefulFoodConfig.blueberryseedID, UsefulFoodContent.blueberrycrop.blockID, Block.tilledField.blockID).setIconIndex(40).setItemName("BlueberrySeed");
+        // orangesapling
+        // peachsapling
+        // pearsapling
+        strawberryseed = new ItemUsefulFoodSeed(UsefulFoodConfig.strawberryseedID, UsefulFoodContent.strawberrycrop.blockID, Block.tilledField.blockID).setIconIndex(41).setItemName("StrawberrySeed");
     }
 
 }
