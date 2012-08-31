@@ -36,7 +36,7 @@ public class UsefulFoodContent
     public static Item eggwich;
     public static Item applecakeitem;
     public static Item shococakeitem;
-    public static Item bisquit;
+    public static Item biscuit;
     public static Item trailmix;
     public static Item magiccakeitem;
     public static Item mutton;
@@ -78,7 +78,7 @@ public class UsefulFoodContent
         hayball = new BlockHayBall(UsefulFoodConfig.HayBallBlockID).setHardness(0.8F).setStepSound(Block.soundClothFootstep).setBlockName("HayBall");
         bush = new BlockBush(UsefulFoodConfig.BushBlockID).setBlockName("Bush");
         blueberrycrop = new BlockBlueberryCrop(UsefulFoodConfig.BlueberryBushID, 18).setBlockName("BlueberryCrop");
-        strawberrycrop = new BlockBlueberryCrop(UsefulFoodConfig.StrawberryBushID, 21).setBlockName("StrawberryCrop");
+        strawberrycrop = new BlockStrawberryCrop(UsefulFoodConfig.StrawberryBushID, 21).setBlockName("StrawberryCrop");
         
         //registry
         GameRegistry.registerBlock(applecake);
@@ -116,7 +116,7 @@ public class UsefulFoodContent
         fishwich = new ItemUsefulFood(UsefulFoodConfig.fishwichID, 8, 1.0F, true).setIconIndex(24).setItemName("FishSandwich");
         chickenwich = new ItemUsefulFood(UsefulFoodConfig.chickenwichID, 9, 1.0F, true).setIconIndex(23).setItemName("ChickenSandwich");
         eggwich = new ItemUsefulFood(UsefulFoodConfig.eggwichID, 6, 1.0F, true).setIconIndex(25).setItemName("EggSandwich");
-        bisquit = new ItemUsefulFood(UsefulFoodConfig.bisquitID, 1, 0.1F, true).setIconIndex(18).setItemName("Bisquit");
+        biscuit = new ItemUsefulFood(UsefulFoodConfig.biscuitID, 1, 0.1F, true).setIconIndex(18).setItemName("Bisquit");
         trailmix = new ItemFruitBowl(UsefulFoodConfig.trailmixID, 4, 0.0F, false).setIconIndex(7).setItemName("TrailMix");
 
         applecakeitem = new ItemCake(UsefulFoodConfig.applecakeitemID, applecake).setIconIndex(26).setMaxStackSize(1).setItemName("AppleCake");
@@ -142,12 +142,7 @@ public class UsefulFoodContent
         peach = new ItemUsefulFood(UsefulFoodConfig.peachID, 4, 0.3F, false).setIconIndex(37).setItemName("Peach");
         pear = new ItemUsefulFood(UsefulFoodConfig.pearID, 4, 0.3F, false).setIconIndex(38).setItemName("Pear");
         strawberry = new ItemUsefulFood(UsefulFoodConfig.strawberryID, 4, 0.3F, false).setIconIndex(39).setItemName("Strawberry");
-        
-        // bananasapling 
         blueberryseed = new ItemUsefulFoodSeed(UsefulFoodConfig.blueberryseedID, UsefulFoodContent.blueberrycrop.blockID, Block.tilledField.blockID).setIconIndex(40).setItemName("BlueberrySeed");
-        // orangesapling
-        // peachsapling
-        // pearsapling
         strawberryseed = new ItemUsefulFoodSeed(UsefulFoodConfig.strawberryseedID, UsefulFoodContent.strawberrycrop.blockID, Block.tilledField.blockID).setIconIndex(41).setItemName("StrawberrySeed");
     }
 

@@ -68,7 +68,7 @@ public class BlockBlueberryCrop extends BlockFlower
      */
     public int getRenderType()
     {
-        return 6;
+        return 1;
     }
 
     /**
@@ -84,24 +84,26 @@ public class BlockBlueberryCrop extends BlockFlower
      */
     public int idDropped(int par1, Random par2Random, int par3)
     {
-        return par1 == 3 ? Item.wheat.shiftedIndex : -1;
+        return par1 == 3 ? UsefulFoodContent.blueberry.shiftedIndex : -1;
     }
 
     /**
      * Returns the quantity of items to drop on block destruction.
      */
-    public int quantityDropped(Random par1Random)
+    public int quantityDropped(Random random)
     {
-        return 1;
+        return 2 + random.nextInt(4);
     }
     
     @Override
     public ArrayList<ItemStack> getBlockDropped(World world, int x, int y, int z, int metadata, int fortune)
     {
     	ArrayList<ItemStack> ret = new ArrayList<ItemStack>();
+    	
+    	Random random = new Random();
         if (metadata == 3)
         {
-            ret.add(new ItemStack(UsefulFoodContent.blueberry));
+            ret.add(new ItemStack(UsefulFoodContent.blueberry, 2 + random.nextInt(3)));
         }
 
         for (int n = 0; n < 3 + fortune; n++)
@@ -109,7 +111,7 @@ public class BlockBlueberryCrop extends BlockFlower
 
             if (world.rand.nextInt(15) <= metadata)
             {
-                ret.add(new ItemStack(UsefulFoodContent.blueberryseed));
+                ret.add(new ItemStack(UsefulFoodContent.blueberryseed, 1 + random.nextInt(2)));
             }
         }
 

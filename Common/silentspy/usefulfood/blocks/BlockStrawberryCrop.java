@@ -18,12 +18,6 @@ public class BlockStrawberryCrop extends BlockBlueberryCrop{
 	}
 	
 	@Override
-	public int getBlockTextureFromSideAndMetadata(int par1, int par2)
-    {
-        return par2 >= 3 ? this.blockIndexInTexture + 2 : (par2 > 0 ? this.blockIndexInTexture + 1 : this.blockIndexInTexture);
-    }
-	
-	@Override
 	public int idDropped(int par1, Random par2Random, int par3)
     {
         return par1 == 3 ? UsefulFoodContent.strawberry.shiftedIndex : -1;
@@ -33,9 +27,11 @@ public class BlockStrawberryCrop extends BlockBlueberryCrop{
     public ArrayList<ItemStack> getBlockDropped(World world, int x, int y, int z, int metadata, int fortune)
     {
     	ArrayList<ItemStack> ret = new ArrayList<ItemStack>();
+    	
+    	Random random = new Random();
         if (metadata == 3)
         {
-            ret.add(new ItemStack(UsefulFoodContent.strawberry));
+            ret.add(new ItemStack(UsefulFoodContent.strawberry, 2 + random.nextInt(3)));
         }
 
         for (int n = 0; n < 3 + fortune; n++)
@@ -43,7 +39,7 @@ public class BlockStrawberryCrop extends BlockBlueberryCrop{
 
             if (world.rand.nextInt(15) <= metadata)
             {
-                ret.add(new ItemStack(UsefulFoodContent.strawberryseed));
+                ret.add(new ItemStack(UsefulFoodContent.strawberryseed, 1 + random.nextInt(2)));
             }
         }
 

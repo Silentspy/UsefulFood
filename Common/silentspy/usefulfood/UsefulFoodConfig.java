@@ -34,7 +34,7 @@ public class UsefulFoodConfig
     static int eggwichID;
     static int applecakeitemID;
     static int shococakeitemID;
-    static int bisquitID;
+    static int biscuitID;
     static int trailmixID;
     static int magiccakeitemID;
     static int muttonitemID;
@@ -103,7 +103,7 @@ public class UsefulFoodConfig
             eggwichID = cfg.getOrCreateIntProperty("eggwich", cfg.CATEGORY_ITEM, 5074).getInt(5074);
             applecakeitemID = cfg.getOrCreateIntProperty("applecake", cfg.CATEGORY_ITEM, 5075).getInt(5075);
             shococakeitemID = cfg.getOrCreateIntProperty("shococake", cfg.CATEGORY_ITEM, 5076).getInt(5076);
-            bisquitID = cfg.getOrCreateIntProperty("bisquit", cfg.CATEGORY_ITEM, 5077).getInt(5077);
+            biscuitID = cfg.getOrCreateIntProperty("biscuit", cfg.CATEGORY_ITEM, 5077).getInt(5077);
             trailmixID = cfg.getOrCreateIntProperty("trailmix", cfg.CATEGORY_ITEM, 5078).getInt(5078);
             magiccakeitemID = cfg.getOrCreateIntProperty("magiccake", cfg.CATEGORY_ITEM, 5079).getInt(5079);
             muttonitemID = cfg.getOrCreateIntProperty("mutton", cfg.CATEGORY_ITEM, 5080).getInt(5080);

@@ -57,7 +57,7 @@ public class UsefulFoodRecipes {
         GameRegistry.addShapelessRecipe(new ItemStack(UsefulFoodContent.marshmallow, 1), new Object[] {Item.stick, Item.bucketWater, Item.sugar, Item.sugar, Item.sugar});
         GameRegistry.addShapelessRecipe(new ItemStack(UsefulFoodContent.icecream, 1), new Object[] {Item.bowlEmpty, Item.snowball, Item.sugar});
         GameRegistry.addShapelessRecipe(new ItemStack(UsefulFoodContent.toast, 5), new Object[] {Item.bread});
-        GameRegistry.addShapelessRecipe(new ItemStack(UsefulFoodContent.bisquit, 3), new Object[] {Item.wheat, Item.wheat});
+        GameRegistry.addShapelessRecipe(new ItemStack(UsefulFoodContent.biscuit, 3), new Object[] {Item.wheat, Item.wheat});
         GameRegistry.addShapelessRecipe(new ItemStack(UsefulFoodContent.trailmix, 1), new Object[] {Item.bowlEmpty, Item.pumpkinSeeds, Item.seeds, Item.melonSeeds});
         GameRegistry.addShapelessRecipe(new ItemStack(Item.wheat, 9), new Object[] {new ItemStack(UsefulFoodContent.hayball, 1)});
     }

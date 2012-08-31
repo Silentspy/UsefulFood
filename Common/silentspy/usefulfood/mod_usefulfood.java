@@ -8,9 +8,11 @@ import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.PreInit;
+import cpw.mods.fml.common.Mod.ServerStarted;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLServerStartedEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -42,7 +44,7 @@ public class mod_usefulfood
 	@Init
     public void load(FMLInitializationEvent event)
     {
-        MinecraftForge.EVENT_BUS.register(new UsefulFoodEvent());
+        MinecraftForge.EVENT_BUS.register(new UsefulFoodEvents());
         FMLLog.fine("[UsefulFood] loading mod_usefulfood recipes");
         proxy.registerRenderInformation();
         UsefulFoodRecipes.init();

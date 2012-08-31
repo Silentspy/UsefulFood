@@ -10,7 +10,7 @@ import net.minecraftforge.event.entity.player.BonemealEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.CommandEvent;
 
-public class UsefulFoodEvent 
+public class UsefulFoodEvents
 {
     @ForgeSubscribe
     public void LivingDropsEvent(LivingDropsEvent event)
@@ -18,8 +18,8 @@ public class UsefulFoodEvent
         if(event.entity instanceof EntitySheep)
         {
             if(!event.entityLiving.isChild()) {
-                Random generator = new Random();
-                int lootchance =  generator.nextInt(5);
+                Random random = new Random();
+                int lootchance =  random.nextInt(5);
                 
                 if(lootchance < 4) {
                     if(event.entityLiving.isBurning()){
@@ -30,18 +30,6 @@ public class UsefulFoodEvent
                 }
             }
         }
-    }
-    
-    @ForgeSubscribe
-    public void PlayerEvent(PlayerEvent event)
-    {
-    	
-    }
-    
-    @ForgeSubscribe
-    public void CommandEvent(CommandEvent event)
-    {
-    	
     }
     
     @ForgeSubscribe
