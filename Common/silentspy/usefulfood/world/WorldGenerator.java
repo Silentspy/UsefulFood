@@ -38,7 +38,7 @@ public class WorldGenerator implements IWorldGenerator {
     	// Generate Strawberry Bush
     	WorldGenBush.generate(world, random, blockX, blockZ, 1);
     	
-    	(new WorldGenTrees(Tutorial.oreblock.blockID, 10)).generate(world, random, Xcoord, Ycoord, Zcoord);
+    	(new WorldGenAppleTree(Tutorial.oreblock.blockID, 10)).generate(world, random, Xcoord, Ycoord, Zcoord);
 	}
     
     public void generateNether(World world, Random random, int chunkX, int chunkZ)
