@@ -11,7 +11,7 @@ public class ItemFoodDebug extends Item
 	public ItemFoodDebug(int var1)
     {
         super(var1);
-        this.setTabToDisplayOn(CreativeTabs.tabMisc);
+        this.setCreativeTab(CreativeTabs.tabMisc);
     }
 	
 	public ItemStack onItemRightClick(ItemStack var1, World var2, EntityPlayer var3)

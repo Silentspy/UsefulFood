@@ -13,7 +13,6 @@ public class BlockMagicCake extends BlockCake
     public BlockMagicCake(int var1)
     {
         super(var1, 0);
-        this.setTickRandomly(true);
     }
     
     public int getBlockTextureFromSideAndMetadata(int var1, int var2)
@@ -50,11 +49,6 @@ public class BlockMagicCake extends BlockCake
         double var13 = (double)((float)par4 + par5Random.nextFloat());
     	
     	par1World.spawnParticle("reddust", var9, var11, var13, 0.0D /*red*/, 1.0D /*green*/, 0.0D /*blue*/);
-    }
-    
-    public String getTextureFile()
-    {
-        return mod_usefulfood.blocktextures;
     }
     
     @SideOnly(Side.CLIENT)

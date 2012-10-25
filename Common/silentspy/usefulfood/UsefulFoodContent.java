@@ -57,6 +57,8 @@ public class UsefulFoodContent
     public static Block applecake;
     public static Block shococake;
     public static Block magiccake;
+    public static Block blueberrycake;
+    
     public static Block hayball;
     public static Block bush;
     public static Block logs;
@@ -77,8 +79,9 @@ public class UsefulFoodContent
         magiccake = new BlockMagicCake(UsefulFoodConfig.MagiccakeBlockID).setHardness(0.5F).setStepSound(Block.soundClothFootstep).setBlockName("MagicCake");
         hayball = new BlockHayBall(UsefulFoodConfig.HayBallBlockID).setHardness(0.8F).setStepSound(Block.soundClothFootstep).setBlockName("HayBall");
         bush = new BlockBush(UsefulFoodConfig.BushBlockID).setBlockName("Bush");
-        blueberrycrop = new BlockBlueberryCrop(UsefulFoodConfig.BlueberryBushID, 18).setBlockName("BlueberryCrop");
-        strawberrycrop = new BlockStrawberryCrop(UsefulFoodConfig.StrawberryBushID, 21).setBlockName("StrawberryCrop");
+        blueberrycrop = new BlockBlueberryCrop(UsefulFoodConfig.BlueberryBushID, 17).setBlockName("BlueberryCrop");
+        strawberrycrop = new BlockStrawberryCrop(UsefulFoodConfig.StrawberryBushID, 20).setBlockName("StrawberryCrop");
+        // blueberrycake = new BlockMagicCake(UsefulFoodConfig.MagiccakeBlockID).setHardness(0.5F).setStepSound(Block.soundClothFootstep).setBlockName("MagicCake");
         
         //registry
         GameRegistry.registerBlock(applecake);
@@ -87,6 +90,7 @@ public class UsefulFoodContent
         GameRegistry.registerBlock(hayball);
         GameRegistry.registerBlock(bush);
         GameRegistry.registerBlock(blueberrycrop);
+        GameRegistry.registerBlock(strawberrycrop);
         
     }
     

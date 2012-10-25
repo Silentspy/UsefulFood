@@ -14,7 +14,7 @@ public class BlockBush extends Block{
 
 	public BlockBush(int var1) {
 		super(var1, Material.leaves);
-		this.setCreativeTab(CreativeTabs.tabDeco);
+		setCreativeTab(CreativeTabs.tabDecorations);
 		this.setHardness(0.2F);
 		this.setLightOpacity(1);
 		this.setStepSound(soundGrassFootstep);
@@ -25,14 +25,33 @@ public class BlockBush extends Block{
 		
 		int texture = 14;
 		
-		switch (metadata) {
-		
-        case 0:  return 14;
-		case 1:  return 15;
-		
+		switch (metadata) 
+		{
+        case 0: 
+        	if(side == 1) {
+        		return 18;
+        	} else {
+        		return 14;
+        	}
+		case 1:
+			if(side == 1) {
+				return 18;
+			} else {
+				return 16;
+			}	
 		}
 		
         return texture;
+    }
+	
+	public int getRenderType()
+    {
+        return 0;
+    }
+	
+	protected int damageDropped(int par1)
+    {
+        return par1;
     }
 	
 	@SideOnly(Side.CLIENT)
@@ -40,6 +59,11 @@ public class BlockBush extends Block{
     {
         par3List.add(new ItemStack(par1, 1, 0));
         par3List.add(new ItemStack(par1, 1, 1));
+    }
+	
+	public boolean isOpaqueCube()
+    {
+        return false;
     }
 	
 	public int quantityDropped(Random random)

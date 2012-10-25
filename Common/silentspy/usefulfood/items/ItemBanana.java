@@ -13,7 +13,7 @@ public class ItemBanana extends Item
     public ItemBanana(int var1)
     {
         super(var1);
-        this.setTabToDisplayOn(CreativeTabs.tabFood);
+        this.setCreativeTab(CreativeTabs.tabFood);
     }
 
     public ItemStack onItemRightClick(ItemStack var1, World var2, EntityPlayer var3)

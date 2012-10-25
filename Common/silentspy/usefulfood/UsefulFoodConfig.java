@@ -52,9 +52,13 @@ public class UsefulFoodConfig
     static int ApplecakeBlockID;
     static int ShococakeBlockID;
     static int MagiccakeBlockID;
+    static int StrawberrycakeBlockID;
+    static int BlueberrycakeBlockID;
+    
     static int HayBallBlockID;
     static int BushBlockID;
     static int LogsBlockID;
+    
     static int BlueberryBushID;
     static int StrawberryBushID;
     
@@ -130,12 +134,17 @@ public class UsefulFoodConfig
             ApplecakeBlockID = cfg.getOrCreateIntProperty("Applecake", cfg.CATEGORY_BLOCK, 184).getInt(184);
             ShococakeBlockID = cfg.getOrCreateIntProperty("Shococake", cfg.CATEGORY_BLOCK, 185).getInt(185);
             MagiccakeBlockID = cfg.getOrCreateIntProperty("Magiccake", cfg.CATEGORY_BLOCK, 186).getInt(186);
+
             HayBallBlockID = cfg.getOrCreateIntProperty("Hayball", cfg.CATEGORY_BLOCK, 187).getInt(187);
+            
             BushBlockID = cfg.getOrCreateIntProperty("Bush", cfg.CATEGORY_BLOCK, 188).getInt(188);
             LogsBlockID = cfg.getOrCreateIntProperty("Logs", cfg.CATEGORY_BLOCK, 189).getInt(189);
             
             BlueberryBushID = cfg.getOrCreateIntProperty("BlueBerryBush", cfg.CATEGORY_BLOCK, 190).getInt(190);
             StrawberryBushID = cfg.getOrCreateIntProperty("StrawberryBush", cfg.CATEGORY_BLOCK, 191).getInt(191);
+            
+            StrawberrycakeBlockID = cfg.getOrCreateIntProperty("Strawberrycake", cfg.CATEGORY_BLOCK, 192).getInt(192);
+            BlueberrycakeBlockID = cfg.getOrCreateIntProperty("Blueberrycake", cfg.CATEGORY_BLOCK, 193).getInt(193);
             
             // Options
             DebugMode = cfg.getOrCreateBooleanProperty("Debug", cfg.CATEGORY_GENERAL, false).getBoolean(false);

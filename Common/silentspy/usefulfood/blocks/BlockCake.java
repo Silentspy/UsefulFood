@@ -4,6 +4,8 @@ import cpw.mods.fml.common.Side;
 import cpw.mods.fml.common.asm.SideOnly;
 import java.util.Random;
 
+import silentspy.usefulfood.mod_usefulfood;
+
 import net.minecraft.src.*;
 
 public class BlockCake extends Block
@@ -178,6 +180,11 @@ public class BlockCake extends Block
     public int idDropped(int par1, Random par2Random, int par3)
     {
         return 0;
+    }
+    
+    public String getTextureFile()
+    {
+        return mod_usefulfood.blocktextures;
     }
 
     @SideOnly(Side.CLIENT)

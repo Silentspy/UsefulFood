@@ -14,7 +14,7 @@ public class ItemCake extends ItemReed {
 	{
 		super(var1, var2);
 		this.setMaxStackSize(1);
-		this.setTabToDisplayOn(CreativeTabs.tabFood);
+		this.setCreativeTab(CreativeTabs.tabFood);
 	}
 	
 	public boolean hasEffect(ItemStack var1)

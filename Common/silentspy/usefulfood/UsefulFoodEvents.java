@@ -7,8 +7,6 @@ import net.minecraft.src.*;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.entity.player.BonemealEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.event.CommandEvent;
 
 public class UsefulFoodEvents
 {

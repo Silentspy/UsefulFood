@@ -1,5 +1,6 @@
 package silentspy.usefulfood;
 
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.src.*;
 import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.MinecraftForge;
