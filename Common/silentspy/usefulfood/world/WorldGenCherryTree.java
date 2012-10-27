@@ -1,7 +1,3 @@
-/*
-*** MADE BY MITHION'S .SCHEMATIC TO JAVA CONVERTING TOOL v1.6 ***
-*/
-
 package silentspy.usefulfood.world;
 
 import java.util.Random;
@@ -81,7 +77,7 @@ public class WorldGenCherryTree extends WorldGenerator
 		world.setBlock(i + 3, j + 2, k + 3, Block.wood.blockID);
 		world.setBlockAndMetadata(i + 3, j + 2, k + 4, Block.leaves.blockID, 12);
 		world.setBlockAndMetadata(i + 3, j + 2, k + 5, Block.leaves.blockID, 12);
-		world.setBlockAndMetadata(i + 3, j + 2, k + 6, Block.leaves.blockID, 4);
+		world.setBlockAndMetadata(i + 3, j + 2, k + 6, Block.leaves.blockID, 12);
 		world.setBlockAndMetadata(i + 3, j + 3, k + 1, Block.leaves.blockID, 12);
 		world.setBlockAndMetadata(i + 3, j + 3, k + 2, Block.leaves.blockID, 12);
 		world.setBlock(i + 3, j + 3, k + 3, Block.wood.blockID);

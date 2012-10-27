@@ -54,49 +54,36 @@ public class WorldGenAppleTree extends WorldGenerator
 
 	public boolean generate(World world, Random rand, int i, int j, int k) {
 		//check that each corner is one of the valid spawn blocks
-		if(!LocationIsValidSpawn(world, i, j, k) || !LocationIsValidSpawn(world, i + 4, j, k) || !LocationIsValidSpawn(world, i + 4, j, k + 4) || !LocationIsValidSpawn(world, i, j, k + 4))
+		if(!LocationIsValidSpawn(world, i, j, k) || !LocationIsValidSpawn(world, i + 4, j, k) || !LocationIsValidSpawn(world, i + 4, j, k + 3) || !LocationIsValidSpawn(world, i, j, k + 3))
 		{
 			return false;
 		}
 
-		world.setBlockAndMetadata(i + 0, j + 3, k + 2, Block.leaves.blockID, 4);
-		world.setBlockAndMetadata(i + 0, j + 4, k + 2, Block.leaves.blockID, 4);
-		world.setBlockAndMetadata(i + 1, j + 3, k + 1, Block.leaves.blockID, 4);
-		world.setBlockAndMetadata(i + 1, j + 3, k + 2, Block.leaves.blockID, 4);
+		world.setBlockAndMetadata(i + 0, j + 3, k + 1, Block.leaves.blockID, 12);
+		world.setBlockAndMetadata(i + 0, j + 3, k + 2, Block.leaves.blockID, 12);
+		world.setBlockAndMetadata(i + 1, j + 2, k + 2, Block.leaves.blockID, 12);
+		world.setBlockAndMetadata(i + 1, j + 3, k + 0, Block.leaves.blockID, 12);
+		world.setBlockAndMetadata(i + 1, j + 3, k + 1, Block.wood.blockID, 4);
+		world.setBlockAndMetadata(i + 1, j + 3, k + 2, Block.wood.blockID, 8);
 		world.setBlockAndMetadata(i + 1, j + 3, k + 3, Block.leaves.blockID, 4);
-		world.setBlockAndMetadata(i + 1, j + 4, k + 2, Block.leaves.blockID, 12);
-		world.setBlockAndMetadata(i + 1, j + 4, k + 3, Block.leaves.blockID, 12);
-		world.setBlockAndMetadata(i + 1, j + 5, k + 2, Block.leaves.blockID, 4);
-		world.setBlock(i + 2, j + 0, k + 2, Block.wood.blockID);
-		world.setBlock(i + 2, j + 1, k + 2, Block.wood.blockID);
-		world.setBlock(i + 2, j + 2, k + 2, Block.wood.blockID);
-		world.setBlockAndMetadata(i + 2, j + 2, k + 3, Block.leaves.blockID, 4);
+		world.setBlockAndMetadata(i + 1, j + 4, k + 1, Block.leaves.blockID, 4);
+		world.setBlockAndMetadata(i + 1, j + 4, k + 2, Block.leaves.blockID, 4);
+		world.setBlock(i + 2, j + 0, k + 1, Block.wood.blockID);
+		world.setBlock(i + 2, j + 1, k + 1, Block.wood.blockID);
+		world.setBlock(i + 2, j + 2, k + 1, Block.wood.blockID);
 		world.setBlockAndMetadata(i + 2, j + 3, k + 0, Block.leaves.blockID, 12);
-		world.setBlockAndMetadata(i + 2, j + 3, k + 1, Block.wood.blockID, 8);
-		world.setBlock(i + 2, j + 3, k + 2, Block.wood.blockID);
+		world.setBlock(i + 2, j + 3, k + 1, Block.wood.blockID);
+		world.setBlockAndMetadata(i + 2, j + 3, k + 2, Block.leaves.blockID, 12);
 		world.setBlockAndMetadata(i + 2, j + 3, k + 3, Block.leaves.blockID, 4);
-		world.setBlockAndMetadata(i + 2, j + 3, k + 4, Block.leaves.blockID, 4);
-		world.setBlockAndMetadata(i + 2, j + 4, k + 1, Block.leaves.blockID, 12);
-		world.setBlock(i + 2, j + 4, k + 2, Block.wood.blockID);
-		world.setBlockAndMetadata(i + 2, j + 4, k + 3, Block.wood.blockID, 8);
-		world.setBlockAndMetadata(i + 2, j + 4, k + 4, Block.leaves.blockID, 12);
-		world.setBlockAndMetadata(i + 2, j + 5, k + 1, Block.leaves.blockID, 4);
-		world.setBlock(i + 2, j + 5, k + 2, Block.wood.blockID);
-		world.setBlockAndMetadata(i + 2, j + 5, k + 3, Block.leaves.blockID, 12);
-		world.setBlockAndMetadata(i + 2, j + 6, k + 2, Block.leaves.blockID, 4);
-		world.setBlockAndMetadata(i + 3, j + 2, k + 2, Block.leaves.blockID, 12);
+		world.setBlockAndMetadata(i + 2, j + 4, k + 1, Block.leaves.blockID, 4);
+		world.setBlockAndMetadata(i + 3, j + 2, k + 1, Block.leaves.blockID, 12);
 		world.setBlockAndMetadata(i + 3, j + 3, k + 0, Block.leaves.blockID, 12);
-		world.setBlockAndMetadata(i + 3, j + 3, k + 1, Block.leaves.blockID, 12);
+		world.setBlockAndMetadata(i + 3, j + 3, k + 1, Block.wood.blockID, 4);
 		world.setBlockAndMetadata(i + 3, j + 3, k + 2, Block.leaves.blockID, 12);
-		world.setBlockAndMetadata(i + 3, j + 3, k + 3, Block.leaves.blockID, 12);
-		world.setBlockAndMetadata(i + 3, j + 4, k + 1, Block.leaves.blockID, 12);
-		world.setBlockAndMetadata(i + 3, j + 4, k + 2, Block.wood.blockID, 4);
-		world.setBlockAndMetadata(i + 3, j + 4, k + 3, Block.leaves.blockID, 12);
-		world.setBlockAndMetadata(i + 3, j + 5, k + 2, Block.leaves.blockID, 12);
+		world.setBlockAndMetadata(i + 3, j + 4, k + 0, Block.leaves.blockID, 4);
+		world.setBlockAndMetadata(i + 3, j + 4, k + 1, Block.leaves.blockID, 4);
 		world.setBlockAndMetadata(i + 4, j + 3, k + 1, Block.leaves.blockID, 12);
 		world.setBlockAndMetadata(i + 4, j + 3, k + 2, Block.leaves.blockID, 12);
-		world.setBlockAndMetadata(i + 4, j + 3, k + 3, Block.leaves.blockID, 4);
-		world.setBlockAndMetadata(i + 4, j + 4, k + 2, Block.leaves.blockID, 12);
 
 		return true;
 	}
