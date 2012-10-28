@@ -9,6 +9,8 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class UsefulFoodConfig 
 {
+	
+	// items
     static int milkbowlID;
     static int cacaobowlID;
     static int cheeseID;
@@ -50,20 +52,6 @@ public class UsefulFoodConfig
     static int pearID;
     static int strawberryID;
     
-    static int ApplecakeBlockID;
-    static int ShococakeBlockID;
-    static int MagiccakeBlockID;
-    static int StrawberrycakeBlockID;
-    static int BlueberrycakeBlockID;
-    
-    static int HayBallBlockID;
-    
-    static int BlueberryBushBlockID;
-    static int StrawberryBushBlockID;
-    
-    static int BlueberryCropBlockID;
-    static int StrawberryCropBlockID;
-    
     static int applesaplingID;
     static int bananasaplingID;
     static int cherrysaplingID;
@@ -85,7 +73,49 @@ public class UsefulFoodConfig
     static int pearjuiceID;
     static int peachjuiceID;
     
-    static boolean DebugMode;
+    static int strawberrycakeID;
+    static int blueberrycakeID;
+    static int bananacakeID;
+    static int orangecakeID;
+    static int peachcakeID;
+    static int pearcakeID;
+    static int cherrycakeID;
+    
+    static int sushiID;
+    static int squidtentacleID;
+    static int cookedsquidtentacleID;
+    static int squidwichID;
+    static int carrotsoupID;
+    
+    // blocks
+    static int ApplecakeBlockID;
+    static int ShococakeBlockID;
+    static int MagiccakeBlockID;
+    static int StrawberrycakeBlockID;
+    static int BlueberrycakeBlockID;
+    static int BananacakeBlockID;
+    static int OrangecakeBlockID;
+    static int PearcakeBlockID;
+    static int PeachcakeBlockID;
+    static int CherrycakeBlockID;
+     
+    static int HayBallBlockID;
+    
+    static int BlueberryBushBlockID;
+    static int StrawberryBushBlockID;
+    
+    static int BlueberryCropBlockID;
+    static int StrawberryCropBlockID;
+    
+    public static boolean DebugMode;
+    public static boolean GenerateAppleTree;
+    public static boolean GenerateBananaTree;
+    public static boolean GenerateCherryTree;
+    public static boolean GenerateOrangeTree;
+    public static boolean GeneratePeachTree;
+    public static boolean GeneratePearTree;
+	public static boolean GenerateStrawberryBush;
+	public static boolean GenerateBlueberryBush;
     
     public static void Properties(FMLPreInitializationEvent event) 
     {
@@ -175,6 +205,19 @@ public class UsefulFoodConfig
 			cherryjuiceID = cfg.getItem("cherryjuice", 5106).getInt(5106);
 			pearjuiceID = cfg.getItem("pearjuice", 5107).getInt(5107);
 			peachjuiceID = cfg.getItem("peachjuice", 5108).getInt(5108);
+			
+		    strawberrycakeID = cfg.getItem("strawberrycake", 5109).getInt(5109);
+		    blueberrycakeID = cfg.getItem("blueberrycake", 5110).getInt(5110);
+		    bananacakeID = cfg.getItem("bananacake", 5111).getInt(5111);
+		    orangecakeID = cfg.getItem("orangecake", 5112).getInt(5112);
+		    peachcakeID = cfg.getItem("peachcake", 5113).getInt(5113);
+		    pearcakeID = cfg.getItem("pearcake", 5114).getInt(5114);
+		    cherrycakeID = cfg.getItem("cherrycake", 5115).getInt(5115);
+		    sushiID = cfg.getItem("sushi", 5116).getInt(5116);
+		    squidtentacleID = cfg.getItem("squidtentacle", 5117).getInt(5117);
+		    cookedsquidtentacleID = cfg.getItem("cookedsquidtentacle", 5118).getInt(5118);
+		    squidwichID = cfg.getItem("squidwich", 5119).getInt(5119);
+		    carrotsoupID = cfg.getItem("carrotsoup", 5120).getInt(5120);
             
             // Blocks
             ApplecakeBlockID = cfg.getBlock("Applecake", 2230).getInt(2230);
@@ -189,12 +232,24 @@ public class UsefulFoodConfig
             BlueberryCropBlockID = cfg.getBlock("BlueBerryCrop", 2236).getInt(2236);
             StrawberryCropBlockID = cfg.getBlock("StrawberryCrop", 2237).getInt(2237);
             
-            StrawberrycakeBlockID = cfg.getBlock("Strawberrycake", 2238).getInt(2238);
-            BlueberrycakeBlockID = cfg.getBlock("Blueberrycake", 2239).getInt(2239);
+            BlueberrycakeBlockID = cfg.getBlock("Bananacake", 2238).getInt(2238);
+            StrawberrycakeBlockID = cfg.getBlock("Strawberrycake", 2239).getInt(2239);
+            BananacakeBlockID = cfg.getBlock("Bananacake", 2240).getInt(2240);
+            OrangecakeBlockID = cfg.getBlock("Orangecake", 2241).getInt(2241);
+            PearcakeBlockID = cfg.getBlock("Pearcake", 2242).getInt(2242);
+            PeachcakeBlockID = cfg.getBlock("Peachcake", 2243).getInt(2243);
+            CherrycakeBlockID = cfg.getBlock("Cherrycake", 2244).getInt(2244);
             
             // Options
             DebugMode = cfg.get(cfg.CATEGORY_GENERAL, "Debug", false).getBoolean(false);
-            
+			GenerateAppleTree = cfg.get(cfg.CATEGORY_GENERAL, "GenerateAppleTree", true).getBoolean(true);
+            GenerateBananaTree = cfg.get(cfg.CATEGORY_GENERAL, "GenerateBananaTree", true).getBoolean(true);
+            GenerateCherryTree = cfg.get(cfg.CATEGORY_GENERAL, "GenerateCherryTree", true).getBoolean(true);
+            GenerateOrangeTree = cfg.get(cfg.CATEGORY_GENERAL, "GenerateOrangeTree", true).getBoolean(true);
+            GeneratePeachTree = cfg.get(cfg.CATEGORY_GENERAL, "GeneratePeachTree", true).getBoolean(true);
+            GeneratePearTree = cfg.get(cfg.CATEGORY_GENERAL, "GeneratePearTree", true).getBoolean(true);
+			GenerateStrawberryBush = cfg.get(cfg.CATEGORY_GENERAL, "GenerateStrawberryBush", true).getBoolean(true);
+			GenerateBlueberryBush = cfg.get(cfg.CATEGORY_GENERAL, "GenerateBlueberryBush", true).getBoolean(true);
         } 
         catch (Exception e)
         {
