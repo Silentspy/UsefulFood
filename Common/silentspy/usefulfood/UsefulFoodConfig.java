@@ -1,6 +1,7 @@
 package silentspy.usefulfood;
 
 import java.util.logging.Level;
+import java.io.File;
 
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.FMLLog;
@@ -56,13 +57,16 @@ public class UsefulFoodConfig
     static int BlueberrycakeBlockID;
     
     static int HayBallBlockID;
-    static int BushBlockID;
-    static int LogsBlockID;
     
-    static int BlueberryBushID;
-    static int StrawberryBushID;
+    static int BlueberryBushBlockID;
+    static int StrawberryBushBlockID;
     
+    static int BlueberryCropBlockID;
+    static int StrawberryCropBlockID;
+    
+    static int applesaplingID;
     static int bananasaplingID;
+    static int cherrysaplingID;
     static int orangesaplingID;
     static int peachsaplingID;
     static int pearsaplingID;
@@ -70,90 +74,135 @@ public class UsefulFoodConfig
     static int blueberryseedID;
     static int strawberryseedID;
     
+    static int strawberrysmoothieID;
+    static int bananasmoothieID;
+    static int magicsmoothieID;
+    static int blueberrysmoothieID;
+    static int melonjuiceID;
+    static int orangejuiceID;
+    static int applejuiceID;
+    static int cherryjuiceID;
+    static int pearjuiceID;
+    static int peachjuiceID;
+    
     static boolean DebugMode;
     
     public static void Properties(FMLPreInitializationEvent event) 
     {
         FMLLog.fine("[UsefulFood] loading mod_usefulfood "+ event.getModMetadata().version);
+        
+        File oldconfig = new File(event.getModConfigurationDirectory() + "\\silentspy_usefulfood.cfg").getAbsoluteFile();
+      
+        if(oldconfig.exists()) 
+        {
+        	FMLLog.fine("[UsefulFood] Found old config!");
+        	File newconfig = new File(event.getModConfigurationDirectory() + "\\UsefulFood.cfg").getAbsoluteFile();
+        	if(oldconfig.renameTo(newconfig)) 
+        	{
+        		FMLLog.fine("[UsefulFood] Successfully renamed silentspy_usefulfood.cfg to UsefulFood.cfg");
+        	} 
+        	else 
+        	{
+        		FMLLog.warning("[UsefulFood] Failed to rename silentspy_usefulfood.cfg to UsefulFood.cfg");
+        	}
+        }
+    
         Configuration cfg = new Configuration(event.getSuggestedConfigurationFile());
         try {
             
             cfg.load();
             
             // Items
-            milkbowlID = cfg.getOrCreateIntProperty("milkbowl", cfg.CATEGORY_ITEM, 5054).getInt(5054);
-            cacaobowlID = cfg.getOrCreateIntProperty("cacaobowl", cfg.CATEGORY_ITEM, 5058).getInt(5058);
-            cheeseID = cfg.getOrCreateIntProperty("cheese", cfg.CATEGORY_ITEM, 5059).getInt(5059);
-            chocolateID = cfg.getOrCreateIntProperty("chocolate", cfg.CATEGORY_ITEM, 5061).getInt(5061);
-            fruitsaladID = cfg.getOrCreateIntProperty("fruitsalad", cfg.CATEGORY_ITEM, 5055).getInt(5055);
-            superfruitsaladID = cfg.getOrCreateIntProperty("superfruitsalad", cfg.CATEGORY_ITEM, 5050).getInt(5050);
-            sugarcubeID = cfg.getOrCreateIntProperty("sugarcube", cfg.CATEGORY_ITEM, 5057).getInt(5057);
-            caramelID = cfg.getOrCreateIntProperty("caramel", cfg.CATEGORY_ITEM, 5062).getInt(5062);
-            caramelappleID = cfg.getOrCreateIntProperty("caramelapple", cfg.CATEGORY_ITEM, 5063).getInt(5063);
-            cookedseedsID = cfg.getOrCreateIntProperty("cookedseeds", cfg.CATEGORY_ITEM, 5056).getInt(5056);
-            friedeggID = cfg.getOrCreateIntProperty("friedegg", cfg.CATEGORY_ITEM, 5051).getInt(5051);
-            pumpkinsoupID = cfg.getOrCreateIntProperty("pumpkinsoup", cfg.CATEGORY_ITEM, 5052).getInt(5052);
-            saladID = cfg.getOrCreateIntProperty("salad", cfg.CATEGORY_ITEM, 5053).getInt(5053);
-            seedsaladID = cfg.getOrCreateIntProperty("seedsalad", cfg.CATEGORY_ITEM, 5064).getInt(5064);
-            jellyID = cfg.getOrCreateIntProperty("jelly", cfg.CATEGORY_ITEM, 5065).getInt(5065);
-            marshmallowID = cfg.getOrCreateIntProperty("marshmallow", cfg.CATEGORY_ITEM, 5066).getInt(5066);
-            cmarshmallowID = cfg.getOrCreateIntProperty("cmarshmallow", cfg.CATEGORY_ITEM, 5067).getInt(5067);
-            icecreamID = cfg.getOrCreateIntProperty("icecream", cfg.CATEGORY_ITEM, 5068).getInt(5068);
-            toastID = cfg.getOrCreateIntProperty("toast", cfg.CATEGORY_ITEM, 5069).getInt(5069);
-            porkwichID = cfg.getOrCreateIntProperty("porkwich", cfg.CATEGORY_ITEM, 5070).getInt(5070);
-            steakwichID = cfg.getOrCreateIntProperty("steakwich", cfg.CATEGORY_ITEM, 5071).getInt(5071);
-            fishwichID = cfg.getOrCreateIntProperty("fishwich", cfg.CATEGORY_ITEM, 5072).getInt(5072);
-            chickenwichID = cfg.getOrCreateIntProperty("chickenwich", cfg.CATEGORY_ITEM, 5073).getInt(5073);
-            eggwichID = cfg.getOrCreateIntProperty("eggwich", cfg.CATEGORY_ITEM, 5074).getInt(5074);
-            applecakeitemID = cfg.getOrCreateIntProperty("applecake", cfg.CATEGORY_ITEM, 5075).getInt(5075);
-            shococakeitemID = cfg.getOrCreateIntProperty("shococake", cfg.CATEGORY_ITEM, 5076).getInt(5076);
-            biscuitID = cfg.getOrCreateIntProperty("biscuit", cfg.CATEGORY_ITEM, 5077).getInt(5077);
-            trailmixID = cfg.getOrCreateIntProperty("trailmix", cfg.CATEGORY_ITEM, 5078).getInt(5078);
-            magiccakeitemID = cfg.getOrCreateIntProperty("magiccake", cfg.CATEGORY_ITEM, 5079).getInt(5079);
-            muttonitemID = cfg.getOrCreateIntProperty("mutton", cfg.CATEGORY_ITEM, 5080).getInt(5080);
-            muttonrawitemID = cfg.getOrCreateIntProperty("rawmutton", cfg.CATEGORY_ITEM, 5081).getInt(5081);
-            muttonwichID = cfg.getOrCreateIntProperty("muttonwich", cfg.CATEGORY_ITEM, 5082).getInt(5082);
-            debugfoodID = cfg.getOrCreateIntProperty("debugfood", cfg.CATEGORY_ITEM, 5083).getInt(5083);
-            bananaID = cfg.getOrCreateIntProperty("banana", cfg.CATEGORY_ITEM, 5084).getInt(5084);
-            bananapeeledID = cfg.getOrCreateIntProperty("bananapeeled", cfg.CATEGORY_ITEM, 5085).getInt(5085);
-            blueberryID = cfg.getOrCreateIntProperty("blueberry", cfg.CATEGORY_ITEM, 5086).getInt(5086);
-            orangeID = cfg.getOrCreateIntProperty("orange", cfg.CATEGORY_ITEM, 5087).getInt(5087);
-            peachID = cfg.getOrCreateIntProperty("peach", cfg.CATEGORY_ITEM, 5088).getInt(5088);
-            pearID = cfg.getOrCreateIntProperty("pear", cfg.CATEGORY_ITEM, 5089).getInt(5089);
-            strawberryID = cfg.getOrCreateIntProperty("strawberry", cfg.CATEGORY_ITEM, 5090).getInt(5090);
+            milkbowlID = cfg.getItem("milkbowl", 5054).getInt(5054);
+            cacaobowlID = cfg.getItem("cacaobowl", 5058).getInt(5058);
+            cheeseID = cfg.getItem("cheese", 5059).getInt(5059);
+            chocolateID = cfg.getItem("chocolate", 5061).getInt(5061);
+            fruitsaladID = cfg.getItem("fruitsalad", 5055).getInt(5055);
+            superfruitsaladID = cfg.getItem("superfruitsalad", 5050).getInt(5050);
+            sugarcubeID = cfg.getItem("sugarcube", 5057).getInt(5057);
+            caramelID = cfg.getItem("caramel", 5062).getInt(5062);
+            caramelappleID = cfg.getItem("caramelapple", 5063).getInt(5063);
+            cookedseedsID = cfg.getItem("cookedseeds", 5056).getInt(5056);
+            friedeggID = cfg.getItem("friedegg", 5051).getInt(5051);
+            pumpkinsoupID = cfg.getItem("pumpkinsoup", 5052).getInt(5052);
+            saladID = cfg.getItem("salad", 5053).getInt(5053);
+            seedsaladID = cfg.getItem("seedsalad", 5064).getInt(5064);
+            jellyID = cfg.getItem("jelly", 5065).getInt(5065);
+            marshmallowID = cfg.getItem("marshmallow", 5066).getInt(5066);
+            cmarshmallowID = cfg.getItem("cmarshmallow", 5067).getInt(5067);
+            icecreamID = cfg.getItem("icecream", 5068).getInt(5068);
+            toastID = cfg.getItem("toast", 5069).getInt(5069);
+            porkwichID = cfg.getItem("porkwich", 5070).getInt(5070);
+            steakwichID = cfg.getItem("steakwich", 5071).getInt(5071);
+            fishwichID = cfg.getItem("fishwich", 5072).getInt(5072);
+            chickenwichID = cfg.getItem("chickenwich", 5073).getInt(5073);
+            eggwichID = cfg.getItem("eggwich", 5074).getInt(5074);
+            applecakeitemID = cfg.getItem("applecake", 5075).getInt(5075);
+            shococakeitemID = cfg.getItem("shococake", 5076).getInt(5076);
+            biscuitID = cfg.getItem("biscuit", 5077).getInt(5077);
+            trailmixID = cfg.getItem("trailmix", 5078).getInt(5078);
+            magiccakeitemID = cfg.getItem("magiccake", 5079).getInt(5079);
+            muttonitemID = cfg.getItem("mutton", 5080).getInt(5080);
+            muttonrawitemID = cfg.getItem("rawmutton", 5081).getInt(5081);
+            muttonwichID = cfg.getItem("muttonwich", 5082).getInt(5082);
+            debugfoodID = cfg.getItem("debugfood", 5083).getInt(5083);
+            bananaID = cfg.getItem("banana", 5084).getInt(5084);
+            bananapeeledID = cfg.getItem("bananapeeled", 5085).getInt(5085);
+            blueberryID = cfg.getItem("blueberry", 5086).getInt(5086);
+            orangeID = cfg.getItem("orange", 5087).getInt(5087);
+            peachID = cfg.getItem("peach", 5088).getInt(5088);
+            pearID = cfg.getItem("pear", 5089).getInt(5089);
+            strawberryID = cfg.getItem("strawberry", 5090).getInt(5090);
 
-            bananasaplingID = cfg.getOrCreateIntProperty("bananasapling", cfg.CATEGORY_ITEM, 5091).getInt(5091);
-            orangesaplingID = cfg.getOrCreateIntProperty("orangesapling", cfg.CATEGORY_ITEM, 5092).getInt(5092);
-            peachsaplingID = cfg.getOrCreateIntProperty("peachsapling", cfg.CATEGORY_ITEM, 5093).getInt(5093);
-            pearsaplingID = cfg.getOrCreateIntProperty("pearsapling", cfg.CATEGORY_ITEM, 5094).getInt(5094);
+            bananasaplingID = cfg.getItem("bananasapling", 5091).getInt(5091);
+            orangesaplingID = cfg.getItem("orangesapling", 5092).getInt(5092);
+            peachsaplingID = cfg.getItem("peachsapling", 5093).getInt(5093);
+            pearsaplingID = cfg.getItem("pearsapling", 5094).getInt(5094);
             
-            blueberryseedID = cfg.getOrCreateIntProperty("blueberryseed", cfg.CATEGORY_ITEM, 5095).getInt(5095);
-            strawberryseedID = cfg.getOrCreateIntProperty("strawberryseed", cfg.CATEGORY_ITEM, 5096).getInt(5096);
+            blueberryseedID = cfg.getItem("blueberryseed", 5095).getInt(5095);
+            strawberryseedID = cfg.getItem("strawberryseed", 5096).getInt(5096);
+            
+            applesaplingID = cfg.getItem("applesapling", 5097).getInt(5097);
+            cherrysaplingID = cfg.getItem("cherrysapling", 5098).getInt(5098);
+            
+			strawberrysmoothieID = cfg.getItem("strawberrysmoothie", 5099).getInt(5099);
+			bananasmoothieID = cfg.getItem("bananasmoothie", 5100).getInt(5100);
+			magicsmoothieID = cfg.getItem("magicsmoothie", 5101).getInt(5101);
+			blueberrysmoothieID = cfg.getItem("blueberrysmoothie", 5102).getInt(5102);
+			melonjuiceID = cfg.getItem("melonjuice", 5103).getInt(5103);
+			orangejuiceID = cfg.getItem("orangejuice", 5104).getInt(5104);
+			applejuiceID = cfg.getItem("applejuice", 5105).getInt(5105);
+			cherryjuiceID = cfg.getItem("cherryjuice", 5106).getInt(5106);
+			pearjuiceID = cfg.getItem("pearjuice", 5107).getInt(5107);
+			peachjuiceID = cfg.getItem("peachjuice", 5108).getInt(5108);
             
             // Blocks
-            ApplecakeBlockID = cfg.getOrCreateIntProperty("Applecake", cfg.CATEGORY_BLOCK, 184).getInt(184);
-            ShococakeBlockID = cfg.getOrCreateIntProperty("Shococake", cfg.CATEGORY_BLOCK, 185).getInt(185);
-            MagiccakeBlockID = cfg.getOrCreateIntProperty("Magiccake", cfg.CATEGORY_BLOCK, 186).getInt(186);
+            ApplecakeBlockID = cfg.getBlock("Applecake", 2230).getInt(2230);
+            ShococakeBlockID = cfg.getBlock("Shococake", 2231).getInt(2231);
+            MagiccakeBlockID = cfg.getBlock("Magiccake", 2232).getInt(2232);
 
-            HayBallBlockID = cfg.getOrCreateIntProperty("Hayball", cfg.CATEGORY_BLOCK, 187).getInt(187);
+            HayBallBlockID = cfg.getBlock("Hayball", 2233).getInt(2233);
             
-            BushBlockID = cfg.getOrCreateIntProperty("Bush", cfg.CATEGORY_BLOCK, 188).getInt(188);
-            LogsBlockID = cfg.getOrCreateIntProperty("Logs", cfg.CATEGORY_BLOCK, 189).getInt(189);
+            BlueberryBushBlockID = cfg.getBlock("BlueberryBush", 2234).getInt(2234);
+            StrawberryBushBlockID = cfg.getBlock("StrawberryBush", 2235).getInt(2235);
             
-            BlueberryBushID = cfg.getOrCreateIntProperty("BlueBerryBush", cfg.CATEGORY_BLOCK, 190).getInt(190);
-            StrawberryBushID = cfg.getOrCreateIntProperty("StrawberryBush", cfg.CATEGORY_BLOCK, 191).getInt(191);
+            BlueberryCropBlockID = cfg.getBlock("BlueBerryCrop", 2236).getInt(2236);
+            StrawberryCropBlockID = cfg.getBlock("StrawberryCrop", 2237).getInt(2237);
             
-            StrawberrycakeBlockID = cfg.getOrCreateIntProperty("Strawberrycake", cfg.CATEGORY_BLOCK, 192).getInt(192);
-            BlueberrycakeBlockID = cfg.getOrCreateIntProperty("Blueberrycake", cfg.CATEGORY_BLOCK, 193).getInt(193);
+            StrawberrycakeBlockID = cfg.getBlock("Strawberrycake", 2238).getInt(2238);
+            BlueberrycakeBlockID = cfg.getBlock("Blueberrycake", 2239).getInt(2239);
             
             // Options
-            DebugMode = cfg.getOrCreateBooleanProperty("Debug", cfg.CATEGORY_GENERAL, false).getBoolean(false);
+            DebugMode = cfg.get(cfg.CATEGORY_GENERAL, "Debug", false).getBoolean(false);
             
-        } catch (Exception e) {
+        } 
+        catch (Exception e)
+        {
             FMLLog.log(Level.SEVERE, e, "UsefulFood has a problem loading it's configuration");
-        } finally {
+        } 
+        finally 
+        {
             cfg.save();
         }
     }
-
 }

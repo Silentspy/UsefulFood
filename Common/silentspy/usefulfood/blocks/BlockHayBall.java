@@ -14,6 +14,7 @@ public class BlockHayBall extends Block{
 	public BlockHayBall(int var1) {
 		super(var1, Material.cloth);
 		this.setCreativeTab(CreativeTabs.tabFood);
+		this.setBurnProperties(var1, 50, 100);
 	}
 	
 	public int getBlockTextureFromSide(int par1)
@@ -39,16 +40,5 @@ public class BlockHayBall extends Block{
 	public String getTextureFile()
     {
         return mod_usefulfood.blocktextures;
-    }
-	
-	public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, int face)
-    {
-    	return 50;
-    }
-	
-	public static void setBurnProperties(int id, int encouragement, int flammability)
-    {
-    	encouragement = 50;
-        flammability = 100;
     }
 }

@@ -54,9 +54,22 @@ public class ClientProxy extends CommonProxy
         LanguageRegistry.addName(UsefulFoodContent.peach, "Peach");
         LanguageRegistry.addName(UsefulFoodContent.pear, "Pear");
         LanguageRegistry.addName(UsefulFoodContent.strawberry, "Strawberry");
-        LanguageRegistry.addName(UsefulFoodContent.bush, "Bush");
+        LanguageRegistry.addName(UsefulFoodContent.blueberrybush, "Blueberry Bush");
+        LanguageRegistry.addName(UsefulFoodContent.strawberrybush, "Strawberry Bush");
         LanguageRegistry.addName(UsefulFoodContent.blueberryseed, "Blueberry Seed");
         LanguageRegistry.addName(UsefulFoodContent.strawberryseed, "Strawberry Seed");
+        
+        LanguageRegistry.addName(UsefulFoodContent.strawberrysmoothie, "Strawberry Smoothie");
+        LanguageRegistry.addName(UsefulFoodContent.bananasmoothie, "Banana Smoothie");
+        LanguageRegistry.addName(UsefulFoodContent.magicsmoothie, "Magic Smoothie");
+        LanguageRegistry.addName(UsefulFoodContent.blueberrysmoothie, "Blueberry Smoothie");
+        
+        LanguageRegistry.addName(UsefulFoodContent.melonjuice, "Melon Juice");
+        LanguageRegistry.addName(UsefulFoodContent.orangejuice, "Orange Juice");
+        LanguageRegistry.addName(UsefulFoodContent.applejuice, "Apple Juice");
+        LanguageRegistry.addName(UsefulFoodContent.cherryjuice, "Cherry Juice");
+        LanguageRegistry.addName(UsefulFoodContent.pearjuice, "Pear Juice");
+        LanguageRegistry.addName(UsefulFoodContent.peachjuice, "Peach Juice");
         
     }
 	

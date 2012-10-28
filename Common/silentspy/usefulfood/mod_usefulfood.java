@@ -18,7 +18,7 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-@Mod(modid = "silentspy_usefulfood", name = "UsefulFood", version = "1.2.0")
+@Mod(modid = "UsefulFood", name = "UsefulFood", version = "1.2.0")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class mod_usefulfood
 {

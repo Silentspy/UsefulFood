@@ -38,10 +38,7 @@ public class UsefulFoodEvents
     		
     		if(metadata < 3)
     		{
-    			if(event.world.setBlockMetadata(event.X, event.Y, event.Z, 3)) 
-    			{
-    				event.setHandeled();
-    			}
+    			event.world.setBlockMetadata(event.X, event.Y, event.Z, 3);
     		}
     	}
     }

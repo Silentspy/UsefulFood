@@ -7,11 +7,16 @@
   "mcversion": "1.3.2",
   "url": "http://www.silentspy.net/usefulfood",
   "updateUrl": "",
+  "authors": [
+  "Silentspy",
+  "Bockwurst"
+  ],
   "credits": "Mod by Silentspy and Bockwurst",
-  "authors": ["Silentspy","Bockwurst"],
   "logoFile": "silentspy/usefulfood/usefulfood.png",
-  "screenshots": [],
+  "screenshots": [
+  ],
   "parent":"",
-  "dependencies": []
+  "dependencies": [
+  ]
 }
 ]

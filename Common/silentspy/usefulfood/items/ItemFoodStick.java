@@ -14,9 +14,9 @@ public class ItemFoodStick extends ItemUsefulFood
         this.setMaxStackSize(1);
     }
 
-    public ItemStack onFoodEaten(ItemStack var1, World var2, EntityPlayer var3)
+    public ItemStack onFoodEaten(ItemStack itemstack, World world, EntityPlayer player)
     {
-        super.onFoodEaten(var1, var2, var3);
+        super.onFoodEaten(itemstack, world, player);
         return new ItemStack(Item.stick);
     }
 }

@@ -31,14 +31,16 @@ public class WorldGenerator implements IWorldGenerator {
     private void generateSurface(World world, Random random, int blockX, int blockZ)
 	{
     	int Xcoord = blockX + random.nextInt(16);
+    	int Ycoord = world.getHeightValue(blockX, blockZ);
     	int Zcoord = blockZ + random.nextInt(16);
     	
     	// Generate Blueberry Bush
-    	WorldGenBush.generate(world, random, blockX, blockZ, 0);
-    	// Generate Strawberry Bush
-    	WorldGenBush.generate(world, random, blockX, blockZ, 1);
+    	WorldGenBush.generate(world, random, blockX, Ycoord, blockZ, UsefulFoodContent.blueberrybush.blockID);
     	
-    	(new WorldGenAppleTree(Tutorial.oreblock.blockID, 10)).generate(world, random, Xcoord, Ycoord, Zcoord);
+    	// Generate Strawberry Bush
+    	WorldGenBush.generate(world, random, blockX, Ycoord, blockZ, UsefulFoodContent.strawberrybush.blockID);
+    	
+    	(new WorldGenAppleTree()).generate(world, random, Xcoord, Ycoord, Zcoord);
 	}
     
     public void generateNether(World world, Random random, int chunkX, int chunkZ)

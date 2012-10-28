@@ -6,18 +6,22 @@ import cpw.mods.fml.common.Side;
 import cpw.mods.fml.common.asm.SideOnly;
 import net.minecraft.src.*;
 
-public class ItemPumpkinsoup extends Item
+public class ItemJuice extends Item
 {
-	int foodlevel;
 	
-    public ItemPumpkinsoup(int var1, int var2)
-    {
-        super(var1);
+	int foodlevel;
+	float saturation;
+	
+	public ItemJuice(int id, int var2, float var3) 
+	{
+		super(id);
         this.setMaxStackSize(1);
+        this.setCreativeTab(CreativeTabs.tabFood);
         this.setTextureFile(mod_usefulfood.itemtextures);
         this.foodlevel = var2;
-    }
-
+        this.saturation = var3;
+	}
+	
     public ItemStack onFoodEaten(ItemStack itemstack, World world, EntityPlayer player)
     {
         if (!player.capabilities.isCreativeMode)
@@ -27,11 +31,11 @@ public class ItemPumpkinsoup extends Item
 
         if (!world.isRemote)
         {
-			player.getFoodStats().addStats(foodlevel, 0);
+            player.getFoodStats().addStats(foodlevel, saturation);
         	
         }
 
-        return itemstack.stackSize <= 0 ? new ItemStack(Item.bowlEmpty) : itemstack;
+        return itemstack.stackSize <= 0 ? new ItemStack(Item.glassBottle) : itemstack;
     }
 
     /**
@@ -58,5 +62,5 @@ public class ItemPumpkinsoup extends Item
     	player.setItemInUse(itemstack, this.getMaxItemUseDuration(itemstack));
         return itemstack;
     }
-    
+
 }
