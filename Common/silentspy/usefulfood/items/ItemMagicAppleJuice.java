@@ -33,7 +33,7 @@ public class ItemMagicAppleJuice extends ItemJuice{
             player.addPotionEffect(new PotionEffect(Potion.regeneration.id, 600, 3));
             player.addPotionEffect(new PotionEffect(Potion.resistance.id, 6000, 0));
             player.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 6000, 0));
-            player.addPotionEffect(new PotionEffect(Potion.digSpeed.id, 600, 0));
+            player.addPotionEffect(new PotionEffect(Potion.digSpeed.id, 400, 0));
         }
 
         return itemstack.stackSize <= 0 ? new ItemStack(Item.glassBottle) : itemstack;

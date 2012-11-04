@@ -32,7 +32,7 @@ public class ItemJuice extends Item
         if (!world.isRemote)
         {
             player.getFoodStats().addStats(foodlevel, saturation);
-        	
+            player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 100, 0));
         }
 
         return itemstack.stackSize <= 0 ? new ItemStack(Item.glassBottle) : itemstack;
