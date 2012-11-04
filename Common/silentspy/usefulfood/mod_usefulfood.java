@@ -52,6 +52,6 @@ public class mod_usefulfood
         FMLLog.fine("[UsefulFood] mod_usefulfood recipes initialized");
         //MinecraftForge.addGrassSeed(new ItemStack(UsefulFoodContent.strawberryseed, 1, 0), 10);
         proxy.addNames();
-        GameRegistry.registerWorldGenerator(new silentspy.usefulfood.world.WorldGenerator());
+        // GameRegistry.registerWorldGenerator(new silentspy.usefulfood.world.WorldGenerator());
     }
 }

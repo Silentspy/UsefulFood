@@ -12,9 +12,9 @@ public class UsefulFoodConfig
 	
 	// items
     static int milkbowlID;
-    static int cacaobowlID;
-    static int cheeseID;
     static int chocolateID;
+    static int cheeseID;
+    static int chocolatecandyID;
     static int fruitsaladID;
     static int superfruitsaladID;
     static int sugarcubeID;
@@ -44,6 +44,8 @@ public class UsefulFoodConfig
     static int muttonrawitemID;
     static int muttonwichID;
     static int debugfoodID;
+    
+    /*
     static int bananaID;
     static int bananapeeledID;
     static int blueberryID;
@@ -62,17 +64,21 @@ public class UsefulFoodConfig
     static int blueberryseedID;
     static int strawberryseedID;
     
-    static int strawberrysmoothieID;
-    static int bananasmoothieID;
-    static int magicsmoothieID;
-    static int blueberrysmoothieID;
-    static int melonjuiceID;
-    static int orangejuiceID;
-    static int applejuiceID;
-    static int cherryjuiceID;
-    static int pearjuiceID;
-    static int peachjuiceID;
+    */
     
+    // static int strawberrysmoothieID;
+    // static int bananasmoothieID;
+    static int magicapplejuiceID;
+    // static int blueberrysmoothieID;
+    static int melonjuiceID;
+    // static int orangejuiceID;
+    static int applejuiceID;
+    // static int cherryjuiceID;
+    // static int pearjuiceID;
+    // static int peachjuiceID;
+    
+    
+    /*
     static int strawberrycakeID;
     static int blueberrycakeID;
     static int bananacakeID;
@@ -80,17 +86,29 @@ public class UsefulFoodConfig
     static int peachcakeID;
     static int pearcakeID;
     static int cherrycakeID;
+    */
     
     static int sushiID;
     static int squidtentacleID;
     static int cookedsquidtentacleID;
     static int squidwichID;
     static int carrotsoupID;
+    static int carrotjuiceID;
+    static int pumpkinbreadID;
+    static int fishnchipsID;
+    static int sugarbiscuitID;
+    static int applebiscuitID;
+    static int chocobiscuitID;
+    static int carrotpieID;
+    static int hotchocolateID;
+    static int chocolateicecreamID;
     
     // blocks
     static int ApplecakeBlockID;
-    static int ShococakeBlockID;
+    static int ChococakeBlockID;
     static int MagiccakeBlockID;
+    
+    /*
     static int StrawberrycakeBlockID;
     static int BlueberrycakeBlockID;
     static int BananacakeBlockID;
@@ -98,16 +116,21 @@ public class UsefulFoodConfig
     static int PearcakeBlockID;
     static int PeachcakeBlockID;
     static int CherrycakeBlockID;
-     
+    */
+    
     static int HayBallBlockID;
     
+    /*
     static int BlueberryBushBlockID;
     static int StrawberryBushBlockID;
     
     static int BlueberryCropBlockID;
     static int StrawberryCropBlockID;
+    */
     
     public static boolean DebugMode;
+    
+    /*
     public static boolean GenerateAppleTree;
     public static boolean GenerateBananaTree;
     public static boolean GenerateCherryTree;
@@ -116,6 +139,7 @@ public class UsefulFoodConfig
     public static boolean GeneratePearTree;
 	public static boolean GenerateStrawberryBush;
 	public static boolean GenerateBlueberryBush;
+	*/
     
     public static void Properties(FMLPreInitializationEvent event) 
     {
@@ -144,9 +168,9 @@ public class UsefulFoodConfig
             
             // Items
             milkbowlID = cfg.getItem("milkbowl", 5054).getInt(5054);
-            cacaobowlID = cfg.getItem("cacaobowl", 5058).getInt(5058);
+            chocolateID = cfg.getItem("chocolate", 5058).getInt(5058);
             cheeseID = cfg.getItem("cheese", 5059).getInt(5059);
-            chocolateID = cfg.getItem("chocolate", 5061).getInt(5061);
+            chocolatecandyID = cfg.getItem("chocolatecandy", 5061).getInt(5061);
             fruitsaladID = cfg.getItem("fruitsalad", 5055).getInt(5055);
             superfruitsaladID = cfg.getItem("superfruitsalad", 5050).getInt(5050);
             sugarcubeID = cfg.getItem("sugarcube", 5057).getInt(5057);
@@ -176,6 +200,7 @@ public class UsefulFoodConfig
             muttonrawitemID = cfg.getItem("rawmutton", 5081).getInt(5081);
             muttonwichID = cfg.getItem("muttonwich", 5082).getInt(5082);
             debugfoodID = cfg.getItem("debugfood", 5083).getInt(5083);
+            /*
             bananaID = cfg.getItem("banana", 5084).getInt(5084);
             bananapeeledID = cfg.getItem("bananapeeled", 5085).getInt(5085);
             blueberryID = cfg.getItem("blueberry", 5086).getInt(5086);
@@ -183,8 +208,9 @@ public class UsefulFoodConfig
             peachID = cfg.getItem("peach", 5088).getInt(5088);
             pearID = cfg.getItem("pear", 5089).getInt(5089);
             strawberryID = cfg.getItem("strawberry", 5090).getInt(5090);
+            */
 
-            bananasaplingID = cfg.getItem("bananasapling", 5091).getInt(5091);
+            /* bananasaplingID = cfg.getItem("bananasapling", 5091).getInt(5091);
             orangesaplingID = cfg.getItem("orangesapling", 5092).getInt(5092);
             peachsaplingID = cfg.getItem("peachsapling", 5093).getInt(5093);
             pearsaplingID = cfg.getItem("pearsapling", 5094).getInt(5094);
@@ -194,18 +220,20 @@ public class UsefulFoodConfig
             
             applesaplingID = cfg.getItem("applesapling", 5097).getInt(5097);
             cherrysaplingID = cfg.getItem("cherrysapling", 5098).getInt(5098);
+            */
             
-			strawberrysmoothieID = cfg.getItem("strawberrysmoothie", 5099).getInt(5099);
-			bananasmoothieID = cfg.getItem("bananasmoothie", 5100).getInt(5100);
-			magicsmoothieID = cfg.getItem("magicsmoothie", 5101).getInt(5101);
-			blueberrysmoothieID = cfg.getItem("blueberrysmoothie", 5102).getInt(5102);
+			// strawberrysmoothieID = cfg.getItem("strawberrysmoothie", 5099).getInt(5099);
+			// bananasmoothieID = cfg.getItem("bananasmoothie", 5100).getInt(5100);
+			magicapplejuiceID = cfg.getItem("magicapplejuice", 5101).getInt(5101);
+			// blueberrysmoothieID = cfg.getItem("blueberrysmoothie", 5102).getInt(5102);
 			melonjuiceID = cfg.getItem("melonjuice", 5103).getInt(5103);
-			orangejuiceID = cfg.getItem("orangejuice", 5104).getInt(5104);
+			// orangejuiceID = cfg.getItem("orangejuice", 5104).getInt(5104);
 			applejuiceID = cfg.getItem("applejuice", 5105).getInt(5105);
-			cherryjuiceID = cfg.getItem("cherryjuice", 5106).getInt(5106);
-			pearjuiceID = cfg.getItem("pearjuice", 5107).getInt(5107);
-			peachjuiceID = cfg.getItem("peachjuice", 5108).getInt(5108);
+			// cherryjuiceID = cfg.getItem("cherryjuice", 5106).getInt(5106);
+			// pearjuiceID = cfg.getItem("pearjuice", 5107).getInt(5107);
+			// peachjuiceID = cfg.getItem("peachjuice", 5108).getInt(5108);
 			
+			/*
 		    strawberrycakeID = cfg.getItem("strawberrycake", 5109).getInt(5109);
 		    blueberrycakeID = cfg.getItem("blueberrycake", 5110).getInt(5110);
 		    bananacakeID = cfg.getItem("bananacake", 5111).getInt(5111);
@@ -213,26 +241,40 @@ public class UsefulFoodConfig
 		    peachcakeID = cfg.getItem("peachcake", 5113).getInt(5113);
 		    pearcakeID = cfg.getItem("pearcake", 5114).getInt(5114);
 		    cherrycakeID = cfg.getItem("cherrycake", 5115).getInt(5115);
+			*/
+			
 		    sushiID = cfg.getItem("sushi", 5116).getInt(5116);
 		    squidtentacleID = cfg.getItem("squidtentacle", 5117).getInt(5117);
 		    cookedsquidtentacleID = cfg.getItem("cookedsquidtentacle", 5118).getInt(5118);
 		    squidwichID = cfg.getItem("squidwich", 5119).getInt(5119);
 		    carrotsoupID = cfg.getItem("carrotsoup", 5120).getInt(5120);
+		    carrotjuiceID = cfg.getItem("carrotjuice", 5121).getInt(5121);
+		    pumpkinbreadID = cfg.getItem("pumpkinbread", 5122).getInt(5122);
+		    fishnchipsID = cfg.getItem("fishnchips", 5123).getInt(5123);
+		    sugarbiscuitID = cfg.getItem("sugarbiscuit", 5124).getInt(5124);
+		    applebiscuitID = cfg.getItem("applebiscuit", 5125).getInt(5125);
+		    chocobiscuitID = cfg.getItem("chocobiscuit", 5126).getInt(5126);
+		    carrotpieID = cfg.getItem("carrotpie", 5127).getInt(5127);
+		    hotchocolateID = cfg.getItem("hotchocolate", 5128).getInt(5128);
+		    chocolateicecreamID = cfg.getItem("chocolateicecream", 5129).getInt(5129);
+		    
             
             // Blocks
             ApplecakeBlockID = cfg.getBlock("Applecake", 2230).getInt(2230);
-            ShococakeBlockID = cfg.getBlock("Shococake", 2231).getInt(2231);
+            ChococakeBlockID = cfg.getBlock("Chococake", 2231).getInt(2231);
             MagiccakeBlockID = cfg.getBlock("Magiccake", 2232).getInt(2232);
 
             HayBallBlockID = cfg.getBlock("Hayball", 2233).getInt(2233);
             
+            /*
             BlueberryBushBlockID = cfg.getBlock("BlueberryBush", 2234).getInt(2234);
             StrawberryBushBlockID = cfg.getBlock("StrawberryBush", 2235).getInt(2235);
             
             BlueberryCropBlockID = cfg.getBlock("BlueBerryCrop", 2236).getInt(2236);
             StrawberryCropBlockID = cfg.getBlock("StrawberryCrop", 2237).getInt(2237);
+            */
             
-            BlueberrycakeBlockID = cfg.getBlock("Bananacake", 2238).getInt(2238);
+            /* BlueberrycakeBlockID = cfg.getBlock("Bananacake", 2238).getInt(2238);
             StrawberrycakeBlockID = cfg.getBlock("Strawberrycake", 2239).getInt(2239);
             BananacakeBlockID = cfg.getBlock("Bananacake", 2240).getInt(2240);
             OrangecakeBlockID = cfg.getBlock("Orangecake", 2241).getInt(2241);
@@ -240,16 +282,17 @@ public class UsefulFoodConfig
             PeachcakeBlockID = cfg.getBlock("Peachcake", 2243).getInt(2243);
             CherrycakeBlockID = cfg.getBlock("Cherrycake", 2244).getInt(2244);
             
+            */
             // Options
             DebugMode = cfg.get(cfg.CATEGORY_GENERAL, "Debug", false).getBoolean(false);
-			GenerateAppleTree = cfg.get(cfg.CATEGORY_GENERAL, "GenerateAppleTree", true).getBoolean(true);
+			/* GenerateAppleTree = cfg.get(cfg.CATEGORY_GENERAL, "GenerateAppleTree", true).getBoolean(true);
             GenerateBananaTree = cfg.get(cfg.CATEGORY_GENERAL, "GenerateBananaTree", true).getBoolean(true);
             GenerateCherryTree = cfg.get(cfg.CATEGORY_GENERAL, "GenerateCherryTree", true).getBoolean(true);
             GenerateOrangeTree = cfg.get(cfg.CATEGORY_GENERAL, "GenerateOrangeTree", true).getBoolean(true);
             GeneratePeachTree = cfg.get(cfg.CATEGORY_GENERAL, "GeneratePeachTree", true).getBoolean(true);
             GeneratePearTree = cfg.get(cfg.CATEGORY_GENERAL, "GeneratePearTree", true).getBoolean(true);
 			GenerateStrawberryBush = cfg.get(cfg.CATEGORY_GENERAL, "GenerateStrawberryBush", true).getBoolean(true);
-			GenerateBlueberryBush = cfg.get(cfg.CATEGORY_GENERAL, "GenerateBlueberryBush", true).getBoolean(true);
+			GenerateBlueberryBush = cfg.get(cfg.CATEGORY_GENERAL, "GenerateBlueberryBush", true).getBoolean(true); */
         } 
         catch (Exception e)
         {

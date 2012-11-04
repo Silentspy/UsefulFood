@@ -6,13 +6,18 @@ import cpw.mods.fml.common.Side;
 import cpw.mods.fml.common.asm.SideOnly;
 import net.minecraft.src.*;
 
-public class ItemMilkbowl extends Item
+public class ItemCarrotSoup extends Item
 {
-    public ItemMilkbowl(int var1)
+	int foodlevel;
+	float saturation;
+	
+    public ItemCarrotSoup(int var1, int var2, float var3)
     {
         super(var1);
+        this.setMaxStackSize(1);
         this.setTextureFile(mod_usefulfood.itemtextures);
-        this.setCreativeTab(CreativeTabs.tabFood);
+        this.foodlevel = var2;
+        this.saturation = var3;
     }
 
     public ItemStack onFoodEaten(ItemStack itemstack, World world, EntityPlayer player)
@@ -24,8 +29,7 @@ public class ItemMilkbowl extends Item
 
         if (!world.isRemote)
         {
-			player.curePotionEffects(itemstack);
-			player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 100, 0));
+			player.getFoodStats().addStats(foodlevel, 0);
         }
 
         return itemstack.stackSize <= 0 ? new ItemStack(Item.bowlEmpty) : itemstack;
@@ -55,4 +59,5 @@ public class ItemMilkbowl extends Item
     	player.setItemInUse(itemstack, this.getMaxItemUseDuration(itemstack));
         return itemstack;
     }
+    
 }

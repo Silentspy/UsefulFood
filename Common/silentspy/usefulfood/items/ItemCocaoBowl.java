@@ -1,17 +1,25 @@
 package silentspy.usefulfood.items;
 
-import silentspy.usefulfood.*;
+import net.minecraft.src.CreativeTabs;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.EnumAction;
+import net.minecraft.src.Item;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.World;
+import silentspy.usefulfood.mod_usefulfood;
 
-import cpw.mods.fml.common.Side;
-import cpw.mods.fml.common.asm.SideOnly;
-import net.minecraft.src.*;
-
-public class ItemMilkbowl extends Item
-{
-    public ItemMilkbowl(int var1)
+public class ItemCocaoBowl extends Item {
+	
+int foodlevel;
+float saturation;
+	
+    public ItemCocaoBowl(int var1, int var2, float var3)
     {
         super(var1);
+        this.setMaxStackSize(1);
         this.setTextureFile(mod_usefulfood.itemtextures);
+        this.foodlevel = var2;
+        this.saturation = var3;
         this.setCreativeTab(CreativeTabs.tabFood);
     }
 
@@ -24,8 +32,8 @@ public class ItemMilkbowl extends Item
 
         if (!world.isRemote)
         {
-			player.curePotionEffects(itemstack);
-			player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 100, 0));
+			player.getFoodStats().addStats(foodlevel, saturation);
+        	
         }
 
         return itemstack.stackSize <= 0 ? new ItemStack(Item.bowlEmpty) : itemstack;
@@ -55,4 +63,5 @@ public class ItemMilkbowl extends Item
     	player.setItemInUse(itemstack, this.getMaxItemUseDuration(itemstack));
         return itemstack;
     }
+
 }

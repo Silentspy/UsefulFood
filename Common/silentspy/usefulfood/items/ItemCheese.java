@@ -11,21 +11,17 @@ public class ItemCheese extends ItemFood
 	public ItemCheese(int var1, int var2, float var3, boolean var4)
     {
         super(var1, var2, var3, var4);
+        this.setTextureFile(mod_usefulfood.itemtextures);
     }
 	
-	public String getTextureFile()
+	public ItemStack onFoodEaten(ItemStack itemstack, World world, EntityPlayer player)
     {
-		return mod_usefulfood.itemtextures;
-    }
-	
-	public ItemStack onFoodEaten(ItemStack var1, World var2, EntityPlayer var3)
-    {
-        super.onFoodEaten(var1, var2, var3);
-        var1.stackSize--;
-    	if (!var2.isRemote)
+        super.onFoodEaten(itemstack, world, player);
+        itemstack.stackSize--;
+    	if (!world.isRemote)
         {
-    	    var3.clearActivePotions();
+    	    player.curePotionEffects(itemstack);
         }
-		return var1;
+		return itemstack;
     }
 }

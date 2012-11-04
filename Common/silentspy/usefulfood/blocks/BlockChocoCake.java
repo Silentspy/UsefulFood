@@ -8,9 +8,9 @@ import cpw.mods.fml.common.Side;
 import cpw.mods.fml.common.asm.SideOnly;
 import net.minecraft.src.*;
 
-public class BlockShocoCake extends BlockCake
+public class BlockChocoCake extends BlockCake
 {
-    public BlockShocoCake(int var1)
+    public BlockChocoCake(int var1)
     {
         super(var1, 0);
         this.setTickRandomly(true);
@@ -49,6 +49,6 @@ public class BlockShocoCake extends BlockCake
     
     public int idPicked(World par1World, int par2, int par3, int par4)
     {
-        return UsefulFoodContent.shococakeitem.shiftedIndex;
+        return UsefulFoodContent.chococakeitem.shiftedIndex;
     }
 }

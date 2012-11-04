@@ -1,6 +1,7 @@
 package silentspy.usefulfood;
 
 import cpw.mods.fml.common.registry.LanguageRegistry;
+import net.minecraft.src.Item;
 import net.minecraftforge.client.MinecraftForgeClient;
 
 public class ClientProxy extends CommonProxy
@@ -8,9 +9,9 @@ public class ClientProxy extends CommonProxy
     public void addNames () 
     {
         LanguageRegistry.addName(UsefulFoodContent.milkbowl, "Milk");
-        LanguageRegistry.addName(UsefulFoodContent.cacaobowl, "Cocoa");
+        LanguageRegistry.addName(UsefulFoodContent.chocolate, "Chocolate");
         LanguageRegistry.addName(UsefulFoodContent.cheese, "Cheese");
-        LanguageRegistry.addName(UsefulFoodContent.chocolate, "Chocolatecandy");
+        LanguageRegistry.addName(UsefulFoodContent.chocolatecandy, "Chocolate Candy");
         LanguageRegistry.addName(UsefulFoodContent.fruitsalad, "Fruitsalad");
         LanguageRegistry.addName(UsefulFoodContent.superfruitsalad, "Magic Fruitsalad");
         LanguageRegistry.addName(UsefulFoodContent.sugarcube, "Sugarcube");
@@ -24,7 +25,7 @@ public class ClientProxy extends CommonProxy
         LanguageRegistry.addName(UsefulFoodContent.jelly, "Jelly");
         LanguageRegistry.addName(UsefulFoodContent.marshmallow, "Marshmallow");
         LanguageRegistry.addName(UsefulFoodContent.cmarshmallow, "Roasted Marshmallow");
-        LanguageRegistry.addName(UsefulFoodContent.icecream, "Icecream");
+        LanguageRegistry.addName(UsefulFoodContent.icecream, "Vanilla Ice cream");
         LanguageRegistry.addName(UsefulFoodContent.toast, "Breadslice");
         LanguageRegistry.addName(UsefulFoodContent.porkwich, "Porkchop Sandwich");
         LanguageRegistry.addName(UsefulFoodContent.steakwich, "Steak Sandwich");
@@ -33,9 +34,9 @@ public class ClientProxy extends CommonProxy
         LanguageRegistry.addName(UsefulFoodContent.eggwich, "Egg Sandwich");
         LanguageRegistry.addName(UsefulFoodContent.applecake, "Apple Cake");
         LanguageRegistry.addName(UsefulFoodContent.applecakeitem, "Apple Cake");
-        LanguageRegistry.addName(UsefulFoodContent.shococake, "Chocolate Cake");
-        LanguageRegistry.addName(UsefulFoodContent.shococakeitem, "Chocolate Cake");
-        LanguageRegistry.addName(UsefulFoodContent.biscuit, "biscuit");
+        LanguageRegistry.addName(UsefulFoodContent.chococake, "Chocolate Cake");
+        LanguageRegistry.addName(UsefulFoodContent.chococakeitem, "Chocolate Cake");
+        LanguageRegistry.addName(UsefulFoodContent.biscuit, "Biscuit");
         LanguageRegistry.addName(UsefulFoodContent.trailmix, "Trail Mix");
         LanguageRegistry.addName(UsefulFoodContent.magiccake, "Magic Cake");
         LanguageRegistry.addName(UsefulFoodContent.magiccakeitem, "Magic Cake");
@@ -47,6 +48,7 @@ public class ClientProxy extends CommonProxy
         {
             LanguageRegistry.addName(UsefulFoodContent.debugfood, "Debug Food");
         }
+        /*
         LanguageRegistry.addName(UsefulFoodContent.banana, "Banana");
         LanguageRegistry.addName(UsefulFoodContent.bananapeeled, "Peeled Banana");
         LanguageRegistry.addName(UsefulFoodContent.blueberry, "Blueberry");
@@ -61,15 +63,30 @@ public class ClientProxy extends CommonProxy
         
         LanguageRegistry.addName(UsefulFoodContent.strawberrysmoothie, "Strawberry Smoothie");
         LanguageRegistry.addName(UsefulFoodContent.bananasmoothie, "Banana Smoothie");
-        LanguageRegistry.addName(UsefulFoodContent.magicsmoothie, "Magic Smoothie");
-        LanguageRegistry.addName(UsefulFoodContent.blueberrysmoothie, "Blueberry Smoothie");
+        */
         
+        LanguageRegistry.addName(UsefulFoodContent.magicapplejuice, "Magic Apple Juice");
+        //LanguageRegistry.addName(UsefulFoodContent.blueberrysmoothie, "Blueberry Smoothie");
         LanguageRegistry.addName(UsefulFoodContent.melonjuice, "Melon Juice");
-        LanguageRegistry.addName(UsefulFoodContent.orangejuice, "Orange Juice");
+        //LanguageRegistry.addName(UsefulFoodContent.orangejuice, "Orange Juice");
         LanguageRegistry.addName(UsefulFoodContent.applejuice, "Apple Juice");
-        LanguageRegistry.addName(UsefulFoodContent.cherryjuice, "Cherry Juice");
-        LanguageRegistry.addName(UsefulFoodContent.pearjuice, "Pear Juice");
-        LanguageRegistry.addName(UsefulFoodContent.peachjuice, "Peach Juice");
+        //LanguageRegistry.addName(UsefulFoodContent.cherryjuice, "Cherry Juice");
+        //LanguageRegistry.addName(UsefulFoodContent.pearjuice, "Pear Juice");
+        //LanguageRegistry.addName(UsefulFoodContent.peachjuice, "Peach Juice");
+        LanguageRegistry.addName(UsefulFoodContent.carrotjuice, "Carrot Juice");
+        LanguageRegistry.addName(UsefulFoodContent.sushi, "Sushi");
+        LanguageRegistry.addName(UsefulFoodContent.squidtentacle, "Squid Tentacle");
+        LanguageRegistry.addName(UsefulFoodContent.cookedsquidtentacle, "Cooked Squid Tentacle");
+        LanguageRegistry.addName(UsefulFoodContent.squidwich, "Squid Sandwich");
+        LanguageRegistry.addName(UsefulFoodContent.carrotsoup, "Carrot Soup");
+        LanguageRegistry.addName(UsefulFoodContent.pumpkinbread, "Pumpkin Bread");
+        LanguageRegistry.addName(UsefulFoodContent.fishnchips, "Fish N' Chips");
+        LanguageRegistry.addName(UsefulFoodContent.sugarbiscuit, "Sugar Biscuit");
+        LanguageRegistry.addName(UsefulFoodContent.applebiscuit, "Apple Biscuit");
+        LanguageRegistry.addName(UsefulFoodContent.chocobiscuit, "Chocolate Biscuit");
+        LanguageRegistry.addName(UsefulFoodContent.carrotpie, "Carrot Pie");
+        LanguageRegistry.addName(UsefulFoodContent.hotchocolate, "Hot Chocolate");
+        LanguageRegistry.addName(UsefulFoodContent.chocolateicecream, "Chocolate Ice cream");
         
     }
 	

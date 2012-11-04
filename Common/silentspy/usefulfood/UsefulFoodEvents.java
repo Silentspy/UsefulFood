@@ -27,10 +27,21 @@ public class UsefulFoodEvents
                     }
                 }
             }
+        } 
+        else if(event.entity instanceof EntitySquid) 
+        {
+        	Random random = new Random();
+            int itemcount = 1 + random.nextInt(4);
+            
+                if(event.entityLiving.isBurning()){
+                    event.drops.add(new EntityItem(event.entityLiving.worldObj, event.entityLiving.posX, event.entityLiving.posY, event.entityLiving.posZ, new ItemStack(UsefulFoodContent.cookedsquidtentacle, itemcount)));
+                } else {
+                    event.drops.add(new EntityItem(event.entityLiving.worldObj, event.entityLiving.posX, event.entityLiving.posY, event.entityLiving.posZ, new ItemStack(UsefulFoodContent.squidtentacle, itemcount)));
+                }
         }
     }
     
-    @ForgeSubscribe
+    /* @ForgeSubscribe
     public void BonemealEvent(BonemealEvent event)
     {	
     	if(event.ID == UsefulFoodContent.blueberrycrop.blockID || event.ID == UsefulFoodContent.strawberrycrop.blockID) {
@@ -41,5 +52,5 @@ public class UsefulFoodEvents
     			event.world.setBlockMetadata(event.X, event.Y, event.Z, 3);
     		}
     	}
-    }
+    } */
 }
