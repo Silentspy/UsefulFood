@@ -1,17 +1,11 @@
 package silentspy.usefulfood.items;
 
-import silentspy.usefulfood.*;
+import net.minecraft.src.ItemFood;
+import silentspy.usefulfood.mod_usefulfood;
 
-import cpw.mods.fml.common.Side;
-import cpw.mods.fml.common.asm.SideOnly;
-import cpw.mods.fml.common.registry.LanguageRegistry;
-import net.minecraft.src.*;
-
-public class ItemUsefulFood extends ItemFood
-{
-	public ItemUsefulFood(int var1, int var2, float var3, boolean var4)
-    {
-        super(var1, var2, var3, var4);
-        this.setTextureFile(mod_usefulfood.itemtextures);
-    }
+public class ItemUsefulFood extends ItemFood {
+	public ItemUsefulFood(int var1, int var2, float var3, boolean var4) {
+		super(var1, var2, var3, var4);
+		this.setTextureFile(mod_usefulfood.itemtextures);
+	}
 }

@@ -1,62 +1,60 @@
 package silentspy.usefulfood.items;
 
-import silentspy.usefulfood.*;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.EnumAction;
+import net.minecraft.src.Item;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.World;
+import silentspy.usefulfood.mod_usefulfood;
 
-import cpw.mods.fml.common.Side;
-import cpw.mods.fml.common.asm.SideOnly;
-import net.minecraft.src.*;
-
-public class ItemPumpkinsoup extends Item
-{
+public class ItemPumpkinsoup extends Item {
 	int foodlevel;
-	
-    public ItemPumpkinsoup(int var1, int var2)
-    {
-        super(var1);
-        this.setMaxStackSize(1);
-        this.setTextureFile(mod_usefulfood.itemtextures);
-        this.foodlevel = var2;
-    }
 
-    public ItemStack onFoodEaten(ItemStack itemstack, World world, EntityPlayer player)
-    {
-        if (!player.capabilities.isCreativeMode)
-        {
-            --itemstack.stackSize;
-        }
+	public ItemPumpkinsoup(int var1, int var2) {
+		super(var1);
+		this.setMaxStackSize(1);
+		this.setTextureFile(mod_usefulfood.itemtextures);
+		this.foodlevel = var2;
+	}
 
-        if (!world.isRemote)
-        {
+	public ItemStack onFoodEaten(ItemStack itemstack, World world,
+			EntityPlayer player) {
+		if (!player.capabilities.isCreativeMode) {
+			--itemstack.stackSize;
+		}
+
+		if (!world.isRemote) {
 			player.getFoodStats().addStats(foodlevel, 0);
-        	
-        }
 
-        return itemstack.stackSize <= 0 ? new ItemStack(Item.bowlEmpty) : itemstack;
-    }
+		}
 
-    /**
-     * How long it takes to use or consume an item
-     */
-    public int getMaxItemUseDuration(ItemStack itemstack)
-    {
-        return 32;
-    }
+		return itemstack.stackSize <= 0 ? new ItemStack(Item.bowlEmpty)
+				: itemstack;
+	}
 
-    /**
-     * returns the action that specifies what animation to play when the items is being used
-     */
-    public EnumAction getItemUseAction(ItemStack itemstack)
-    {
-        return EnumAction.drink;
-    }
+	/**
+	 * How long it takes to use or consume an item
+	 */
+	public int getMaxItemUseDuration(ItemStack itemstack) {
+		return 32;
+	}
 
-    /**
-     * Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
-     */
-    public ItemStack onItemRightClick(ItemStack itemstack, World world, EntityPlayer player)
-    {
-    	player.setItemInUse(itemstack, this.getMaxItemUseDuration(itemstack));
-        return itemstack;
-    }
-    
+	/**
+	 * returns the action that specifies what animation to play when the items
+	 * is being used
+	 */
+	public EnumAction getItemUseAction(ItemStack itemstack) {
+		return EnumAction.drink;
+	}
+
+	/**
+	 * Called whenever this item is equipped and the right mouse button is
+	 * pressed. Args: itemStack, world, entityPlayer
+	 */
+	public ItemStack onItemRightClick(ItemStack itemstack, World world,
+			EntityPlayer player) {
+		player.setItemInUse(itemstack, this.getMaxItemUseDuration(itemstack));
+		return itemstack;
+	}
+
 }
