@@ -100,7 +100,7 @@ public class UsefulFoodConfig {
 	 * CherrycakeBlockID;
 	 */
 
-	static int HayBallBlockID;
+	static int StorageBlockID;
 
 	/*
 	 * static int BlueberryBushBlockID; static int StrawberryBushBlockID;
@@ -245,7 +245,7 @@ public class UsefulFoodConfig {
 			ChococakeBlockID = cfg.getBlock("Chococake", 2231).getInt(2231);
 			MagiccakeBlockID = cfg.getBlock("Magiccake", 2232).getInt(2232);
 
-			HayBallBlockID = cfg.getBlock("Hayball", 2233).getInt(2233);
+			StorageBlockID = cfg.getBlock("Hayball", 2233).getInt(2233);
 
 			/*
 			 * BlueberryBushBlockID = cfg.getBlock("BlueberryBush",

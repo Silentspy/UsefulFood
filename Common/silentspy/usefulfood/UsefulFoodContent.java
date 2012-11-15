@@ -3,24 +3,8 @@ package silentspy.usefulfood;
 import net.minecraft.src.Block;
 import net.minecraft.src.Item;
 import net.minecraft.src.Potion;
-import silentspy.usefulfood.blocks.BlockAppleCake;
-import silentspy.usefulfood.blocks.BlockChocoCake;
-import silentspy.usefulfood.blocks.BlockHayBall;
-import silentspy.usefulfood.blocks.BlockMagicCake;
-import silentspy.usefulfood.items.ItemBowl;
-import silentspy.usefulfood.items.ItemCake;
-import silentspy.usefulfood.items.ItemCarrotSoup;
-import silentspy.usefulfood.items.ItemCheese;
-import silentspy.usefulfood.items.ItemCocaoBowl;
-import silentspy.usefulfood.items.ItemFoodDebug;
-import silentspy.usefulfood.items.ItemFoodStick;
-import silentspy.usefulfood.items.ItemFruitBowl;
-import silentspy.usefulfood.items.ItemJellyBowl;
-import silentspy.usefulfood.items.ItemJuice;
-import silentspy.usefulfood.items.ItemMagicAppleJuice;
-import silentspy.usefulfood.items.ItemMilkbowl;
-import silentspy.usefulfood.items.ItemPumpkinsoup;
-import silentspy.usefulfood.items.ItemUsefulFood;
+import silentspy.usefulfood.blocks.*;
+import silentspy.usefulfood.items.*;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class UsefulFoodContent {
@@ -98,7 +82,7 @@ public class UsefulFoodContent {
 	public static Block magiccake;
 	// public static Block blueberrycake;
 
-	public static Block hayball;
+	public static Block storage;
 
 	/*
 	 * public static Block blueberrybush; public static Block strawberrybush;
@@ -115,7 +99,7 @@ public class UsefulFoodContent {
 		applecake = new BlockAppleCake(UsefulFoodConfig.ApplecakeBlockID).setHardness(0.5F).setStepSound(Block.soundClothFootstep).setBlockName("AppleCake");
 		chococake = new BlockChocoCake(UsefulFoodConfig.ChococakeBlockID).setHardness(0.5F).setStepSound(Block.soundClothFootstep).setBlockName("ChocoCake");
 		magiccake = new BlockMagicCake(UsefulFoodConfig.MagiccakeBlockID).setHardness(0.5F).setStepSound(Block.soundClothFootstep).setBlockName("MagicCake");
-		hayball = new BlockHayBall(UsefulFoodConfig.HayBallBlockID).setHardness(0.8F).setStepSound(Block.soundClothFootstep).setBlockName("HayBall");
+		storage = new BlockStorage(UsefulFoodConfig.StorageBlockID).setHardness(0.8F).setResistance(1.0F).setStepSound(Block.soundClothFootstep).setBlockName("storage");
 
 		/*
 		 * blueberrybush = new
@@ -140,7 +124,7 @@ public class UsefulFoodContent {
 		GameRegistry.registerBlock(applecake);
 		GameRegistry.registerBlock(chococake);
 		GameRegistry.registerBlock(magiccake);
-		GameRegistry.registerBlock(hayball);
+		GameRegistry.registerBlock(storage);
 
 		/*
 		 * GameRegistry.registerBlock(blueberrybush);
@@ -265,6 +249,7 @@ public class UsefulFoodContent {
 		carrotpie = new ItemUsefulFood(UsefulFoodConfig.carrotpieID, 8, 0.8F,true).setIconIndex(68).setItemName("CarrotPie");
 		hotchocolate = new ItemCocaoBowl(UsefulFoodConfig.hotchocolateID, 6,0.3F).setIconIndex(72).setItemName("HotChocolate");
 		chocolateicecream = new ItemUsefulFood(UsefulFoodConfig.chocolateicecreamID, 8, 0.8F, true).setIconIndex(73).setItemName("ChocolateIcecream");
-
+		
+		Item.itemsList[UsefulFoodConfig.StorageBlockID] = new ItemBlockStorage(UsefulFoodConfig.StorageBlockID-256, storage).setItemName("storage");
 	}
 }

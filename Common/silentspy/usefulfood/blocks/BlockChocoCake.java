@@ -19,17 +19,18 @@ public class BlockChocoCake extends BlockCake {
 				: (var1 == 1 ? 5 : (var2 > 0 && var1 == 4 ? 7 : 6));
 	}
 
-	public void eatCakeSlice(World par1World, int par2, int par3, int par4,
-			EntityPlayer par5EntityPlayer) {
-		if (par5EntityPlayer.canEat(false)) {
-			par5EntityPlayer.getFoodStats().addStats(4, 0.5F);
-			int var6 = par1World.getBlockMetadata(par2, par3, par4) + 1;
+	public void eatCakeSlice(World world, int par2, int par3, int par4, EntityPlayer player) {
+		if (player.canEat(false)) {
+			world.playSoundAtEntity(player, "random.burp", 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
+			
+			player.getFoodStats().addStats(4, 0.5F);
+			int var6 = world.getBlockMetadata(par2, par3, par4) + 1;
 
 			if (var6 >= 6) {
-				par1World.setBlockWithNotify(par2, par3, par4, 0);
+				world.setBlockWithNotify(par2, par3, par4, 0);
 			} else {
-				par1World.setBlockMetadataWithNotify(par2, par3, par4, var6);
-				par1World.markBlockAsNeedsUpdate(par2, par3, par4);
+				world.setBlockMetadataWithNotify(par2, par3, par4, var6);
+				world.markBlockAsNeedsUpdate(par2, par3, par4);
 			}
 		}
 	}

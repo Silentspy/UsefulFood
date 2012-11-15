@@ -37,7 +37,6 @@ public class ClientProxy extends CommonProxy {
 		LanguageRegistry.addName(UsefulFoodContent.trailmix, "Trail Mix");
 		LanguageRegistry.addName(UsefulFoodContent.magiccake, "Magic Cake");
 		LanguageRegistry.addName(UsefulFoodContent.magiccakeitem, "Magic Cake");
-		LanguageRegistry.addName(UsefulFoodContent.hayball, "HayBall");
 		LanguageRegistry.addName(UsefulFoodContent.mutton, "Cooked Mutton");
 		LanguageRegistry.addName(UsefulFoodContent.muttonraw, "Raw Mutton");
 		LanguageRegistry.addName(UsefulFoodContent.muttonwich, "Mutton Sandwich");
@@ -95,6 +94,8 @@ public class ClientProxy extends CommonProxy {
 		LanguageRegistry.addName(UsefulFoodContent.carrotpie, "Carrot Pie");
 		LanguageRegistry.addName(UsefulFoodContent.hotchocolate, "Hot Chocolate");
 		LanguageRegistry.addName(UsefulFoodContent.chocolateicecream, "Chocolate Ice cream");
+		LanguageRegistry.instance().addStringLocalization("tile.storage.hay.name", "Hay Block");
+		LanguageRegistry.instance().addStringLocalization("tile.storage.sugarcane.name", "Reed block");
 
 	}
 
