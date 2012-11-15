@@ -1,6 +1,8 @@
 package silentspy.usefulfood;
 
+import net.minecraft.src.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.DungeonHooks;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
@@ -10,7 +12,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod(modid = "UsefulFood", name = "UsefulFood", version = "1.2.0")
+@Mod(modid = "UsefulFood", name = "UsefulFood", version = "1.2.1")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class mod_usefulfood {
 	@SidedProxy(clientSide = "silentspy.usefulfood.ClientProxy", serverSide = "silentspy.usefulfood.CommonProxy")
@@ -23,6 +25,13 @@ public class mod_usefulfood {
 
 	public static UsefulFoodContent getContentInstance() {
 		return contentInstance;
+	}
+	
+	@PreInit
+	public void preInit(FMLPreInitializationEvent event) {
+		UsefulFoodConfig.Properties(event);
+		contentInstance = new UsefulFoodContent();
+		contentInstance.init();
 	}
 
 	@Init
@@ -37,12 +46,8 @@ public class mod_usefulfood {
 		proxy.addNames();
 		// GameRegistry.registerWorldGenerator(new
 		// silentspy.usefulfood.world.WorldGenerator());
-	}
-
-	@PreInit
-	public void preInit(FMLPreInitializationEvent event) {
-		UsefulFoodConfig.Properties(event);
-		contentInstance = new UsefulFoodContent();
-		contentInstance.init();
+		DungeonHooks.addDungeonLoot(new ItemStack(UsefulFoodContent.magiccakeitem, 1), 001, 1, 1);
+		DungeonHooks.addDungeonLoot(new ItemStack(UsefulFoodContent.magicapplejuice, 1), 002, 1, 1);
+		DungeonHooks.addDungeonLoot(new ItemStack(UsefulFoodContent.caramel, 1), 005, 1, 2);
 	}
 }

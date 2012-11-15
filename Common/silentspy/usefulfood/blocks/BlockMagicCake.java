@@ -18,23 +18,24 @@ public class BlockMagicCake extends BlockCake {
 				: 10));
 	}
 
-	public void eatCakeSlice(World par1World, int par2, int par3, int par4,
-			EntityPlayer par5EntityPlayer) {
-		if (par5EntityPlayer.canEat(false)) {
-			par5EntityPlayer.getFoodStats().addStats(8, 0.5F);
-			par5EntityPlayer.addPotionEffect(new PotionEffect(
+	public void eatCakeSlice(World world, int x, int y, int z, EntityPlayer player) {
+		if (player.canEat(false)) {
+			world.playSoundAtEntity(player, "random.burp", 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
+			
+			player.getFoodStats().addStats(8, 0.5F);
+			player.addPotionEffect(new PotionEffect(
 					Potion.regeneration.id, 200, 3));
-			par5EntityPlayer.addPotionEffect(new PotionEffect(
+			player.addPotionEffect(new PotionEffect(
 					Potion.resistance.id, 2000, 0));
-			par5EntityPlayer.addPotionEffect(new PotionEffect(
+			player.addPotionEffect(new PotionEffect(
 					Potion.fireResistance.id, 2000, 0));
-			int var6 = par1World.getBlockMetadata(par2, par3, par4) + 1;
+			int var6 = world.getBlockMetadata(x, y, z) + 1;
 
 			if (var6 >= 6) {
-				par1World.setBlockWithNotify(par2, par3, par4, 0);
+				world.setBlockWithNotify(x, y, z, 0);
 			} else {
-				par1World.setBlockMetadataWithNotify(par2, par3, par4, var6);
-				par1World.markBlockAsNeedsUpdate(par2, par3, par4);
+				world.setBlockMetadataWithNotify(x, y, z, var6);
+				world.markBlockAsNeedsUpdate(x, y, z);
 			}
 		}
 	}

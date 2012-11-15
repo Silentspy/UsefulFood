@@ -18,8 +18,7 @@ public class ItemMilkbowl extends Item {
 		this.setMaxStackSize(1);
 	}
 
-	public ItemStack onFoodEaten(ItemStack itemstack, World world,
-			EntityPlayer player) {
+	public ItemStack onFoodEaten(ItemStack itemstack, World world, EntityPlayer player) {
 		if (!player.capabilities.isCreativeMode) {
 			--itemstack.stackSize;
 		}
@@ -29,8 +28,7 @@ public class ItemMilkbowl extends Item {
 			player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 100, 0));
 		}
 
-		return itemstack.stackSize <= 0 ? new ItemStack(Item.bowlEmpty)
-				: itemstack;
+		return itemstack.stackSize <= 0 ? new ItemStack(Item.bowlEmpty) : itemstack;
 	}
 
 	/**
@@ -52,8 +50,7 @@ public class ItemMilkbowl extends Item {
 	 * Called whenever this item is equipped and the right mouse button is
 	 * pressed. Args: itemStack, world, entityPlayer
 	 */
-	public ItemStack onItemRightClick(ItemStack itemstack, World world,
-			EntityPlayer player) {
+	public ItemStack onItemRightClick(ItemStack itemstack, World world, EntityPlayer player) {
 		player.setItemInUse(itemstack, this.getMaxItemUseDuration(itemstack));
 		return itemstack;
 	}

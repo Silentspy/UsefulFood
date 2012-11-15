@@ -22,8 +22,7 @@ public class ItemSmoothie extends Item {
 		this.saturation = var3;
 	}
 
-	public ItemStack onFoodEaten(ItemStack itemstack, World world,
-			EntityPlayer player) {
+	public ItemStack onFoodEaten(ItemStack itemstack, World world, EntityPlayer player) {
 		if (!player.capabilities.isCreativeMode) {
 			--itemstack.stackSize;
 		}
@@ -56,8 +55,7 @@ public class ItemSmoothie extends Item {
 	 * Called whenever this item is equipped and the right mouse button is
 	 * pressed. Args: itemStack, world, entityPlayer
 	 */
-	public ItemStack onItemRightClick(ItemStack itemstack, World world,
-			EntityPlayer player) {
+	public ItemStack onItemRightClick(ItemStack itemstack, World world, EntityPlayer player) {
 		player.setItemInUse(itemstack, this.getMaxItemUseDuration(itemstack));
 		return itemstack;
 	}

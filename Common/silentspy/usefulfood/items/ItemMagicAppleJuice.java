@@ -19,25 +19,20 @@ public class ItemMagicAppleJuice extends ItemJuice {
 		this.saturation = var3;
 	}
 
-	public ItemStack onFoodEaten(ItemStack itemstack, World world,
-			EntityPlayer player) {
+	public ItemStack onFoodEaten(ItemStack itemstack, World world, EntityPlayer player) {
 		if (!player.capabilities.isCreativeMode) {
 			--itemstack.stackSize;
 		}
 
 		if (!world.isRemote) {
 			player.getFoodStats().addStats(foodlevel, saturation);
-			player.addPotionEffect(new PotionEffect(Potion.regeneration.id,
-					600, 3));
-			player.addPotionEffect(new PotionEffect(Potion.resistance.id, 6000,
-					0));
-			player.addPotionEffect(new PotionEffect(Potion.fireResistance.id,
-					6000, 0));
+			player.addPotionEffect(new PotionEffect(Potion.regeneration.id, 600, 3));
+			player.addPotionEffect(new PotionEffect(Potion.resistance.id, 6000, 0));
+			player.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 6000, 0));
 			player.addPotionEffect(new PotionEffect(Potion.digSpeed.id, 400, 0));
 		}
 
-		return itemstack.stackSize <= 0 ? new ItemStack(Item.glassBottle)
-				: itemstack;
+		return itemstack.stackSize <= 0 ? new ItemStack(Item.glassBottle) : itemstack;
 	}
 
 	public EnumRarity getRarity(ItemStack var1) {

@@ -2,14 +2,13 @@ package silentspy.usefulfood;
 
 import java.util.Random;
 
-import net.minecraft.src.EntityItem;
 import net.minecraft.src.EntitySheep;
 import net.minecraft.src.EntitySquid;
-import net.minecraft.src.ItemStack;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 
 public class UsefulFoodEvents {
+	
 	@ForgeSubscribe
 	public void LivingDropsEvent(LivingDropsEvent event) {
 		if (event.entity instanceof EntitySheep) 
@@ -17,17 +16,19 @@ public class UsefulFoodEvents {
 			if (!event.entityLiving.isChild()) 
 			{
 				Random random = new Random();
-				int lootchance = random.nextInt(5);
-
-				if (lootchance < 4) 
-				{
+				
+				int var3 = random.nextInt(2) + 1 + random.nextInt(1 + event.lootingLevel);
+				int var4;
+				
+				for (var4 = 0; var4 < var3; ++var4)
+		        {
 					if (event.entityLiving.isBurning()) 
 					{
-						event.drops.add(new EntityItem(event.entityLiving.worldObj, event.entityLiving.posX, event.entityLiving.posY, event.entityLiving.posZ, new ItemStack(UsefulFoodContent.mutton, 1)));
+						event.entity.dropItem(UsefulFoodContent.mutton.shiftedIndex, 1);
 					} 
 					else 
 					{
-						event.drops.add(new EntityItem(event.entityLiving.worldObj, event.entityLiving.posX, event.entityLiving.posY, event.entityLiving.posZ, new ItemStack(UsefulFoodContent.muttonraw, 1)));
+						event.entity.dropItem(UsefulFoodContent.muttonraw.shiftedIndex, 1);
 					}
 				}
 			}
@@ -35,16 +36,22 @@ public class UsefulFoodEvents {
 		else if (event.entity instanceof EntitySquid) 
 		{
 			Random random = new Random();
-			int itemcount = 1 + random.nextInt(4);
+			
+			int var3 = random.nextInt(4) + 1 + random.nextInt(1 + event.lootingLevel);
+			int var4;
+			
+	        for (var4 = 0; var4 < var3; ++var4)
+	        {
 
 			if (event.entityLiving.isBurning()) 
 			{
-				event.drops.add(new EntityItem(event.entityLiving.worldObj, event.entityLiving.posX, event.entityLiving.posY, event.entityLiving.posZ, new ItemStack(UsefulFoodContent.cookedsquidtentacle,itemcount)));
+				event.entity.dropItem(UsefulFoodContent.cookedsquidtentacle.shiftedIndex, 1);
 			} 
 			else 
 			{
-				event.drops.add(new EntityItem(event.entityLiving.worldObj, event.entityLiving.posX, event.entityLiving.posY, event.entityLiving.posZ, new ItemStack(UsefulFoodContent.squidtentacle, itemcount)));
+				event.entity.dropItem(UsefulFoodContent.squidtentacle.shiftedIndex, 1);
 			}
+	        }
 		}
 	}
 

@@ -11,8 +11,7 @@ public class ItemJellyBowl extends ItemUsefulFood {
 		this.setMaxStackSize(1);
 	}
 
-	public ItemStack onFoodEaten(ItemStack itemstack, World world,
-			EntityPlayer player) {
+	public ItemStack onFoodEaten(ItemStack itemstack, World world, EntityPlayer player) {
 		super.onFoodEaten(itemstack, world, player);
 		if (!world.isRemote) {
 			player.curePotionEffects(itemstack);

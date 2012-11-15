@@ -9,8 +9,7 @@ public class ItemCheese extends ItemUsefulFood {
 		super(var1, var2, var3, var4);
 	}
 
-	public ItemStack onFoodEaten(ItemStack itemstack, World world,
-			EntityPlayer player) {
+	public ItemStack onFoodEaten(ItemStack itemstack, World world, EntityPlayer player) {
 		super.onFoodEaten(itemstack, world, player);
 
 		if (!world.isRemote) {
