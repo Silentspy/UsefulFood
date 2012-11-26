@@ -140,7 +140,7 @@ public class BlockCake extends Block {
 				par1World.setBlockWithNotify(par2, par3, par4, 0);
 			} else {
 				par1World.setBlockMetadataWithNotify(par2, par3, par4, var6);
-				par1World.markBlockAsNeedsUpdate(par2, par3, par4);
+				par1World.markBlockForRenderUpdate2(par2, par3, par4);
 			}
 		}
 	}

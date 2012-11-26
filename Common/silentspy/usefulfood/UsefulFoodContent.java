@@ -124,7 +124,7 @@ public class UsefulFoodContent {
 		GameRegistry.registerBlock(applecake);
 		GameRegistry.registerBlock(chococake);
 		GameRegistry.registerBlock(magiccake);
-		GameRegistry.registerBlock(storage);
+		GameRegistry.registerBlock(storage, ItemBlockStorage.class);
 
 		/*
 		 * GameRegistry.registerBlock(blueberrybush);
@@ -249,7 +249,5 @@ public class UsefulFoodContent {
 		carrotpie = new ItemUsefulFood(UsefulFoodConfig.carrotpieID, 8, 0.8F,true).setIconIndex(68).setItemName("CarrotPie");
 		hotchocolate = new ItemCocaoBowl(UsefulFoodConfig.hotchocolateID, 6,0.3F).setIconIndex(72).setItemName("HotChocolate");
 		chocolateicecream = new ItemUsefulFood(UsefulFoodConfig.chocolateicecreamID, 8, 0.8F, true).setIconIndex(73).setItemName("ChocolateIcecream");
-		
-		Item.itemsList[UsefulFoodConfig.StorageBlockID] = new ItemBlockStorage(UsefulFoodConfig.StorageBlockID-256, storage).setItemName("storage");
 	}
 }

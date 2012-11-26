@@ -12,7 +12,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod(modid = "UsefulFood", name = "UsefulFood", version = "1.2.1")
+@Mod(modid = "UsefulFood", name = "UsefulFood", version = "1.2.2")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class mod_usefulfood {
 	@SidedProxy(clientSide = "silentspy.usefulfood.ClientProxy", serverSide = "silentspy.usefulfood.CommonProxy")

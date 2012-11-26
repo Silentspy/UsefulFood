@@ -20,7 +20,7 @@ public class BlockMagicCake extends BlockCake {
 
 	public void eatCakeSlice(World world, int x, int y, int z, EntityPlayer player) {
 		if (player.canEat(false)) {
-			world.playSoundAtEntity(player, "random.burp", 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
+			world.playSoundAtEntity(player, "random.eat", 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
 			
 			player.getFoodStats().addStats(8, 0.5F);
 			player.addPotionEffect(new PotionEffect(
@@ -35,7 +35,7 @@ public class BlockMagicCake extends BlockCake {
 				world.setBlockWithNotify(x, y, z, 0);
 			} else {
 				world.setBlockMetadataWithNotify(x, y, z, var6);
-				world.markBlockAsNeedsUpdate(x, y, z);
+				world.markBlockForRenderUpdate2(x, y, z);
 			}
 		}
 	}

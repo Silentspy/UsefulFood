@@ -21,7 +21,7 @@ public class BlockAppleCake extends BlockCake {
 
 	public void eatCakeSlice(World world, int par2, int par3, int par4, EntityPlayer player) {
 		if (player.canEat(false)) {
-			world.playSoundAtEntity(player, "random.burp", 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
+			world.playSoundAtEntity(player, "random.eat", 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
 			
 			player.getFoodStats().addStats(3, 0.5F);
 			int var6 = world.getBlockMetadata(par2, par3, par4) + 1;
@@ -30,7 +30,7 @@ public class BlockAppleCake extends BlockCake {
 				world.setBlockWithNotify(par2, par3, par4, 0);
 			} else {
 				world.setBlockMetadataWithNotify(par2, par3, par4, var6);
-				world.markBlockAsNeedsUpdate(par2, par3, par4);
+				world.markBlockForRenderUpdate2(par2, par3, par4);
 			}
 		}
 	}
