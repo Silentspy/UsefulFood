@@ -1,0 +1,21 @@
+[
+{
+  "modid": "Recipear",
+  "name": "Recipear",
+  "description": "",
+  "version": "1.1",
+  "mcversion": "1.4.7",
+  "url": "http://www.silentspy.net/",
+  "updateUrl": "",
+  "authors": [
+  "Silentspy"
+  ],
+  "credits": "Mod by Silentspy",
+  "logoFile": "recipear/recipear.png",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
