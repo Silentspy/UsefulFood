@@ -3,8 +3,8 @@
   "modid": "UsefulFood",
   "name": "UsefulFood",
   "description": "Adds a variation of food types",
-  "version": "1.2.3",
-  "mcversion": "1.4.6",
+  "version": "@version@",
+  "mcversion": "@mcversion@",
   "url": "http://www.silentspy.net/usefulfood",
   "updateUrl": "",
   "authors": [
@@ -12,7 +12,7 @@
   "Bockwurst"
   ],
   "credits": "Mod by Silentspy and Bockwurst",
-  "logoFile": "/silentspy/usefulfood/usefulfood.png",
+  "logoFile": "/mods/usefulfood/usefulfood.png",
   "screenshots": [
   ],
   "parent":"",
