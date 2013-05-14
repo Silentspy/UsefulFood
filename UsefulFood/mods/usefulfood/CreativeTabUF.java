@@ -3,15 +3,15 @@ package mods.usefulfood;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 
-public class CreativeTabUsefulFood extends CreativeTabs 
+public class CreativeTabUF extends CreativeTabs 
 {	
-	public CreativeTabUsefulFood(String label) {
+	public CreativeTabUF(String label) {
 		super(label);
 	}
 
 	@Override
     public ItemStack getIconItemStack() {
-		return new ItemStack(UsefulFoodItems.magiccake);
+		return new ItemStack(UFItems.magiccake);
 	}
 	
 	@Override

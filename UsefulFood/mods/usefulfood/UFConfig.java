@@ -7,7 +7,7 @@ import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-public class UsefulFoodConfig {
+public class UFConfig {
 
 	// items
 	static int milkbottleItemID;

@@ -11,19 +11,19 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod(modid = "UsefulFood", name = "UsefulFood", version = "1.4.0")
+@Mod(modid = "UsefulFood", name = "UsefulFood", version = "1.4.1")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class mod_usefulfood {
 	@SidedProxy(clientSide = "mods.usefulfood.ClientProxy", serverSide = "mods.usefulfood.CommonProxy")
 	public static CommonProxy proxy;
-	public static final CreativeTabs tabUsefulFood = new CreativeTabUsefulFood("UsefulFood");
+	public static final CreativeTabs tabUsefulFood = new CreativeTabUF("UsefulFood");
 	public static boolean MoCreatures = false;
 	
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event) {
-		UsefulFoodConfig.Properties(event);
-		new UsefulFoodBlocks().init();
-		new UsefulFoodItems().init();
+		UFConfig.Properties(event);
+		new UFBlocks().init();
+		new UFItems().init();
 	}
 	
 	@Init
@@ -40,9 +40,9 @@ public class mod_usefulfood {
 			MoCreatures = false;
 		}
 		
-		MinecraftForge.EVENT_BUS.register(new UsefulFoodEvents());
+		MinecraftForge.EVENT_BUS.register(new UFEvents());
 		FMLLog.fine("[UsefulFood] loading mod_usefulfood recipes");
-		UsefulFoodRecipes.init();
+		UFRecipes.init();
 		FMLLog.fine("[UsefulFood] mod_usefulfood recipes initialized");
 		
 		proxy.addNames();

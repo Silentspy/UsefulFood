@@ -7,7 +7,7 @@ public class ClientProxy extends CommonProxy
 {
 	public void addNames() 
 	{
-		new UsefulFoodRegistry().localization();
+		new UFRegistry().localization();
 	}
 
 	public void registerRenderInformation() {

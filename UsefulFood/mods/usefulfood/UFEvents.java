@@ -7,7 +7,7 @@ import net.minecraft.entity.passive.EntitySquid;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 
-public class UsefulFoodEvents {
+public class UFEvents {
 	
 	@ForgeSubscribe
 	public void LivingDropsEvent(LivingDropsEvent event) 
@@ -25,11 +25,11 @@ public class UsefulFoodEvents {
 		        {
 					if (event.entityLiving.isBurning()) 
 					{
-						event.entity.dropItem(UsefulFoodItems.mutton.itemID, 1);
+						event.entity.dropItem(UFItems.mutton.itemID, 1);
 					} 
 					else 
 					{
-						event.entity.dropItem(UsefulFoodItems.muttonraw.itemID, 1);
+						event.entity.dropItem(UFItems.muttonraw.itemID, 1);
 					}
 				}
 			}
@@ -45,11 +45,11 @@ public class UsefulFoodEvents {
 	        {
 	        	if (event.entityLiving.isBurning()) 
 				{
-					event.entity.dropItem(UsefulFoodItems.cookedsquidtentacle.itemID, 1);
+					event.entity.dropItem(UFItems.cookedsquidtentacle.itemID, 1);
 				} 
 				else 
 				{
-					event.entity.dropItem(UsefulFoodItems.squidtentacle.itemID, 1);
+					event.entity.dropItem(UFItems.squidtentacle.itemID, 1);
 				}
 	        }
 		}

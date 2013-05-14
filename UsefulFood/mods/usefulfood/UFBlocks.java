@@ -4,7 +4,7 @@ import net.minecraft.block.Block;
 import mods.usefulfood.blocks.MagicCake;
 import mods.usefulfood.blocks.SpecialCake;
 
-public class UsefulFoodBlocks {
+public class UFBlocks {
 	
 	public static Block applecake;
 	public static Block chococake;
@@ -17,9 +17,9 @@ public class UsefulFoodBlocks {
 	
 	public void init() 
 	{
-		applecake = new SpecialCake(UsefulFoodConfig.ApplecakeBlockID, "applecake", 3, 0.5F, UsefulFoodConfig.applecakeItemID);
-		chococake = new SpecialCake(UsefulFoodConfig.ChococakeBlockID, "chocolatecake", 4, 0.5F, UsefulFoodConfig.chococakeItemID);
-		magiccake = new MagicCake(UsefulFoodConfig.MagiccakeBlockID, "magiccake", 8, 0.5F, UsefulFoodConfig.magiccakeItemID);
+		applecake = new SpecialCake(UFConfig.ApplecakeBlockID, "applecake", 3, 0.5F, UFConfig.applecakeItemID);
+		chococake = new SpecialCake(UFConfig.ChococakeBlockID, "chocolatecake", 4, 0.5F, UFConfig.chococakeItemID);
+		magiccake = new MagicCake(UFConfig.MagiccakeBlockID, "magiccake", 8, 0.5F, UFConfig.magiccakeItemID);
 		
 		/*
 		if(UsefulFoodConfig.EnableStorageBlock) 
@@ -28,6 +28,6 @@ public class UsefulFoodBlocks {
 		}
 		*/
 		
-		CaramelCake = new SpecialCake(UsefulFoodConfig.CaramelCakeBlockID, "caramelcake", 4, 0.5F, UsefulFoodConfig.CaramelCakeItemID);
+		CaramelCake = new SpecialCake(UFConfig.CaramelCakeBlockID, "caramelcake", 4, 0.5F, UFConfig.CaramelCakeItemID);
 	}
 }
