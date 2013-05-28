@@ -11,12 +11,12 @@ public class ItemFoodUF extends ItemFood {
 	
 	String name;
 	
-	public ItemFoodUF(int var1, String name, int var2, float var3, boolean var4) {
-		super(var1, var2, var3, var4);
+	public ItemFoodUF(int id, String name, int hunger, float saturation, boolean canwolfeat) {
+		super(id, hunger, saturation, canwolfeat);
 		this.setCreativeTab(mod_usefulfood.tabUsefulFood);
 		this.setUnlocalizedName(name);
 		this.name = name;
-		GameRegistry.registerItem(this, name);
+		GameRegistry.registerItem(this, name, "UsefulFood");
 	}
 	
 	@SideOnly(Side.CLIENT)

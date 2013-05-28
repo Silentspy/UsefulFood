@@ -25,11 +25,11 @@ public class UFEvents {
 		        {
 					if (event.entityLiving.isBurning()) 
 					{
-						event.entity.dropItem(UFItems.mutton.itemID, 1);
+						event.entity.dropItem(UFItems.MuttonCooked.itemID, 1);
 					} 
 					else 
 					{
-						event.entity.dropItem(UFItems.muttonraw.itemID, 1);
+						event.entity.dropItem(UFItems.MuttonRaw.itemID, 1);
 					}
 				}
 			}
@@ -45,11 +45,11 @@ public class UFEvents {
 	        {
 	        	if (event.entityLiving.isBurning()) 
 				{
-					event.entity.dropItem(UFItems.cookedsquidtentacle.itemID, 1);
+					event.entity.dropItem(UFItems.SquidTentacleCooked.itemID, 1);
 				} 
 				else 
 				{
-					event.entity.dropItem(UFItems.squidtentacle.itemID, 1);
+					event.entity.dropItem(UFItems.SquidTentacleRaw.itemID, 1);
 				}
 	        }
 		}

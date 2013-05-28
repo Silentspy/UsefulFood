@@ -11,7 +11,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod(modid = "UsefulFood", name = "UsefulFood", version = "1.4.1")
+@Mod(modid = "UsefulFood", name = "UsefulFood", version = "1.4.3")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class mod_usefulfood {
 	@SidedProxy(clientSide = "mods.usefulfood.ClientProxy", serverSide = "mods.usefulfood.CommonProxy")
@@ -46,6 +46,6 @@ public class mod_usefulfood {
 		FMLLog.fine("[UsefulFood] mod_usefulfood recipes initialized");
 		
 		proxy.addNames();
-		new UFDungeonLoot();
+		// new UFDungeonLoot();
 	}
 }

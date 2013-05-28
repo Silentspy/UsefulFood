@@ -14,7 +14,6 @@ public class ItemMagicIceCream extends ItemBowl{
 
 	public ItemMagicIceCream(int var1, String name, int var2, float var3, boolean var4) {
 		super(var1, name, var2, var3, var4);
-		// TODO Auto-generated constructor stub
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -30,6 +29,6 @@ public class ItemMagicIceCream extends ItemBowl{
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack is, EntityPlayer player, List l, boolean B)
 	{
-		l.add("looks delicious!");
+		l.add("Looks Delicious!");
 	}
 }

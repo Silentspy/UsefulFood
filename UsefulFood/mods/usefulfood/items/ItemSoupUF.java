@@ -19,7 +19,7 @@ public class ItemSoupUF extends ItemUF {
 		this.saturation = var3;
 	}
 
-	public ItemStack onFoodEaten(ItemStack itemstack, World world, EntityPlayer player) {
+	public ItemStack onEaten(ItemStack itemstack, World world, EntityPlayer player) {
 		if (!player.capabilities.isCreativeMode) {
 			--itemstack.stackSize;
 		}

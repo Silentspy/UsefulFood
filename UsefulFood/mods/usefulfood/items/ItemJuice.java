@@ -18,14 +18,13 @@ public class ItemJuice extends ItemBottle {
 		if (!player.capabilities.isCreativeMode) {
 			--itemstack.stackSize;
 			if (itemstack.stackSize > 0) {
-				player.inventory.addItemStackToInventory(new ItemStack(
-						Item.glassBottle));
+				player.inventory.addItemStackToInventory(new ItemStack(Item.glassBottle));
 			}
 		}
 
 		if (!world.isRemote) {
 			player.getFoodStats().addStats(foodlevel, saturation);
-			player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 600, 0));
+			player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 30*20, 0));
 		}
 
 		return itemstack.stackSize <= 0 ? new ItemStack(Item.glassBottle)

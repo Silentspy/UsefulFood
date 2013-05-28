@@ -11,7 +11,7 @@ public class UFDungeonLoot {
 	
 	public UFDungeonLoot () 
 	{
-		this.AddDungeonLoot(new ItemStack(UFItems.magiccake), 			1, 2, 100);
+		this.AddDungeonLoot(new ItemStack(UFItems.MagicCake), 			1, 2, 100);
 		this.AddDungeonLoot(new ItemStack(UFItems.magicapplejuice), 	1, 2, 100);
 		this.AddDungeonLoot(new ItemStack(UFItems.caramel), 			1, 10, 100);
 		this.AddDungeonLoot(new ItemStack(UFItems.Tea), 				1, 10, 100);
@@ -43,7 +43,7 @@ public class UFDungeonLoot {
 			    ChestGenHooks.STRONGHOLD_CROSSING
 		};
 		
-		for(String Chest : ChestsToSpawnIn )
+		for(String Chest : ChestsToSpawnIn)
 		{
 			ChestGenHooks.getInfo(Chest).addItem(new WeightedRandomChestContent(itemstack,min,max,weight));
 		}

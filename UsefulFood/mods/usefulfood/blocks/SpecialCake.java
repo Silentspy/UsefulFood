@@ -34,7 +34,7 @@ public class SpecialCake extends BlockCakeUF {
 	public SpecialCake(int id, String name, int foodlevel, float saturation, int cakeitemid) {
 		super(id);
 		this.cakeitemid = cakeitemid;
-		this.foodlevel = foodlevel;
+		this.foodlevel = foodlevel / 6;
 		this.saturation = saturation;
 		this.setTickRandomly(true);
 		this.setHardness(0.5F);

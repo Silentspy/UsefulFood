@@ -20,7 +20,7 @@ public class ItemReedUF extends ItemReed
 		this.setCreativeTab(mod_usefulfood.tabUsefulFood);
 		this.setUnlocalizedName(name);
 		this.name = name;
-		GameRegistry.registerItem(this, name);
+		GameRegistry.registerItem(this, name, "UsefulFood");
 	}
 	
 	@SideOnly(Side.CLIENT)

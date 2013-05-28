@@ -11,7 +11,7 @@ public class CreativeTabUF extends CreativeTabs
 
 	@Override
     public ItemStack getIconItemStack() {
-		return new ItemStack(UFItems.magiccake);
+		return new ItemStack(UFItems.MuttonRaw);
 	}
 	
 	@Override

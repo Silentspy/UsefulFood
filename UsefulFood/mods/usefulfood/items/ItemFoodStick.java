@@ -6,8 +6,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 public class ItemFoodStick extends ItemFoodUF {
-	public ItemFoodStick(int var1, String name, int var2, float var3, boolean var4) {
-		super(var1, name, var2, var3, var4);
+	public ItemFoodStick(int var1, String name, int Hunger, float Saturation, boolean CanWolfEat) {
+		super(var1, name, Hunger, Saturation, CanWolfEat);
 		this.setMaxStackSize(1);
 	}
 
