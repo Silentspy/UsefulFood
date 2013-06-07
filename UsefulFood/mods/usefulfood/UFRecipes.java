@@ -52,7 +52,7 @@ public class UFRecipes {
 		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.Oatmeal), new Object[] { Item.bowlEmpty, Item.seeds, Item.seeds, Item.seeds, Item.seeds, Item.seeds, Item.seeds });
 		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.jelly), new Object[] { Item.bowlEmpty, Item.slimeBall,Item.sugar });
 		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.marshmallow), new Object[] { Item.stick, Item.bucketWater, Item.sugar, Item.sugar, Item.sugar });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.icecream), new Object[] { Item.bowlEmpty,Item.snowball, Item.sugar });
+		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.icecream), new Object[] { Item.bowlEmpty,Item.snowball, Item.sugar, UFItems.milkbottle });
 		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.breadslice, 5), new Object[] { Item.bread });
 		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.biscuit, 3), new Object[] { Item.wheat, Item.wheat });
 		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.trailmix), new Object[] { Item.bowlEmpty, Item.pumpkinSeeds, Item.seeds, Item.melonSeeds });

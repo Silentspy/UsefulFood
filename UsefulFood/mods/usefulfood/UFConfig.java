@@ -74,6 +74,11 @@ public class UFConfig {
 	static int CaramelCakeItemID;
 	static int CheeseSandwichItemID;
 	static int CaramelIceCreamItemID;
+	static int CerealItemID;
+	static int ChocolateCerealItemID;
+	static int FrenchFriesItemID;
+	static int AppleJellyItemID;
+	static int MelonJellyItemID;
 	
 	// blocks
 	static int ApplecakeBlockID;
@@ -167,6 +172,11 @@ public class UFConfig {
 			CaramelCakeItemID = cfg.getItem("caramelcake", 5170).getInt(5170);
 			CheeseSandwichItemID = cfg.getItem("cheesesandwich", 5171).getInt(5171);
 			CaramelIceCreamItemID = cfg.getItem("caramelicecream", 5172).getInt(5172);
+			CerealItemID = cfg.getItem("cereal", 5173).getInt(5173);
+			ChocolateCerealItemID = cfg.getItem("chocolatecereal", 5174).getInt(5174);
+			FrenchFriesItemID = cfg.getItem("frenchfries", 5175).getInt(5175);
+			AppleJellyItemID = cfg.getItem("applejelly", 5176).getInt(5176);
+			MelonJellyItemID = cfg.getItem("melonjelly", 5177).getInt(5177);
 			
 			// Blocks
 			ApplecakeBlockID = cfg.getBlock("Applecake", 2230).getInt(2230);

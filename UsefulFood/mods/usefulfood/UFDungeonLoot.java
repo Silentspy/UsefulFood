@@ -11,15 +11,15 @@ public class UFDungeonLoot {
 	
 	public UFDungeonLoot () 
 	{
-		this.AddDungeonLoot(new ItemStack(UFItems.MagicCake), 			1, 2, 100);
-		this.AddDungeonLoot(new ItemStack(UFItems.magicapplejuice), 	1, 2, 100);
-		this.AddDungeonLoot(new ItemStack(UFItems.caramel), 			1, 10, 100);
-		this.AddDungeonLoot(new ItemStack(UFItems.Tea), 				1, 10, 100);
-		this.AddDungeonLoot(new ItemStack(UFItems.Cheese), 				1, 10, 100);
-		this.AddDungeonLoot(new ItemStack(UFItems.trailmix), 			1, 10, 100);
-		this.AddDungeonLoot(new ItemStack(UFItems.biscuit), 			1, 10, 100);
-		this.AddDungeonLoot(new ItemStack(UFItems.applebiscuit), 		1, 10, 100);
-		this.AddDungeonLoot(new ItemStack(UFItems.salad), 				1, 10, 100);
+		this.AddDungeonLoot(new ItemStack(UFItems.MagicCake), 			1, 2, 1);
+		this.AddDungeonLoot(new ItemStack(UFItems.magicapplejuice), 	1, 2, 1);
+		this.AddDungeonLoot(new ItemStack(UFItems.caramel), 			1, 10, 5);
+		this.AddDungeonLoot(new ItemStack(UFItems.Tea), 				1, 10, 5);
+		this.AddDungeonLoot(new ItemStack(UFItems.Cheese), 				1, 10, 5);
+		this.AddDungeonLoot(new ItemStack(UFItems.trailmix), 			1, 10, 5);
+		this.AddDungeonLoot(new ItemStack(UFItems.biscuit), 			1, 10, 5);
+		this.AddDungeonLoot(new ItemStack(UFItems.applebiscuit), 		1, 10, 5);
+		this.AddDungeonLoot(new ItemStack(UFItems.salad), 				1, 10, 5);
 	}
 	
 	/**

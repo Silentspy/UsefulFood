@@ -46,6 +46,6 @@ public class mod_usefulfood {
 		FMLLog.fine("[UsefulFood] mod_usefulfood recipes initialized");
 		
 		proxy.addNames();
-		// new UFDungeonLoot();
+		new UFDungeonLoot();
 	}
 }
