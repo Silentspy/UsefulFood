@@ -11,15 +11,15 @@ public class UFDungeonLoot {
 	
 	public UFDungeonLoot () 
 	{
-		this.AddDungeonLoot(new ItemStack(UFItems.MagicCake), 			1, 2, 1);
-		this.AddDungeonLoot(new ItemStack(UFItems.magicapplejuice), 	1, 2, 1);
-		this.AddDungeonLoot(new ItemStack(UFItems.caramel), 			1, 10, 5);
-		this.AddDungeonLoot(new ItemStack(UFItems.Tea), 				1, 10, 5);
-		this.AddDungeonLoot(new ItemStack(UFItems.Cheese), 				1, 10, 5);
-		this.AddDungeonLoot(new ItemStack(UFItems.trailmix), 			1, 10, 5);
-		this.AddDungeonLoot(new ItemStack(UFItems.biscuit), 			1, 10, 5);
-		this.AddDungeonLoot(new ItemStack(UFItems.applebiscuit), 		1, 10, 5);
-		this.AddDungeonLoot(new ItemStack(UFItems.salad), 				1, 10, 5);
+		this.AddDungeonLoot(new ItemStack(UFItems.MagicCake), 			1, 1, 1);
+		this.AddDungeonLoot(new ItemStack(UFItems.magicapplejuice), 	1, 1, 1);
+		this.AddDungeonLoot(new ItemStack(UFItems.caramel), 			1, 10, 25);
+		this.AddDungeonLoot(new ItemStack(UFItems.Tea), 				1, 10, 25);
+		this.AddDungeonLoot(new ItemStack(UFItems.Cheese), 				1, 10, 25);
+		this.AddDungeonLoot(new ItemStack(UFItems.trailmix), 			1, 10, 25);
+		this.AddDungeonLoot(new ItemStack(UFItems.biscuit), 			1, 10, 25);
+		this.AddDungeonLoot(new ItemStack(UFItems.applebiscuit), 		1, 10, 25);
+		this.AddDungeonLoot(new ItemStack(UFItems.salad), 				1, 10, 25);
 	}
 	
 	/**
@@ -34,13 +34,7 @@ public class UFDungeonLoot {
 	private void AddDungeonLoot(ItemStack itemstack, int min, int max, int weight) 
 	{
 		String[] ChestsToSpawnIn = { 
-				ChestGenHooks.BONUS_CHEST, 
-				ChestGenHooks.DUNGEON_CHEST,
-			    ChestGenHooks.MINESHAFT_CORRIDOR,
-			    ChestGenHooks.PYRAMID_DESERT_CHEST, 
-			    ChestGenHooks.PYRAMID_JUNGLE_CHEST, 
-			    ChestGenHooks.STRONGHOLD_CORRIDOR, 
-			    ChestGenHooks.STRONGHOLD_CROSSING
+				ChestGenHooks.VILLAGE_BLACKSMITH
 		};
 		
 		for(String Chest : ChestsToSpawnIn)
