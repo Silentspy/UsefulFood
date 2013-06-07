@@ -83,13 +83,18 @@ public class UFItems
 	public static Item sushi;
 	public static Item Tea;
 	public static Item trailmix;
+	public static Item Cereal;
+	public static Item ChocolateCereal;
+	public static Item FrenchFries;
+	public static Item AppleJelly;
+	public static Item MelonJelly;
 	
 	
 	public void init() 
 	{
 		milkbottle = new ItemBottle(UFConfig.milkbottleItemID, "MilkBottle", 0, 0.0F, true).setContainerItem(Item.glassBottle);
 		chocolatebottle = new ItemBottle(UFConfig.chocolateItemID, "ChocolateMilkBottle", 3, 0.8F, true);
-		Cheese = new ItemCheese(UFConfig.cheeseItemID, "Cheese", 3, 0.6F, true);
+		Cheese = new ItemCheese(UFConfig.cheeseItemID, "Cheese", 2, 0.6F, true);
 		chocolatecandy = new ItemFoodUF(UFConfig.chocolatecandyItemID, "ChocolateBar", 6, 1.0F, false);
 		fruitsalad = new ItemBowl(UFConfig.fruitsaladItemID, "FruitSalad", 7, 0.6F, false);
 		magicfruitsalad = new ItemMagicFruitSalad(UFConfig.magicfruitsaladItemID, "MagicFruitSalad", 6, 0.6F, false).setPotionEffect(Potion.regeneration.id, 5, 0, 1.0F).setPotionEffect(Potion.resistance.id, 10, 0, 1.0F);
@@ -104,7 +109,7 @@ public class UFItems
 		jelly = new ItemBowl(UFConfig.jellyItemID, "Jelly", 5, 0.3F, false).setPotionEffect(Potion.jump.id, 30, 0, 1.0F);
 		marshmallow = new ItemFoodStick(UFConfig.marshmallowItemID, "RawMarshmallow", 3, 0.3F, false);
 		cmarshmallow = new ItemFoodStick(UFConfig.cmarshmallowItemID, "CookedMarshmallow", 4, 0.3F, false);
-		icecream = new ItemBowl(UFConfig.icecreamItemID, "VanillaIceCream", 2, 0.3F, false);
+		icecream = new ItemBowl(UFConfig.icecreamItemID, "VanillaIceCream", 2, 0.3F, true);
 		breadslice = new ItemFoodUF(UFConfig.toastItemID, "Breadslice", 1, 0.3F, false);
 		porkwich = new ItemFoodUF(UFConfig.porkwichItemID, "PorkChopSandwich", 11, 1.0F, true);
 		steakwich = new ItemFoodUF(UFConfig.steakwichItemID, "SteakSandwich", 11, 1.0F, true);
@@ -149,9 +154,9 @@ public class UFItems
 		MagicIceCream = new ItemMagicIceCream(UFConfig.MagicIceCreamItemID, "MagicIceCream", 9, 0.6F, true).setPotionEffect(Potion.regeneration.id, 5, 0, 1.0F).setPotionEffect(Potion.resistance.id, 10, 0, 1.0F);
 		SquidSushi = new ItemFoodUF(UFConfig.SquidSushiItemID, "SquidSushi", 5, 0.3F, true);
 		CactusJuice = new ItemJuice(UFConfig.CactusJuiceItemID, "CactusJuice", 5, 0.6F); 
-		Spaghetti = new ItemBowl(UFConfig.SpaghettiItemID, "Spaghetti", 5, 0.6F, true);
-		AppleIceCream = new ItemBowl(UFConfig.AppleIceCreamItemID, "AppleIceCream", 5, 0.6F, false);
-		MelonIceCream = new ItemBowl(UFConfig.MelonIceCreamItemID, "MelonIceCream", 7, 0.6F, false);
+		Spaghetti = new ItemBowl(UFConfig.SpaghettiItemID, "Spaghetti", 5, 0.6F, false);
+		AppleIceCream = new ItemBowl(UFConfig.AppleIceCreamItemID, "AppleIceCream", 5, 0.6F, true);
+		MelonIceCream = new ItemBowl(UFConfig.MelonIceCreamItemID, "MelonIceCream", 7, 0.6F, true);
 		ChocolateApple = new ItemFoodStick(UFConfig.ChocolateAppleItemID, "ChocolateApple", 11, 0.6F, false);
 		CaramelBiscuit = new ItemFoodUF(UFConfig.CaramelBiscuitItemID, "CaramelBiscuit", 8, 0.6F, false);
 		FishSoup = new ItemSoupUF(UFConfig.FishSoupItemID, "FishSoup", 12, 0.6F);
@@ -160,5 +165,11 @@ public class UFItems
 		CaramelCake = new ItemReedUF(UFConfig.CaramelCakeItemID, UFBlocks.CaramelCake, "CaramelCake").setMaxStackSize(1);
 		CheeseSandwich = new ItemFoodUF(UFConfig.CheeseSandwichItemID, "CheeseSandwich", 5, 1.0F, false);
 		CaramelIceCream = new ItemBowl(UFConfig.CaramelIceCreamItemID, "CaramelIceCream", 6, 0.6F, false);
+		Cereal = new ItemBowl(UFConfig.CerealItemID, "Cereal", 4, 0.5F, true);
+		ChocolateCereal = new ItemBowl(UFConfig.ChocolateCerealItemID, "ChocolateCereal", 6, 0.5F, true);
+		FrenchFries = new ItemFoodUF(UFConfig.FrenchFriesItemID, "FrenchFries", 6, 0.6F, false); 
+		AppleJelly = new ItemBowl(UFConfig.AppleJellyItemID, "AppleJelly", 9, 0.4F, false);
+		MelonJelly = new ItemBowl(UFConfig.MelonJellyItemID, "MelonJelly", 7, 0.4F, false);
+		
 		}
 }
