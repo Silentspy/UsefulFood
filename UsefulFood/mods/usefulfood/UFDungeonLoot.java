@@ -9,17 +9,23 @@ import net.minecraftforge.common.ChestGenHooks;
 
 public class UFDungeonLoot {
 	
+	String[] ChestsToSpawnIn = { 
+			ChestGenHooks.VILLAGE_BLACKSMITH,
+			ChestGenHooks.BONUS_CHEST,
+			ChestGenHooks.DUNGEON_CHEST
+	};
+	
 	public UFDungeonLoot () 
 	{
 		this.AddDungeonLoot(new ItemStack(UFItems.MagicCake), 			1, 1, 1);
 		this.AddDungeonLoot(new ItemStack(UFItems.magicapplejuice), 	1, 1, 1);
-		this.AddDungeonLoot(new ItemStack(UFItems.caramel), 			1, 10, 25);
-		this.AddDungeonLoot(new ItemStack(UFItems.Tea), 				1, 10, 25);
-		this.AddDungeonLoot(new ItemStack(UFItems.Cheese), 				1, 10, 25);
-		this.AddDungeonLoot(new ItemStack(UFItems.trailmix), 			1, 10, 25);
-		this.AddDungeonLoot(new ItemStack(UFItems.biscuit), 			1, 10, 25);
-		this.AddDungeonLoot(new ItemStack(UFItems.applebiscuit), 		1, 10, 25);
-		this.AddDungeonLoot(new ItemStack(UFItems.salad), 				1, 10, 25);
+		this.AddDungeonLoot(new ItemStack(UFItems.caramel), 			1, 4, 2);
+		this.AddDungeonLoot(new ItemStack(UFItems.Tea), 				1, 4, 2);
+		this.AddDungeonLoot(new ItemStack(UFItems.Cheese), 				1, 4, 2);
+		this.AddDungeonLoot(new ItemStack(UFItems.trailmix), 			1, 1, 2);
+		this.AddDungeonLoot(new ItemStack(UFItems.biscuit), 			1, 4, 2);
+		this.AddDungeonLoot(new ItemStack(UFItems.AppleJamBiscuit), 	1, 4, 2);
+		this.AddDungeonLoot(new ItemStack(UFItems.salad), 				1, 1, 2);
 	}
 	
 	/**
@@ -31,15 +37,19 @@ public class UFDungeonLoot {
      * @param chance the amount at a maximum it will spawn in a dungeon chest
      */
 	
-	private void AddDungeonLoot(ItemStack itemstack, int min, int max, int weight) 
+	private void AddDungeonLoot(ItemStack itemstack, int minStack, int maxStack, int weight) 
 	{
-		String[] ChestsToSpawnIn = { 
-				ChestGenHooks.VILLAGE_BLACKSMITH
-		};
-		
 		for(String Chest : ChestsToSpawnIn)
 		{
-			ChestGenHooks.getInfo(Chest).addItem(new WeightedRandomChestContent(itemstack,min,max,weight));
+			ChestGenHooks.addItem(Chest, new WeightedRandomChestContent(itemstack,minStack,maxStack,weight));
 		}
 	}
+	
+	public static void increaseLootGen(int min, int max, String... locations) {
+        for (String location : locations) {
+            ChestGenHooks lootInfo = ChestGenHooks.getInfo(location);
+            lootInfo.setMin(lootInfo.getMin() + min);
+            lootInfo.setMax(lootInfo.getMax() + max);
+        }
+    }
 }

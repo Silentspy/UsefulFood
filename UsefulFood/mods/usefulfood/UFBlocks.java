@@ -13,13 +13,13 @@ public class UFBlocks {
 	public static Block MagicCake;
 	public static Block CaramelCake;
 	
-	public void init() 
+	public UFBlocks() 
 	{
 		AppleCake = new SpecialCake(UFConfig.ApplecakeBlockID, "applecake", 18, 0.6F, UFConfig.applecakeItemID);
 		ChocolateCake = new SpecialCake(UFConfig.ChococakeBlockID, "chocolatecake", 12, 0.5F, UFConfig.chococakeItemID);
 		MagicCake = new MagicCake(UFConfig.MagiccakeBlockID, "magiccake", 48, 0.5F, UFConfig.magiccakeItemID);
 		
 		// 1.4
-		CaramelCake = new SpecialCake(UFConfig.CaramelCakeBlockID, "caramelcake", 12, 0.8F, UFConfig.CaramelCakeItemID);
+		CaramelCake = new SpecialCake(UFConfig.CaramelCakeBlockID, "caramelcake", 19, 0.8F, UFConfig.CaramelCakeItemID);
 	}
 }

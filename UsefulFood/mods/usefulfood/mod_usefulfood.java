@@ -22,8 +22,8 @@ public class mod_usefulfood {
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event) {
 		UFConfig.Properties(event);
-		new UFBlocks().init();
-		new UFItems().init();
+		new UFBlocks();
+		new UFItems();
 	}
 	
 	@Init
@@ -33,7 +33,7 @@ public class mod_usefulfood {
 		{
 			Class.forName("drzhark.mocreatures.MoCreatures");
 			MoCreatures = true;
-			FMLLog.info("[UsefulFood] Mo's Creatures Detected using 5x sugarcube recipe instead");
+			FMLLog.info("[UsefulFood] Mo's Creatures Detected. using 5x sugarcube recipe instead");
 		}
 		catch (ClassNotFoundException e)
 		{
@@ -42,10 +42,10 @@ public class mod_usefulfood {
 		
 		MinecraftForge.EVENT_BUS.register(new UFEvents());
 		FMLLog.fine("[UsefulFood] loading mod_usefulfood recipes");
-		UFRecipes.init();
+		new UFRecipes();
 		FMLLog.fine("[UsefulFood] mod_usefulfood recipes initialized");
 		
 		proxy.addNames();
-		new UFDungeonLoot();
+		//new UFDungeonLoot();
 	}
 }

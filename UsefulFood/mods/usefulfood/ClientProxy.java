@@ -52,7 +52,7 @@ public class ClientProxy extends CommonProxy
 		LanguageRegistry.addName(UFItems.pumpkinbread, "Pumpkin Bread");
 		LanguageRegistry.addName(UFItems.fishnchips, "Fish N' Chips");
 		LanguageRegistry.addName(UFItems.sugarbiscuit, "Sugar Biscuit");
-		LanguageRegistry.addName(UFItems.applebiscuit, "Apple Biscuit");
+		LanguageRegistry.addName(UFItems.AppleJamBiscuit, "Apple Jam Biscuit");
 		LanguageRegistry.addName(UFItems.chocobiscuit, "Chocolate Biscuit");
 		LanguageRegistry.addName(UFItems.carrotpie, "Carrot Pie");
 		LanguageRegistry.addName(UFItems.hotchocolatebottle, "Hot Chocolate Milk Bottle");
@@ -73,6 +73,29 @@ public class ClientProxy extends CommonProxy
 		LanguageRegistry.addName(UFItems.MelonIceCream, "Melon Ice Cream");
 		LanguageRegistry.addName(UFItems.CheeseSandwich, "Cheese Sandwich");
 		LanguageRegistry.addName(UFItems.CaramelIceCream, "Caramel Ice Cream");
+		LanguageRegistry.addName(UFItems.Cereal, "Cereal");
+		LanguageRegistry.addName(UFItems.ChocolateCereal, "Chocolate Cereal");
+		LanguageRegistry.addName(UFItems.FrenchFries, "French Fries");
+		LanguageRegistry.addName(UFItems.AppleJelly, "Apple Jelly");
+		LanguageRegistry.addName(UFItems.MelonJelly, "Melon Jelly");
+		LanguageRegistry.addName(UFItems.Donut, "Donut");
+		LanguageRegistry.addName(UFItems.Oreo, "Oreo");
+		LanguageRegistry.addName(UFItems.CaramelToast, "Caramel Toast");
+		LanguageRegistry.addName(UFItems.ChocolateToast, "Chocolate Toast");
+		LanguageRegistry.addName(UFItems.SugarToast, "Sugar Toast");
+		LanguageRegistry.addName(UFItems.SugarPancake, "Sugar Pancake");
+		LanguageRegistry.addName(UFItems.AppleJamPanCake, "Apple Jam Pancake");
+		LanguageRegistry.addName(UFItems.AppleJamToast, "Apple Jam Toast");
+		LanguageRegistry.addName(UFItems.AppleJam, "Apple Jam");
+		LanguageRegistry.addName(UFItems.Waffle, "Waffle");
+		LanguageRegistry.addName(UFItems.CaramelPanCake, "Caramel Pancake");
+		LanguageRegistry.addName(UFItems.ChocolatePanCake, "Chocolate Pancake");
+		LanguageRegistry.addName(UFItems.MelonJamPanCake, "Melon Jam Pancake");
+		LanguageRegistry.addName(UFItems.MelonJamToast, "Melon Jam Toast");
+		LanguageRegistry.addName(UFItems.MelonJamBiscuit, "Melon Jam Biscuit");
+		LanguageRegistry.addName(UFItems.MelonJam, "Melon Jam");
+		LanguageRegistry.addName(UFItems.PanCakeDough, "Pancake Dough");
+		LanguageRegistry.addName(UFItems.PanCake, "Pancake");	
 	}
 
 	public void registerRenderInformation() {

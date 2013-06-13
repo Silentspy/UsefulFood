@@ -79,6 +79,24 @@ public class UFConfig {
 	static int FrenchFriesItemID;
 	static int AppleJellyItemID;
 	static int MelonJellyItemID;
+	static int DonutitemID;
+	static int OreoItemID;
+	static int CaramelToastItemID;
+	static int ChocolateToastItemID;
+	static int SugarToastItemID;
+	static int SugarPancakeItemID;
+	static int AppleJamPanCakeItemID;
+	static int AppleJamToastItemID;
+	static int AppleJamItemID;
+	static int WaffleItemID;
+	static int CaramelPanCakeItemID;
+	static int ChocolatePanCakeItemID;
+	static int MelonJamPanCakeItemID;
+	static int MelonJamToastItemID;
+	static int MelonJamBiscuitItemID;
+	static int MelonJamItemID;
+	static int PanCakeDoughItemID;
+	static int PanCakeItemID;
 	
 	// blocks
 	static int ApplecakeBlockID;
@@ -177,6 +195,24 @@ public class UFConfig {
 			FrenchFriesItemID = cfg.getItem("frenchfries", 5175).getInt(5175);
 			AppleJellyItemID = cfg.getItem("applejelly", 5176).getInt(5176);
 			MelonJellyItemID = cfg.getItem("melonjelly", 5177).getInt(5177);
+			DonutitemID = cfg.getItem("donut", 5178).getInt(5179);
+			OreoItemID = cfg.getItem("oreo", 5180).getInt(5180);
+			CaramelToastItemID = cfg.getItem("carameltoast", 5181).getInt(5181);
+			ChocolateToastItemID = cfg.getItem("chocolatetoast", 5182).getInt(5182);
+			SugarToastItemID = cfg.getItem("sugartoast", 5183).getInt(5183);
+			SugarPancakeItemID = cfg.getItem("sugarpancake", 5184).getInt(5184);
+			AppleJamPanCakeItemID = cfg.getItem("applejampancake", 5185).getInt(5185);
+			AppleJamToastItemID = cfg.getItem("applejamtoast", 5186).getInt(5186);
+			AppleJamItemID = cfg.getItem("applejam", 5187).getInt(5187);
+			WaffleItemID = cfg.getItem("waffle", 5188).getInt(5188);
+			CaramelPanCakeItemID = cfg.getItem("caramelpancake", 5189).getInt(5189);
+			ChocolatePanCakeItemID = cfg.getItem("chocolatepancake", 5190).getInt(5190);
+			MelonJamPanCakeItemID = cfg.getItem("melonjampancake", 5191).getInt(5191);
+			MelonJamToastItemID = cfg.getItem("melonjamtoast", 5192).getInt(5192);
+			MelonJamBiscuitItemID = cfg.getItem("melonjambiscuit", 5193).getInt(5193);
+			MelonJamItemID = cfg.getItem("melonjam", 5194).getInt(5194);
+			PanCakeDoughItemID = cfg.getItem("pancakedough", 5195).getInt(5195);
+			PanCakeItemID = cfg.getItem("pancake", 5196).getInt(5196);
 			
 			// Blocks
 			ApplecakeBlockID = cfg.getBlock("Applecake", 2230).getInt(2230);

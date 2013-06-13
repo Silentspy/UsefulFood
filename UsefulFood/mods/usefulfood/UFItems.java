@@ -19,7 +19,7 @@ import net.minecraft.potion.Potion;
 
 public class UFItems 
 {
-	public static Item applebiscuit;
+	public static Item AppleJamBiscuit;
 	public static Item AppleCake;
 	public static Item AppleIceCream;
 	public static Item applejuice;
@@ -88,9 +88,26 @@ public class UFItems
 	public static Item FrenchFries;
 	public static Item AppleJelly;
 	public static Item MelonJelly;
+	public static Item Donut;
+	public static Item Oreo;
+	public static Item CaramelToast;
+	public static Item ChocolateToast;
+	public static Item SugarToast;
+	public static Item SugarPancake;
+	public static Item AppleJamPanCake;
+	public static Item AppleJamToast;
+	public static Item AppleJam;
+	public static Item Waffle;
+	public static Item CaramelPanCake;
+	public static Item ChocolatePanCake;
+	public static Item MelonJamPanCake;
+	public static Item MelonJamToast;
+	public static Item MelonJamBiscuit;
+	public static Item MelonJam;
+	public static Item PanCakeDough;
+	public static Item PanCake;
 	
-	
-	public void init() 
+	public UFItems() 
 	{
 		milkbottle = new ItemBottle(UFConfig.milkbottleItemID, "MilkBottle", 0, 0.0F, true).setContainerItem(Item.glassBottle);
 		chocolatebottle = new ItemBottle(UFConfig.chocolateItemID, "ChocolateMilkBottle", 3, 0.8F, true);
@@ -98,9 +115,9 @@ public class UFItems
 		chocolatecandy = new ItemFoodUF(UFConfig.chocolatecandyItemID, "ChocolateBar", 6, 1.0F, false);
 		fruitsalad = new ItemBowl(UFConfig.fruitsaladItemID, "FruitSalad", 7, 0.6F, false);
 		magicfruitsalad = new ItemMagicFruitSalad(UFConfig.magicfruitsaladItemID, "MagicFruitSalad", 6, 0.6F, false).setPotionEffect(Potion.regeneration.id, 5, 0, 1.0F).setPotionEffect(Potion.resistance.id, 10, 0, 1.0F);
-		sugarcube = new ItemFoodUF(UFConfig.sugarcubeItemID, "SugarCube", 2, 0.1F,false).setPotionEffect(Potion.moveSpeed.id, 10, 0, 1.0F);
-		caramel = new ItemFoodUF(UFConfig.caramelItemID, "Caramel", 3, 0.2F, false).setPotionEffect(Potion.moveSpeed.id, 10, 0, 1.0F);
-		caramelapple = new ItemFoodStick(UFConfig.caramelappleItemID, "CaramelApple", 8, 0.5F, false).setPotionEffect(Potion.moveSpeed.id, 10, 0, 1.0F);
+		sugarcube = new ItemFoodUF(UFConfig.sugarcubeItemID, "SugarCube", 4, 0.1F, false).setPotionEffect(Potion.moveSpeed.id, 10, 0, 1.0F);
+		caramel = new ItemFoodUF(UFConfig.caramelItemID, "Caramel", 5, 0.2F, false).setPotionEffect(Potion.moveSpeed.id, 10, 0, 1.0F);
+		caramelapple = new ItemFoodStick(UFConfig.caramelappleItemID, "CaramelApple", 10, 0.5F, false).setPotionEffect(Potion.moveSpeed.id, 10, 0, 1.0F);
 		RoastedSeeds = new ItemFoodUF(UFConfig.cookedseedsItemID, "RoastedSeeds", 1, 0.5F, false);
 		friedegg = new ItemFoodUF(UFConfig.friedeggItemID, "FriedEgg", 3, 0.4F, true);
 		pumpkinsoup = new ItemSoupUF(UFConfig.pumpkinsoupItemID, "PumpkinSoup", 5, 0.8F);
@@ -142,9 +159,9 @@ public class UFItems
 		carrotjuice = new ItemJuice(UFConfig.carrotjuiceItemID, "CarrotJuice", 12, 0.9F);
 		carrotsoup = new ItemSoupUF(UFConfig.carrotsoupItemID, "CarrotSoup", 9, 0.8F);
 		pumpkinbread = new ItemFoodUF(UFConfig.pumpkinbreadItemID, "PumpkinBread", 10, 0.6F, true);
-		fishnchips = new ItemFoodUF(UFConfig.fishnchipsItemID, "FishnChips", 13, 1.2F, true);
+		fishnchips = new ItemFoodUF(UFConfig.fishnchipsItemID, "FishnChips", 12, 1.2F, true);
 		sugarbiscuit = new ItemFoodUF(UFConfig.sugarbiscuitItemID, "SugarBiscuit", 3, 0.3F, true);
-		applebiscuit = new ItemFoodUF(UFConfig.applebiscuitItemID, "AppleBiscuit", 6, 0.3F, true);
+		AppleJamBiscuit = new ItemFoodUF(UFConfig.applebiscuitItemID, "AppleBiscuit", 10, 0.3F, true);
 		chocobiscuit = new ItemFoodUF(UFConfig.chocobiscuitItemID, "ChocolateBiscuit", 9, 0.3F, true);
 		carrotpie = new ItemFoodUF(UFConfig.carrotpieItemID, "CarrotPie", 9, 0.8F, true);
 		hotchocolatebottle = new ItemBottle(UFConfig.hotchocolateItemID, "HotChocolateMilkBottle", 4, 1.0F, true).setContainerItem(Item.glassBottle);
@@ -158,18 +175,35 @@ public class UFItems
 		AppleIceCream = new ItemBowl(UFConfig.AppleIceCreamItemID, "AppleIceCream", 5, 0.6F, true);
 		MelonIceCream = new ItemBowl(UFConfig.MelonIceCreamItemID, "MelonIceCream", 7, 0.6F, true);
 		ChocolateApple = new ItemFoodStick(UFConfig.ChocolateAppleItemID, "ChocolateApple", 11, 0.6F, false);
-		CaramelBiscuit = new ItemFoodUF(UFConfig.CaramelBiscuitItemID, "CaramelBiscuit", 8, 0.6F, false);
+		CaramelBiscuit = new ItemFoodUF(UFConfig.CaramelBiscuitItemID, "CaramelBiscuit", 7, 0.6F, false).setPotionEffect(Potion.moveSpeed.id, 10, 0, 1.0F);
 		FishSoup = new ItemSoupUF(UFConfig.FishSoupItemID, "FishSoup", 12, 0.6F);
 		Tea = new ItemTea(UFConfig.TeaItemID, "Tea", 2);
 		HotMilkBottle = new ItemBottle(UFConfig.HotMilkBottleItemID, "HotMilkBottle", 1, 0.3F, true).setContainerItem(Item.glassBottle);
 		CaramelCake = new ItemReedUF(UFConfig.CaramelCakeItemID, UFBlocks.CaramelCake, "CaramelCake").setMaxStackSize(1);
 		CheeseSandwich = new ItemFoodUF(UFConfig.CheeseSandwichItemID, "CheeseSandwich", 5, 1.0F, false);
-		CaramelIceCream = new ItemBowl(UFConfig.CaramelIceCreamItemID, "CaramelIceCream", 6, 0.6F, false);
+		CaramelIceCream = new ItemBowl(UFConfig.CaramelIceCreamItemID, "CaramelIceCream", 8, 0.6F, false).setPotionEffect(Potion.moveSpeed.id, 10, 0, 1.0F);
 		Cereal = new ItemBowl(UFConfig.CerealItemID, "Cereal", 4, 0.5F, true);
 		ChocolateCereal = new ItemBowl(UFConfig.ChocolateCerealItemID, "ChocolateCereal", 6, 0.5F, true);
 		FrenchFries = new ItemFoodUF(UFConfig.FrenchFriesItemID, "FrenchFries", 6, 0.6F, false); 
 		AppleJelly = new ItemBowl(UFConfig.AppleJellyItemID, "AppleJelly", 9, 0.4F, false);
 		MelonJelly = new ItemBowl(UFConfig.MelonJellyItemID, "MelonJelly", 7, 0.4F, false);
-		
-		}
+		Donut = new ItemFoodUF(UFConfig.DonutitemID, "Donut", 7, 0.6F, false);
+		Oreo = new ItemFoodUF(UFConfig.OreoItemID, "Oreo", 19, 0.6F, false);
+		CaramelToast = new ItemFoodUF(UFConfig.CaramelToastItemID, "CaramelToast", 7, 0.6F, false).setPotionEffect(Potion.moveSpeed.id, 10, 0, 1.0F);
+		ChocolateToast = new ItemFoodUF(UFConfig.ChocolateToastItemID, "ChocolateToast", 8, 0.6F, false);
+		SugarToast = new ItemFoodUF(UFConfig.SugarToastItemID, "SugarToast", 3, 0.2F, false).setPotionEffect(Potion.moveSpeed.id, 5, 0, 1.0F);
+		SugarPancake = new ItemFoodUF(UFConfig.SugarPancakeItemID, "SugarPancake", 8, 0.6F, false).setPotionEffect(Potion.moveSpeed.id, 10, 0, 1.0F);
+		AppleJamPanCake = new ItemFoodUF(UFConfig.AppleJamPanCakeItemID, "AppleJamPanCake", 15, 0.7F, false);
+		AppleJamToast = new ItemFoodUF(UFConfig.AppleJamToastItemID, "AppleJamToast", 10, 0.7F, false);
+		AppleJam = new ItemFoodUF(UFConfig.AppleJamItemID, "AppleJam", 8, 0.4F, false).setContainerItem(Item.bowlEmpty);
+		Waffle = new ItemFoodUF(UFConfig.WaffleItemID, "Waffle", 6, 0.6F, false);
+		CaramelPanCake = new ItemFoodUF(UFConfig.CaramelPanCakeItemID, "CaramelPanCake", 12, 0.6F, false).setPotionEffect(Potion.moveSpeed.id, 10, 0, 1.0F);
+		ChocolatePanCake = new ItemFoodUF(UFConfig.ChocolatePanCakeItemID, "ChocolatePanCake", 13, 0.6F, false);
+		MelonJamPanCake = new ItemFoodUF(UFConfig.MelonJamPanCakeItemID, "MelonJamPanCake", 13, 0.4F, false);
+		MelonJamToast = new ItemFoodUF(UFConfig.MelonJamToastItemID, "MelonJamToast", 8, 0.4F, false);
+		MelonJamBiscuit = new ItemFoodUF(UFConfig.MelonJamBiscuitItemID, "MelonJamBiscuit", 8, 0.4F, false);
+		MelonJam = new ItemFoodUF(UFConfig.MelonJamItemID, "MelonJam", 6, 0.4F, false).setContainerItem(Item.bowlEmpty);
+		PanCakeDough = new ItemFoodUF(UFConfig.PanCakeDoughItemID, "PanCakeDough", 5, 0.3F, false);
+		PanCake = new ItemFoodUF(UFConfig.PanCakeItemID, "PanCake", 6, 0.6F, false);
+	}
 }
