@@ -204,7 +204,7 @@ public class UFConfig {
 			AppleJamPanCakeItemID = cfg.getItem("applejampancake", 5185).getInt(5185);
 			AppleJamToastItemID = cfg.getItem("applejamtoast", 5186).getInt(5186);
 			AppleJamItemID = cfg.getItem("applejam", 5187).getInt(5187);
-			WaffleItemID = cfg.getItem("waffle", 5188).getInt(5188);
+			// WaffleItemID = cfg.getItem("waffle", 5188).getInt(5188);
 			CaramelPanCakeItemID = cfg.getItem("caramelpancake", 5189).getInt(5189);
 			ChocolatePanCakeItemID = cfg.getItem("chocolatepancake", 5190).getInt(5190);
 			MelonJamPanCakeItemID = cfg.getItem("melonjampancake", 5191).getInt(5191);

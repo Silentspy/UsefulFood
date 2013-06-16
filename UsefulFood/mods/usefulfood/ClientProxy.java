@@ -87,7 +87,7 @@ public class ClientProxy extends CommonProxy
 		LanguageRegistry.addName(UFItems.AppleJamPanCake, "Apple Jam Pancake");
 		LanguageRegistry.addName(UFItems.AppleJamToast, "Apple Jam Toast");
 		LanguageRegistry.addName(UFItems.AppleJam, "Apple Jam");
-		LanguageRegistry.addName(UFItems.Waffle, "Waffle");
+		// LanguageRegistry.addName(UFItems.Waffle, "Waffle");
 		LanguageRegistry.addName(UFItems.CaramelPanCake, "Caramel Pancake");
 		LanguageRegistry.addName(UFItems.ChocolatePanCake, "Chocolate Pancake");
 		LanguageRegistry.addName(UFItems.MelonJamPanCake, "Melon Jam Pancake");
