@@ -1,17 +1,17 @@
 [
 {
-  "modid": "UsefulFood",
+  "modid": "\u00A7eUsefulFood",
   "name": "UsefulFood",
-  "description": "Adds a variation of food types",
+  "description": "\u00A73Adds a variation of food types",
   "version": "@version@",
   "mcversion": "@mcversion@",
-  "url": "http://www.silentspy.net/usefulfood",
+  "url": "\u00A7chttp://www.silentspy.net/usefulfood",
   "updateUrl": "",
   "authors": [
-  "Silentspy",
-  "Bockwurst"
+  "\u00A7eSilentspy",
+  "\u00A7eBockwurst"
   ],
-  "credits": "Mod by Silentspy and Bockwurst",
+  "credits": "Mod by \u00A7cSilentspy and \u00A7cBockwurst",
   "logoFile": "/mods/usefulfood/usefulfood.png",
   "screenshots": [
   ],
