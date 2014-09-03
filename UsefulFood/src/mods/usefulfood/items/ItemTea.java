@@ -1,6 +1,7 @@
 package mods.usefulfood.items;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
@@ -11,8 +12,8 @@ public class ItemTea extends ItemBottle {
 
 	int hearts;
 	
-	public ItemTea(int id, String name, int hearts) {
-		super(id, name, 0, 0.0F, true);
+	public ItemTea(String name, int hearts) {
+		super(name, 0, 0.0F, true);
 		this.hearts = hearts;
 	}
 	
@@ -21,7 +22,7 @@ public class ItemTea extends ItemBottle {
 		if (!player.capabilities.isCreativeMode) {
 			--itemstack.stackSize;
 			if(itemstack.stackSize > 0) {
-				player.inventory.addItemStackToInventory(new ItemStack(Item.glassBottle));
+				player.inventory.addItemStackToInventory(new ItemStack(Items.glass_bottle));
 			}
 		}
 
@@ -32,6 +33,6 @@ public class ItemTea extends ItemBottle {
 			}
 		}
 		
-		return itemstack.stackSize <= 0 ? new ItemStack(Item.glassBottle) : itemstack;
+		return itemstack.stackSize <= 0 ? new ItemStack(Items.glass_bottle) : itemstack;
 	}
 }

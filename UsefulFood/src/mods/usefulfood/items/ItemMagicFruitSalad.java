@@ -7,8 +7,8 @@ import net.minecraft.item.ItemStack;
 
 public class ItemMagicFruitSalad extends ItemBowl{
 
-	public ItemMagicFruitSalad(int var1, String name, int var2, float var3, boolean var4) {
-		super(var1, name, var2, var3, var4);
+	public ItemMagicFruitSalad(String name, int var2, float var3, boolean var4) {
+		super(name, var2, var3, var4);
 	}
 	
 	@SideOnly(Side.CLIENT)

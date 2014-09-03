@@ -1,6 +1,7 @@
 package mods.usefulfood.items;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
@@ -15,8 +16,8 @@ public class ItemBottle extends ItemFoodUF {
 	float saturation;
 	boolean removepoison = false;
 	
-	public ItemBottle(int id, String name, int foodlevel, float saturation, boolean removepoison) {
-		super(id, name, 0, 0, false);
+	public ItemBottle(String name, int foodlevel, float saturation, boolean removepoison) {
+		super(name, 0, 0, false);
 		this.setMaxStackSize(16);
 		this.setCreativeTab(mod_usefulfood.tabUsefulFood);
 		this.foodlevel = foodlevel;
@@ -24,8 +25,8 @@ public class ItemBottle extends ItemFoodUF {
 		this.removepoison = removepoison;
 	}
 	
-	public ItemBottle(int id, String name, int foodlevel, float saturation) {
-		super(id, name, 0, 0, false);
+	public ItemBottle(String name, int foodlevel, float saturation) {
+		super(name, 0, 0, false);
 		this.setMaxStackSize(16);
 		this.setCreativeTab(mod_usefulfood.tabUsefulFood);
 		this.foodlevel = foodlevel;
@@ -35,7 +36,7 @@ public class ItemBottle extends ItemFoodUF {
     public ItemStack onEaten(ItemStack itemstack, World world, EntityPlayer player) {
 		if (!player.capabilities.isCreativeMode) {
 			--itemstack.stackSize;
-			if(itemstack.stackSize > 0) player.inventory.addItemStackToInventory(new ItemStack(Item.glassBottle));
+			if(itemstack.stackSize > 0) player.inventory.addItemStackToInventory(new ItemStack(Items.glass_bottle));
 		}
 
 		if (!world.isRemote) {
@@ -44,7 +45,7 @@ public class ItemBottle extends ItemFoodUF {
 			if(this.removepoison) player.removePotionEffect(Potion.poison.id);
 		}
 		
-		return itemstack.stackSize <= 0 ? new ItemStack(Item.glassBottle) : itemstack;
+		return itemstack.stackSize <= 0 ? new ItemStack(Items.glass_bottle) : itemstack;
 	}
 
 	/**

@@ -84,3 +84,8 @@ item.Sushi.name=Sushi
 item.Tea.name=Lily Tea
 item.Trailmix.name=Trail mix
 item.VanillaIceCream.name=Vanilla Ice Cream
+
+tile.applecake.name=Apple Cake
+tile.caramelcake.name=Caramel Cake
+tile.chocolatecake.name=Chocolate Cake
+tile.magiccake.name=Magic Cake

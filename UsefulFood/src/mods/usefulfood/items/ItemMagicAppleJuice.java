@@ -3,6 +3,7 @@ package mods.usefulfood.items;
 import java.util.List;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -15,15 +16,15 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class ItemMagicAppleJuice extends ItemJuice {
 
 	
-	public ItemMagicAppleJuice(int id, String name, int var2, float var3) {
-		super(id, name, var2, var3);
+	public ItemMagicAppleJuice(String name, int var2, float var3) {
+		super(name, var2, var3);
 	}
 
 	public ItemStack onEaten(ItemStack itemstack, World world, EntityPlayer player) {
 		if (!player.capabilities.isCreativeMode) {
 			--itemstack.stackSize;
 			if(itemstack.stackSize > 0) {
-				player.inventory.addItemStackToInventory(new ItemStack(Item.glassBottle));
+				player.inventory.addItemStackToInventory(new ItemStack(Items.glass_bottle));
 			}
 		}
 
@@ -36,7 +37,7 @@ public class ItemMagicAppleJuice extends ItemJuice {
 			player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 600, 0));
 		}
 
-		return itemstack.stackSize <= 0 ? new ItemStack(Item.glassBottle) : itemstack;
+		return itemstack.stackSize <= 0 ? new ItemStack(Items.glass_bottle) : itemstack;
 	}
 
 	@SideOnly(Side.CLIENT)

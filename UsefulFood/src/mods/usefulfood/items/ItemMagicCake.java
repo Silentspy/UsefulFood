@@ -11,8 +11,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemMagicCake extends ItemReedUF
 {
-	public ItemMagicCake(int var1, Block var2, String name) {
-		super(var1, var2, name);
+	public ItemMagicCake(Block var2, String name) {
+		super(var2, name);
 	}
 	
 	@SideOnly(Side.CLIENT)

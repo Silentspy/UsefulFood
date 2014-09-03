@@ -2,14 +2,14 @@ package mods.usefulfood;
 
 import java.util.Random;
 
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.entity.passive.EntitySquid;
-import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 
 public class UFEvents {
 	
-	@ForgeSubscribe
+	@SubscribeEvent
 	public void LivingDropsEvent(LivingDropsEvent event) 
 	{
 		if (event.entity instanceof EntitySheep) 
@@ -25,11 +25,11 @@ public class UFEvents {
 		        {
 					if (event.entityLiving.isBurning()) 
 					{
-						event.entity.dropItem(UFItems.MuttonCooked.itemID, 1);
+						event.entity.dropItem(UFItems.MuttonCooked, 1);
 					} 
 					else 
 					{
-						event.entity.dropItem(UFItems.MuttonRaw.itemID, 1);
+						event.entity.dropItem(UFItems.MuttonRaw, 1);
 					}
 				}
 			}
@@ -45,11 +45,11 @@ public class UFEvents {
 	        {
 	        	if (event.entityLiving.isBurning()) 
 				{
-					event.entity.dropItem(UFItems.SquidTentacleCooked.itemID, 1);
+					event.entity.dropItem(UFItems.SquidTentacleCooked, 1);
 				} 
 				else 
 				{
-					event.entity.dropItem(UFItems.SquidTentacleRaw.itemID, 1);
+					event.entity.dropItem(UFItems.SquidTentacleRaw, 1);
 				}
 	        }
 		}

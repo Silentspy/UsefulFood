@@ -14,8 +14,8 @@ import net.minecraft.world.World;
 import mods.usefulfood.mod_usefulfood;
 
 public class ItemFoodDebug extends ItemUF {
-	public ItemFoodDebug(int id, String name) {
-		super(id, name);
+	public ItemFoodDebug(String name) {
+		super(name);
 		this.setCreativeTab(mod_usefulfood.tabUsefulFood);
 	}
 	

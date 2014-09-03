@@ -8,8 +8,8 @@ import net.minecraft.item.ItemStack;
 
 public class ItemBlockBush extends ItemBlock{
 
-	public ItemBlockBush(int par1) {
-		super(par1);
+	public ItemBlockBush(Block block) {
+		super(block);
 		setHasSubtypes(true);
 	}
 	

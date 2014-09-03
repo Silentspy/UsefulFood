@@ -10,8 +10,8 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class MagicCake extends SpecialCake {
-	public MagicCake(int id, String name, int foodlevel, float saturation, int cakeitem) {
-		super(id, name, foodlevel, saturation, cakeitem);
+	public MagicCake(String name, int foodlevel, float saturation) {
+		super(name, foodlevel, saturation);
 	}
 
 	public void eatCakeSlice(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer)
@@ -38,6 +38,7 @@ public class MagicCake extends SpecialCake {
     }
 
 	@SideOnly(Side.CLIENT)
+	@Override
 	public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random random) {
 		double var9 = (double) ((float) par2 + random.nextFloat());
 		double var11 = (double) ((float) par3 + random.nextFloat());
@@ -47,8 +48,8 @@ public class MagicCake extends SpecialCake {
 				1.0D /* green */, 0.0D /* blue */);
 	}
 
-	@SideOnly(Side.CLIENT)
+/*	@SideOnly(Side.CLIENT)
 	public int idPicked(World par1World, int par2, int par3, int par4) {
 		return cakeitemid + 256;
-	}
+	}*/
 }

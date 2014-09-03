@@ -12,8 +12,8 @@ import net.minecraft.world.World;
 
 public class ItemMagicIceCream extends ItemBowl{
 
-	public ItemMagicIceCream(int var1, String name, int var2, float var3, boolean var4) {
-		super(var1, name, var2, var3, var4);
+	public ItemMagicIceCream(String name, int var2, float var3, boolean var4) {
+		super(name, var2, var3, var4);
 	}
 
 	@SideOnly(Side.CLIENT)

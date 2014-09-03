@@ -8,12 +8,12 @@ import java.util.Random;
 import mods.usefulfood.mod_usefulfood;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.Icon;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
@@ -21,25 +21,24 @@ public class SpecialCake extends BlockCakeUF {
 
 	int foodlevel;
 	float saturation;
-	int cakeitemid;
 	String name;
 	
 	@SideOnly(Side.CLIENT)
-	private Icon cake_top_icon;
+	private IIcon cake_top_icon;
 	@SideOnly(Side.CLIENT)
-	private Icon cake_bottom_icon;
+	private IIcon cake_bottom_icon;
 	@SideOnly(Side.CLIENT)
-	private Icon cake_inner_icon;
+	private IIcon cake_inner_icon;
 	
-	public SpecialCake(int id, String name, int foodlevel, float saturation, int cakeitemid) {
-		super(id);
-		this.cakeitemid = cakeitemid;
+	public SpecialCake(String name, int foodlevel, float saturation) {
+		super();
 		this.foodlevel = foodlevel / 6;
 		this.saturation = saturation;
 		this.setTickRandomly(true);
 		this.setHardness(0.5F);
-		this.setStepSound(Block.soundClothFootstep);
+		this.setStepSound(Block.soundTypeCloth);
 		this.name = name;
+		this.setBlockName(name);
 		GameRegistry.registerBlock(this, name);
 	}
 
@@ -69,7 +68,8 @@ public class SpecialCake extends BlockCakeUF {
     /**
      * From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
      */
-    public Icon getIcon(int par1, int par2)
+	@Override
+    public IIcon getIcon(int par1, int par2)
     {
         return par1 == 1 ? this.cake_top_icon : (par1 == 0 ? this.cake_bottom_icon : (par2 > 0 && par1 == 4 ? this.cake_inner_icon : this.blockIcon));
     }
@@ -80,7 +80,8 @@ public class SpecialCake extends BlockCakeUF {
      * When this method is called, your block should register all the icons it needs with the given IconRegister. This
      * is the only chance you get to register icons.
      */
-    public void registerIcons(IconRegister par1IconRegister)
+	@Override
+    public void registerBlockIcons(IIconRegister par1IconRegister)
     {
         this.blockIcon = par1IconRegister.registerIcon("usefulfood:" + name + "_side");
         this.cake_inner_icon = par1IconRegister.registerIcon("usefulfood:" + name + "_inner");
@@ -88,9 +89,9 @@ public class SpecialCake extends BlockCakeUF {
         this.cake_bottom_icon = par1IconRegister.registerIcon("usefulfood:" + name + "_bottom");
     }
 
-	@SideOnly(Side.CLIENT)
+/*	@SideOnly(Side.CLIENT)
 	
 	public int idPicked(World par1World, int par2, int par3, int par4) {
 		return cakeitemid + 256;
-	}
+	}*/
 }

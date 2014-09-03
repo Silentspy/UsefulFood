@@ -11,10 +11,8 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod(modid = "UsefulFood", name = "UsefulFood", version = "1.4.4")
-@NetworkMod(clientSideRequired = true, serverSideRequired = false)
+@Mod(modid = "UsefulFood", name = "UsefulFood", version = "1.4.5")
 public class mod_usefulfood {
 	public static final CreativeTabs tabUsefulFood = new CreativeTabUF("UsefulFood");
 	public static boolean MoCreatures = false;
@@ -23,7 +21,6 @@ public class mod_usefulfood {
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		UFConfig.Properties(event);
 		new UFBlocks();
 		new UFItems();
 	}

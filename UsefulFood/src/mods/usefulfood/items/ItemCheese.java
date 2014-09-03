@@ -6,8 +6,8 @@ import net.minecraft.potion.Potion;
 import net.minecraft.world.World;
 
 public class ItemCheese extends ItemFoodUF {
-	public ItemCheese(int var1, String name, int var2, float var3, boolean var4) {
-		super(var1, name, var2, var3, var4);
+	public ItemCheese(String name, int var2, float var3, boolean var4) {
+		super(name, var2, var3, var4);
 	}
 
 	public ItemStack onEaten(ItemStack itemstack, World world, EntityPlayer player) {

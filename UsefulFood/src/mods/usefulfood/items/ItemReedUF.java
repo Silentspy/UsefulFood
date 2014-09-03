@@ -2,7 +2,6 @@ package mods.usefulfood.items;
 
 
 import net.minecraft.block.Block;
-import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.ItemReed;
 import mods.usefulfood.mod_usefulfood;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -14,18 +13,13 @@ public class ItemReedUF extends ItemReed
 
 	String name;
 	
-	public ItemReedUF(int var1, Block var2, String name) {
-		super(var1, var2);
+	public ItemReedUF(Block var2, String name) {
+		super(var2);
 		this.setMaxStackSize(1);
 		this.setCreativeTab(mod_usefulfood.tabUsefulFood);
 		this.setUnlocalizedName(name);
 		this.name = name;
+		this.setTextureName("usefulfood:" + name);
 		GameRegistry.registerItem(this, name, "UsefulFood");
-	}
-	
-	@SideOnly(Side.CLIENT)
-	public void registerIcons(IconRegister iconRegister)
-	{
-		this.itemIcon = iconRegister.registerIcon("usefulfood:" + name);
 	}
 }

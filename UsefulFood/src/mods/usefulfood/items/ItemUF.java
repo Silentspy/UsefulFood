@@ -1,6 +1,5 @@
 package mods.usefulfood.items;
 
-import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -14,17 +13,12 @@ public class ItemUF extends Item {
 
 	String name;
 	
-	public ItemUF(int par1, String name) {
-		super(par1);
+	public ItemUF(String name) {
+		super();
 		this.setCreativeTab(mod_usefulfood.tabUsefulFood);
 		this.setUnlocalizedName(name);
 		this.name = name;
+		this.setTextureName("usefulfood:" + name);
 		GameRegistry.registerItem(this, name, "UsefulFood");
-	}
-	
-	@SideOnly(Side.CLIENT)
-	public void registerIcons(IconRegister iconRegister)
-	{
-		this.itemIcon = iconRegister.registerIcon("usefulfood:" + name);
 	}
 }
