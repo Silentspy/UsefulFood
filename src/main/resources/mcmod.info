@@ -1,0 +1,12 @@
+[
+{
+  "modid": "UsefulFood",
+  "name": "UsefulFood",
+  "description": "Adds a variation of food types that stay close to the vanilla feel",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "silentspy.net/usefulfood",
+  "authors": ["Silentspy", "Bockwurst"],
+  "logoFile": "usefulfood.png"
+}
+]
