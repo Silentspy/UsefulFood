@@ -7,13 +7,15 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 public class ItemFoodStick extends ItemFoodUF {
-	public ItemFoodStick(String name, int Hunger, float Saturation, boolean CanWolfEat) {
-		super(name, Hunger, Saturation, CanWolfEat);
-		this.setMaxStackSize(1);
-	}
 
-	public ItemStack onEaten(ItemStack itemstack, World world, EntityPlayer player) {
-		super.onEaten(itemstack, world, player);
-		return new ItemStack(Items.stick);
-	}
+    public ItemFoodStick(String name, int Hunger, float Saturation, boolean CanWolfEat) {
+        super(name, Hunger, Saturation, CanWolfEat);
+        this.setMaxStackSize(1);
+    }
+
+    @Override
+    public ItemStack onItemUseFinish(ItemStack itemstack, World world, EntityPlayer player) {
+        super.onItemUseFinish(itemstack, world, player);
+        return new ItemStack(Items.stick);
+    }
 }

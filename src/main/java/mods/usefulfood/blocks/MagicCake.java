@@ -2,54 +2,44 @@ package mods.usefulfood.blocks;
 
 import java.util.Random;
 
+import mods.usefulfood.UFItems;
+import net.minecraft.block.BlockCake;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.world.World;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class MagicCake extends SpecialCake {
-	public MagicCake(String name, int foodlevel, float saturation) {
-		super(name, foodlevel, saturation);
-	}
+public final class MagicCake extends SpecialCake {
 
-	public void eatCakeSlice(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer)
-    {
-        if (par5EntityPlayer.canEat(false))
-        {
-            par5EntityPlayer.getFoodStats().addStats(foodlevel, saturation);
-            par5EntityPlayer.addPotionEffect(new PotionEffect(Potion.regeneration.id, 200, 3));
-            par5EntityPlayer.addPotionEffect(new PotionEffect(Potion.resistance.id, 2000, 0));
-			par5EntityPlayer.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 2000, 0));
-			par1World.playSoundAtEntity(par5EntityPlayer, "random.eat", 0.5F, par1World.rand.nextFloat() * 0.1F + 0.9F);
-            
-            int l = par1World.getBlockMetadata(par2, par3, par4) + 1;
-
-            if (l >= 6)
-            {
-                par1World.setBlockToAir(par2, par3, par4);
-            }
-            else
-            {
-                par1World.setBlockMetadataWithNotify(par2, par3, par4, l, 2);
-            }
-        }
+    public MagicCake(String name, int foodlevel, float saturation) {
+        super(name, foodlevel, saturation);
     }
 
-	@SideOnly(Side.CLIENT)
-	@Override
-	public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random random) {
-		double var9 = (double) ((float) par2 + random.nextFloat());
-		double var11 = (double) ((float) par3 + random.nextFloat());
-		double var13 = (double) ((float) par4 + random.nextFloat());
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void randomDisplayTick(World par1World, BlockPos blockPos, IBlockState blockState, Random random) {
+        double var9 = (double) blockPos.getX() + random.nextFloat();
+        double var11 = (double) blockPos.getY() + random.nextFloat();
+        double var13 = (double) blockPos.getZ() + random.nextFloat();
 
-		par1World.spawnParticle("reddust", var9, var11, var13, 0.0D /* red */,
-				1.0D /* green */, 0.0D /* blue */);
-	}
+        par1World.spawnParticle(EnumParticleTypes.REDSTONE, var9, var11, var13, 0.0D /* red */,
+                1.0D /* green */, 0.0D /* blue */);
+    }
 
-/*	@SideOnly(Side.CLIENT)
-	public int idPicked(World par1World, int par2, int par3, int par4) {
-		return cakeitemid + 256;
-	}*/
+    @Override
+    @SideOnly(Side.CLIENT)
+    public Item getItem(World worldIn, BlockPos pos) {
+        return UFItems.MagicCake;
+    }
+
+    @Override
+    public PotionEffect[] getPotionEffects() {
+        return new PotionEffect[] { new PotionEffect(Potion.regeneration.id, 200, 3), new PotionEffect(Potion.resistance.id, 2000, 0), new PotionEffect(Potion.fireResistance.id, 2000, 0) };
+    }
 }
