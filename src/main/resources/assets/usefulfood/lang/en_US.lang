@@ -85,7 +85,14 @@ item.Tea.name=Lily Tea
 item.Trailmix.name=Trail mix
 item.VanillaIceCream.name=Vanilla Ice Cream
 
-tile.applecake.name=Apple Cake
-tile.caramelcake.name=Caramel Cake
-tile.chocolatecake.name=Chocolate Cake
-tile.magiccake.name=Magic Cake
+tile.AppleCake.name=Apple Cake
+tile.CaramelCake.name=Caramel Cake
+tile.ChocolateCake.name=Chocolate Cake
+tile.MagicCake.name=Magic Cake
+
+item.magiccake.tooltip=It is not a lie!
+item.MagicIceCream.tooltip=Looks Delicious!
+item.debug.tooltip=Siphons the food outta you!
+item.MagicAppleJuice.tooltip=Makes you feel leg... wait for it.... endary!
+
+itemGroup.UsefulFood=UsefulFood

@@ -8,22 +8,21 @@ import net.minecraft.potion.Potion;
 import net.minecraft.world.World;
 
 public class ItemBowl extends ItemFoodUF {
-	
-	boolean removepoison = false;
-	
-	public ItemBowl(String name, int hunger, float saturation, boolean removepoison) {
-		super(name, hunger, saturation, false);
-		this.setMaxStackSize(1);
-		this.removepoison = removepoison;
-	}
-	
-	public ItemStack onEaten(ItemStack itemstack, World world, EntityPlayer player) {
-		super.onEaten(itemstack, world, player);
-		if (!world.isRemote){
-			if(removepoison) {
-				player.removePotionEffect(Potion.poison.id);
-			}
-		}
-		return new ItemStack(Items.bowl);
-	}
+
+    boolean removepoison = false;
+
+    public ItemBowl(String name, int hunger, float saturation, boolean removepoison) {
+        super(name, hunger, saturation, false);
+        this.setMaxStackSize(1);
+        this.removepoison = removepoison;
+    }
+
+    @Override
+    public ItemStack onItemUseFinish(ItemStack itemstack, World world, EntityPlayer player) {
+        super.onItemUseFinish(itemstack, world, player);
+        if (!world.isRemote) {
+            if(removepoison) player.removePotionEffect(Potion.poison.id);
+        }
+        return new ItemStack(Items.bowl);
+    }
 }
