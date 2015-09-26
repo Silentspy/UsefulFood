@@ -12,7 +12,7 @@ public class CreativeTabUF extends CreativeTabs
 
 	@Override
     public ItemStack getIconItemStack() {
-		return new ItemStack(UFItems.MuttonRaw);
+		return new ItemStack(UF.items.MuttonRaw);
 	}
 	
 	@Override
@@ -22,6 +22,6 @@ public class CreativeTabUF extends CreativeTabs
 
 	@Override
 	public Item getTabIconItem() {
-		return UFItems.MuttonRaw;
+		return UF.items.MuttonRaw;
 	}
 }

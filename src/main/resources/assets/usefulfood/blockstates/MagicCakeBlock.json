@@ -1,0 +1,12 @@
+{
+    "variants":
+    {
+        "bites=0": {"model": "usefulfood:magiccake_uneaten"},
+        "bites=1": {"model": "usefulfood:magiccake_slice1"},
+        "bites=2": {"model": "usefulfood:magiccake_slice2"},
+        "bites=3": {"model": "usefulfood:magiccake_slice3"},
+        "bites=4": {"model": "usefulfood:magiccake_slice4"},
+        "bites=5": {"model": "usefulfood:magiccake_slice5"},
+        "bites=6": {"model": "usefulfood:magiccake_slice6"}
+    }
+}

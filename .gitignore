@@ -2,9 +2,12 @@ bin/
 build/
 distribute/
 eclipse/
+run/
 .settings/
 .gradle/
 .metadata/
 .project
 .classpath
 .project
+*.launch
+*Thumbs.db

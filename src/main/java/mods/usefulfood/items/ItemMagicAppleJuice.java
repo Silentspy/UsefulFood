@@ -9,9 +9,10 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.stats.StatList;
 import net.minecraft.world.World;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemMagicAppleJuice extends ItemJuice {
 
@@ -19,30 +20,40 @@ public class ItemMagicAppleJuice extends ItemJuice {
 	public ItemMagicAppleJuice(String name, int var2, float var3) {
 		super(name, var2, var3);
 	}
+	
+	public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityPlayer playerIn)
+    {
+		if (!playerIn.capabilities.isCreativeMode)
+        {
+            --stack.stackSize;
+        }
 
-	public ItemStack onEaten(ItemStack itemstack, World world, EntityPlayer player) {
-		if (!player.capabilities.isCreativeMode) {
-			--itemstack.stackSize;
-			if(itemstack.stackSize > 0) {
-				player.inventory.addItemStackToInventory(new ItemStack(Items.glass_bottle));
-			}
-		}
+        playerIn.triggerAchievement(StatList.objectUseStats[Item.getIdFromItem(this)]);
 
-		if (!world.isRemote) {
-			player.getFoodStats().addStats(foodlevel, saturation);
-			player.addPotionEffect(new PotionEffect(Potion.regeneration.id, 600, 3));
-			player.addPotionEffect(new PotionEffect(Potion.resistance.id, 6000, 0));
-			player.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 6000, 0));
-			player.addPotionEffect(new PotionEffect(Potion.digSpeed.id, 400, 0));
-			player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 600, 0));
-		}
+        if (!playerIn.capabilities.isCreativeMode)
+        {
+            if (stack.stackSize <= 0)
+            {
+                return new ItemStack(Items.glass_bottle);
+            }
 
-		return itemstack.stackSize <= 0 ? new ItemStack(Items.glass_bottle) : itemstack;
-	}
+            playerIn.inventory.addItemStackToInventory(new ItemStack(Items.glass_bottle));
+        }
+        
+        playerIn.getFoodStats().addStats(foodlevel, saturation);
+        playerIn.addPotionEffect(new PotionEffect(Potion.regeneration.id, 600, 3));
+        playerIn.addPotionEffect(new PotionEffect(Potion.resistance.id, 6000, 0));
+        playerIn.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 6000, 0));
+        playerIn.addPotionEffect(new PotionEffect(Potion.digSpeed.id, 400, 0));
+        playerIn.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 600, 0));
+        this.onFoodEaten(stack, worldIn, playerIn);
+        worldIn.playSoundAtEntity(playerIn, "random.burp", 0.5F, worldIn.rand.nextFloat() * 0.1F + 0.9F);
+        return stack;
+    }
 
 	@SideOnly(Side.CLIENT)
 	public EnumRarity getRarity(ItemStack var1) {
-		return EnumRarity.epic;
+		return EnumRarity.EPIC;
 	}
 
 	@SideOnly(Side.CLIENT)

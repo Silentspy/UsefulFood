@@ -1,10 +1,9 @@
 package mods.usefulfood.items;
 
+import mods.usefulfood.UF;
+import mods.usefulfood.UFItem2Model;
 import net.minecraft.item.ItemFood;
-import mods.usefulfood.mod_usefulfood;
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemFoodUF extends ItemFood {
 	
@@ -12,10 +11,10 @@ public class ItemFoodUF extends ItemFood {
 	
 	public ItemFoodUF(String name, int hunger, float saturation, boolean canwolfeat) {
 		super(hunger, saturation, canwolfeat);
-		this.setCreativeTab(mod_usefulfood.tabUsefulFood);
+		this.setCreativeTab(UF.tabUsefulFood);
 		this.setUnlocalizedName(name);
 		this.name = name;
-		this.setTextureName("usefulfood:" + name);
-		GameRegistry.registerItem(this, name, "UsefulFood");
+		GameRegistry.registerItem(this, name);
+		UF.getItem2Models().add(new UFItem2Model(this, name));
 	}
 }

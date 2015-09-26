@@ -1,13 +1,12 @@
 package mods.usefulfood;
 
-import net.minecraft.block.Block;
+import com.mrcrayfish.furniture.api.FurnitureRegister;
+
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import cpw.mods.fml.common.registry.GameRegistry;
-
-import com.mrcrayfish.furniture.api.FurnitureRegister;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class UFRecipes 
 {
@@ -20,131 +19,134 @@ public class UFRecipes
 
 	private void AddRecipes() 
 	{
-		GameRegistry.addRecipe(new ItemStack(UFItems.porkwich), new Object[] { "#", "%", "#", '#', UFItems.breadslice, '%', Items.cooked_porkchop });
-		GameRegistry.addRecipe(new ItemStack(UFItems.steakwich), new Object[] { "#", "%", "#", '#', UFItems.breadslice, '%', Items.cooked_beef });
-		GameRegistry.addRecipe(new ItemStack(UFItems.fishwich), new Object[] { "#", "%", "#", '#', UFItems.breadslice, '%', Items.cooked_fished });
-		GameRegistry.addRecipe(new ItemStack(UFItems.chickenwich), new Object[] { "#", "%", "#", '#', UFItems.breadslice, '%', Items.cooked_chicken });
-		GameRegistry.addRecipe(new ItemStack(UFItems.eggwich), new Object[] { "#", "%", "#", '#', UFItems.breadslice, '%', UFItems.friedegg });
-		GameRegistry.addRecipe(new ItemStack(UFItems.AppleCake), new Object[] { "AAA", "BEB", "CCC", 'A', UFItems.milkbottle, 'B', Items.apple, 'C', Items.wheat, 'E', Items.egg });
-		GameRegistry.addRecipe(new ItemStack(UFItems.ChocolateCake), new Object[] { "AAA", "BEB", "CCC", 'A', UFItems.milkbottle, 'B', new ItemStack(Items.dye, 1, 3), 'C', Items.wheat, 'E', Items.egg });
-		GameRegistry.addRecipe(new ItemStack(UFItems.MagicCake), new Object[] { "AAA", "BEB", "CCC", 'A', UFItems.milkbottle, 'B', new ItemStack(Items.golden_apple, 1, 1), 'C', Items.wheat, 'E', Items.egg });
-		GameRegistry.addRecipe(new ItemStack(UFItems.MuttonSandwich), new Object[] { "#", "%", "#", '#', UFItems.breadslice, '%', UFItems.MuttonCooked });
+		GameRegistry.addRecipe(new ItemStack(UF.items.porkwich), new Object[] { "#", "%", "#", '#', UF.items.breadslice, '%', Items.cooked_porkchop });
+		GameRegistry.addRecipe(new ItemStack(UF.items.steakwich), new Object[] { "#", "%", "#", '#', UF.items.breadslice, '%', Items.cooked_beef });
+		GameRegistry.addRecipe(new ItemStack(UF.items.fishwich), new Object[] { "#", "%", "#", '#', UF.items.breadslice, '%', Items.cooked_fish });
+		GameRegistry.addRecipe(new ItemStack(UF.items.chickenwich), new Object[] { "#", "%", "#", '#', UF.items.breadslice, '%', Items.cooked_chicken });
+		GameRegistry.addRecipe(new ItemStack(UF.items.eggwich), new Object[] { "#", "%", "#", '#', UF.items.breadslice, '%', UF.items.friedegg });
+		GameRegistry.addRecipe(new ItemStack(UF.items.AppleCake), new Object[] { "AAA", "BEB", "CCC", 'A', UF.items.milkbottle, 'B', Items.apple, 'C', Items.wheat, 'E', Items.egg });
+		GameRegistry.addRecipe(new ItemStack(UF.items.ChocolateCake), new Object[] { "AAA", "BEB", "CCC", 'A', UF.items.milkbottle, 'B', new ItemStack(Items.dye, 1, 3), 'C', Items.wheat, 'E', Items.egg });
+		GameRegistry.addRecipe(new ItemStack(UF.items.MagicCake), new Object[] { "AAA", "BEB", "CCC", 'A', UF.items.milkbottle, 'B', new ItemStack(Items.golden_apple, 1, 1), 'C', Items.wheat, 'E', Items.egg });
+		GameRegistry.addRecipe(new ItemStack(UF.items.MuttonSandwich), new Object[] { "#", "%", "#", '#', UF.items.breadslice, '%', UF.items.MuttonCooked });
 
 		// 1.2
-		GameRegistry.addRecipe(new ItemStack(UFItems.SquidSandwich), new Object[] { "#", "%", "#", '#', UFItems.breadslice, '%', UFItems.SquidTentacleCooked });
+		GameRegistry.addRecipe(new ItemStack(UF.items.SquidSandwich), new Object[] { "#", "%", "#", '#', UF.items.breadslice, '%', UF.items.SquidTentacleCooked });
 		
 		// 1.4
-		GameRegistry.addRecipe(new ItemStack(UFItems.CaramelCake), new Object[] { "AAA", "BEB", "CCC", 'A', UFItems.milkbottle, 'B', UFItems.caramel, 'C', Items.wheat, 'E', Items.egg });
-		GameRegistry.addRecipe(new ItemStack(UFItems.CaramelCake), new Object[] { "AAA", "BEB", "CCC", 'A', Items.milk_bucket, 'B', UFItems.caramel, 'C', Items.wheat, 'E', Items.egg });
-		GameRegistry.addRecipe(new ItemStack(UFItems.AppleCake), new Object[] { "AAA", "BEB", "CCC", 'A', Items.milk_bucket, 'B', Items.apple, 'C', Items.wheat, 'E', Items.egg });
-		GameRegistry.addRecipe(new ItemStack(UFItems.ChocolateCake), new Object[] { "AAA", "BEB", "CCC", 'A', Items.milk_bucket, 'B', new ItemStack(Items.dye, 1, 3), 'C', Items.wheat, 'E', Items.egg });
-		GameRegistry.addRecipe(new ItemStack(UFItems.MagicCake), new Object[] { "AAA", "BEB", "CCC", 'A', Items.milk_bucket, 'B', new ItemStack(Items.golden_apple, 1, 1), 'C', Items.wheat, 'E', Items.egg });
-		GameRegistry.addRecipe(new ItemStack(UFItems.CheeseSandwich), new Object[] { "#", "%", "#", '#', UFItems.breadslice, '%', UFItems.Cheese });
+		GameRegistry.addRecipe(new ItemStack(UF.items.CaramelCake), new Object[] { "AAA", "BEB", "CCC", 'A', UF.items.milkbottle, 'B', UF.items.caramel, 'C', Items.wheat, 'E', Items.egg });
+		GameRegistry.addRecipe(new ItemStack(UF.items.CaramelCake), new Object[] { "AAA", "BEB", "CCC", 'A', Items.milk_bucket, 'B', UF.items.caramel, 'C', Items.wheat, 'E', Items.egg });
+		GameRegistry.addRecipe(new ItemStack(UF.items.AppleCake), new Object[] { "AAA", "BEB", "CCC", 'A', Items.milk_bucket, 'B', Items.apple, 'C', Items.wheat, 'E', Items.egg });
+		GameRegistry.addRecipe(new ItemStack(UF.items.ChocolateCake), new Object[] { "AAA", "BEB", "CCC", 'A', Items.milk_bucket, 'B', new ItemStack(Items.dye, 1, 3), 'C', Items.wheat, 'E', Items.egg });
+		GameRegistry.addRecipe(new ItemStack(UF.items.MagicCake), new Object[] { "AAA", "BEB", "CCC", 'A', Items.milk_bucket, 'B', new ItemStack(Items.golden_apple, 1, 1), 'C', Items.wheat, 'E', Items.egg });
+		GameRegistry.addRecipe(new ItemStack(UF.items.CheeseSandwich), new Object[] { "#", "%", "#", '#', UF.items.breadslice, '%', UF.items.Cheese });
+	
+		// 1.5
+		GameRegistry.addRecipe(new ItemStack(UF.items.MuttonSandwich), new Object[] { "#", "%", "#", '#', UF.items.breadslice, '%', Items.cooked_mutton });
 	}
 
 	private void AddShapelessRecipes() 
 	{
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.milkbottle, 2), new Object[] { Items.glass_bottle, Items.glass_bottle, Items.milk_bucket });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.magicfruitsalad), new Object[] {Items.bowl, Items.speckled_melon, Items.golden_apple });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.milkbottle, 2), new Object[] { Items.glass_bottle, Items.glass_bottle, Items.milk_bucket });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.magicfruitsalad), new Object[] {Items.bowl, Items.speckled_melon, Items.golden_apple });
 		
-		if(mod_usefulfood.MoCreatures) 
+		if(UF.MoCreatures) 
 		{
-			GameRegistry.addShapelessRecipe(new ItemStack(UFItems.sugarcube), new Object[] { Items.sugar, Items.sugar, Items.sugar, Items.sugar, Items.sugar});
+			GameRegistry.addShapelessRecipe(new ItemStack(UF.items.sugarcube), new Object[] { Items.sugar, Items.sugar, Items.sugar, Items.sugar, Items.sugar});
 		}
 		else 
 		{
-			GameRegistry.addShapelessRecipe(new ItemStack(UFItems.sugarcube), new Object[] { Items.sugar, Items.sugar, Items.sugar, Items.sugar});
+			GameRegistry.addShapelessRecipe(new ItemStack(UF.items.sugarcube), new Object[] { Items.sugar, Items.sugar, Items.sugar, Items.sugar});
 		}
 		
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.caramelapple), new Object[] { Items.stick, UFItems.caramel, Items.apple });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.pumpkinsoup), new Object[] {Items.bowl, Blocks.pumpkin });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.salad), new Object[] { Blocks.red_flower, Blocks.yellow_flower, Items.bowl, Items.wheat_seeds });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.fruitsalad), new Object[] {Items.bowl, Items.melon, Items.apple });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.Oatmeal), new Object[] { Items.bowl, Items.wheat_seeds, Items.wheat_seeds, Items.wheat_seeds, Items.wheat_seeds, Items.wheat_seeds, Items.wheat_seeds });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.jelly), new Object[] { Items.bowl, Items.slime_ball,Items.sugar });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.marshmallow), new Object[] { Items.stick, Items.water_bucket, Items.sugar, Items.sugar, Items.sugar });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.icecream), new Object[] { Items.bowl,Items.snowball, Items.sugar, UFItems.milkbottle });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.breadslice, 5), new Object[] { Items.bread });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.biscuit, 3), new Object[] { Items.wheat, Items.wheat });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.trailmix), new Object[] { Items.bowl, Items.pumpkin_seeds, Items.wheat_seeds, Items.melon_seeds });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.caramelapple), new Object[] { Items.stick, UF.items.caramel, Items.apple });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.pumpkinsoup), new Object[] {Items.bowl, Blocks.pumpkin });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.salad), new Object[] { Blocks.red_flower, Blocks.yellow_flower, Items.bowl, Items.wheat_seeds });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.fruitsalad), new Object[] {Items.bowl, Items.melon, Items.apple });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.Oatmeal), new Object[] { Items.bowl, Items.wheat_seeds, Items.wheat_seeds, Items.wheat_seeds, Items.wheat_seeds, Items.wheat_seeds, Items.wheat_seeds });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.jelly), new Object[] { Items.bowl, Items.slime_ball,Items.sugar });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.marshmallow), new Object[] { Items.stick, Items.water_bucket, Items.sugar, Items.sugar, Items.sugar });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.icecream), new Object[] { Items.bowl,Items.snowball, Items.sugar, UF.items.milkbottle });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.breadslice, 5), new Object[] { Items.bread });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.biscuit, 3), new Object[] { Items.wheat, Items.wheat });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.trailmix), new Object[] { Items.bowl, Items.pumpkin_seeds, Items.wheat_seeds, Items.melon_seeds });
 		
 		// 1.2
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.chocolatecandy), new Object[] { new ItemStack(Items.dye, 1, 3), Items.sugar, UFItems.milkbottle });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.chocolateicecream), new Object[] {UFItems.chocolatecandy, UFItems.icecream });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.sushi), new Object[] { Items.fish, Blocks.waterlily });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.melonjuice), new Object[] {Items.melon, Items.melon, Items.melon, Items.glass_bottle });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.applejuice), new Object[] {Items.apple, Items.apple, Items.apple, Items.glass_bottle });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.carrotjuice), new Object[] {Items.carrot, Items.carrot, Items.carrot, Items.glass_bottle });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.magicapplejuice), new Object[] {new ItemStack(Items.golden_apple, 1, 1), new ItemStack(Items.golden_apple, 1, 0), new ItemStack(Items.golden_apple, 1, 0), Items.glass_bottle });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.carrotsoup), new Object[] {Items.carrot, Items.carrot, Items.bowl });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.pumpkinbread), new Object[] {Items.wheat, Items.wheat, Blocks.pumpkin });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.fishnchips), new Object[] {UFItems.FrenchFries, Items.cooked_fished });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.carrotpie), new Object[] { Items.carrot, Items.egg, Items.sugar, Items.wheat });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.AppleJamBiscuit), new Object[] {UFItems.AppleJam, UFItems.biscuit });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.sugarbiscuit), new Object[] {Items.sugar, UFItems.biscuit });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.chocolatecandy), new Object[] { new ItemStack(Items.dye, 1, 3), Items.sugar, UF.items.milkbottle });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.chocolateicecream), new Object[] {UF.items.chocolatecandy, UF.items.icecream });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.sushi), new Object[] { Items.fish, Blocks.waterlily });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.melonjuice), new Object[] {Items.melon, Items.melon, Items.melon, Items.glass_bottle });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.applejuice), new Object[] {Items.apple, Items.apple, Items.apple, Items.glass_bottle });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.carrotjuice), new Object[] {Items.carrot, Items.carrot, Items.carrot, Items.glass_bottle });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.magicapplejuice), new Object[] {new ItemStack(Items.golden_apple, 1, 1), new ItemStack(Items.golden_apple, 1, 0), new ItemStack(Items.golden_apple, 1, 0), Items.glass_bottle });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.carrotsoup), new Object[] {Items.carrot, Items.carrot, Items.bowl });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.pumpkinbread), new Object[] {Items.wheat, Items.wheat, Blocks.pumpkin });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.fishnchips), new Object[] {UF.items.FrenchFries, Items.cooked_fish });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.carrotpie), new Object[] { Items.carrot, Items.egg, Items.sugar, Items.wheat });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.AppleJamBiscuit), new Object[] {UF.items.AppleJam, UF.items.biscuit });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.sugarbiscuit), new Object[] {Items.sugar, UF.items.biscuit });
 		
 		// 1.4
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.SquidSushi), new Object[] {UFItems.SquidTentacleRaw, Blocks.waterlily });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.CactusJuice), new Object[] {Items.glass_bottle, Blocks.cactus, Blocks.cactus, Blocks.cactus });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.Spaghetti), new Object[] {Items.wheat, Items.water_bucket, Items.egg, Items.bowl });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.AppleIceCream), new Object[] {UFItems.icecream, Items.apple });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.MagicIceCream), new Object[] {new ItemStack(Items.golden_apple, 1, 0), Items.speckled_melon, Items.speckled_melon, UFItems.icecream});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.ChocolateApple), new Object[] {Items.stick, Items.apple, UFItems.hotchocolatebottle });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.CaramelBiscuit), new Object[] {UFItems.biscuit, UFItems.caramel});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.FishSoup), new Object[] {Items.bowl, Items.cooked_fished, Items.carrot, Items.potato, Items.water_bucket });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.Tea), new Object[] {Items.glass_bottle, Blocks.waterlily });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.chocolatecandy), new Object[] { new ItemStack(Items.dye, 1, 3), Items.sugar, Items.milk_bucket });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.Cheese), new Object[] { UFItems.HotMilkBottle });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.MelonIceCream), new Object[] {UFItems.icecream, Items.melon, Items.melon, Items.melon });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.hotchocolatebottle), new Object[] { new ItemStack(Items.dye, 1, 3), Items.glass_bottle, UFItems.HotMilkBottle });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.chocolatebottle), new Object[] { new ItemStack(Items.dye, 1, 3), Items.glass_bottle, UFItems.milkbottle });
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.chocobiscuit, 2), new Object[] {UFItems.biscuit, UFItems.biscuit, UFItems.hotchocolatebottle});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.CaramelIceCream), new Object[] {UFItems.icecream, UFItems.caramel});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.SquidSushi), new Object[] {UF.items.SquidTentacleRaw, Blocks.waterlily });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.CactusJuice), new Object[] {Items.glass_bottle, Blocks.cactus, Blocks.cactus, Blocks.cactus });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.Spaghetti), new Object[] {Items.wheat, Items.water_bucket, Items.egg, Items.bowl });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.AppleIceCream), new Object[] {UF.items.icecream, Items.apple });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.MagicIceCream), new Object[] {new ItemStack(Items.golden_apple, 1, 0), Items.speckled_melon, Items.speckled_melon, UF.items.icecream});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.ChocolateApple), new Object[] {Items.stick, Items.apple, UF.items.hotchocolatebottle });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.CaramelBiscuit), new Object[] {UF.items.biscuit, UF.items.caramel});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.FishSoup), new Object[] {Items.bowl, Items.cooked_fish, Items.carrot, Items.potato, Items.water_bucket });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.Tea), new Object[] {Items.glass_bottle, Blocks.waterlily });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.chocolatecandy), new Object[] { new ItemStack(Items.dye, 1, 3), Items.sugar, Items.milk_bucket });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.Cheese), new Object[] { UF.items.HotMilkBottle });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.MelonIceCream), new Object[] {UF.items.icecream, Items.melon, Items.melon, Items.melon });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.hotchocolatebottle), new Object[] { new ItemStack(Items.dye, 1, 3), Items.glass_bottle, UF.items.HotMilkBottle });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.chocolatebottle), new Object[] { new ItemStack(Items.dye, 1, 3), Items.glass_bottle, UF.items.milkbottle });
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.chocobiscuit, 2), new Object[] {UF.items.biscuit, UF.items.biscuit, UF.items.hotchocolatebottle});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.CaramelIceCream), new Object[] {UF.items.icecream, UF.items.caramel});
 		
 		// 1.4.3
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.AppleJelly), new Object[] {Items.sugar, Items.apple, Items.slime_ball, Items.bowl});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.MelonJelly), new Object[] {Items.sugar, Items.melon, Items.slime_ball, Items.bowl});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.AppleJelly), new Object[] {UFItems.jelly, Items.apple});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.MelonJelly), new Object[] {UFItems.jelly, Items.melon});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.Cereal), new Object[] {UFItems.milkbottle, Items.wheat, Items.sugar, Items.bowl});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.ChocolateCereal), new Object[] {UFItems.milkbottle, Items.wheat, Items.sugar, new ItemStack(Items.dye, 1, 3), Items.bowl});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.FrenchFries), new Object[] {Items.baked_potato});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.PanCakeDough), new Object[] {Items.sugar, Items.milk_bucket, Items.wheat, Items.egg});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.PanCakeDough), new Object[] {Items.sugar, UFItems.milkbottle, Items.wheat, Items.egg});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.AppleJam),  new Object[] {Items.sugar, Items.bowl, Items.apple});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.MelonJam),  new Object[] {Items.sugar, Items.bowl, Items.melon});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.AppleJamBiscuit),  new Object[] {UFItems.biscuit, UFItems.AppleJam});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.AppleJamPanCake),  new Object[] {UFItems.PanCake, UFItems.AppleJam});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.AppleJamToast),  new Object[] {UFItems.breadslice, UFItems.AppleJam});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.CaramelPanCake),  new Object[] {UFItems.PanCake, UFItems.caramel});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.CaramelToast),  new Object[] {UFItems.breadslice, UFItems.caramel});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.ChocolatePanCake),  new Object[] {UFItems.PanCake, UFItems.chocolatecandy});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.ChocolateToast),  new Object[] {UFItems.chocolatecandy, UFItems.breadslice});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.MelonJamBiscuit),  new Object[] {UFItems.MelonJam, UFItems.biscuit});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.MelonJamToast),  new Object[] {UFItems.MelonJam, UFItems.breadslice});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.MelonJamPanCake),  new Object[] {UFItems.PanCake, UFItems.MelonJam});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.SugarToast),  new Object[] {Items.sugar, UFItems.breadslice});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.SugarPancake),  new Object[] {Items.sugar, UFItems.PanCake});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.Donut),  new Object[] {Items.wheat, Items.wheat, Items.sugar, UFItems.milkbottle, new ItemStack(Items.dye, 1, 3)});
-		GameRegistry.addShapelessRecipe(new ItemStack(UFItems.Oreo),  new Object[] {UFItems.chocobiscuit, UFItems.chocobiscuit, Items.sugar, Items.sugar, UFItems.milkbottle});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.AppleJelly), new Object[] {Items.sugar, Items.apple, Items.slime_ball, Items.bowl});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.MelonJelly), new Object[] {Items.sugar, Items.melon, Items.slime_ball, Items.bowl});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.AppleJelly), new Object[] {UF.items.jelly, Items.apple});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.MelonJelly), new Object[] {UF.items.jelly, Items.melon});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.Cereal), new Object[] {UF.items.milkbottle, Items.wheat, Items.sugar, Items.bowl});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.ChocolateCereal), new Object[] {UF.items.milkbottle, Items.wheat, Items.sugar, new ItemStack(Items.dye, 1, 3), Items.bowl});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.FrenchFries), new Object[] {Items.baked_potato});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.PanCakeDough), new Object[] {Items.sugar, Items.milk_bucket, Items.wheat, Items.egg});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.PanCakeDough), new Object[] {Items.sugar, UF.items.milkbottle, Items.wheat, Items.egg});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.AppleJam),  new Object[] {Items.sugar, Items.bowl, Items.apple});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.MelonJam),  new Object[] {Items.sugar, Items.bowl, Items.melon});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.AppleJamBiscuit),  new Object[] {UF.items.biscuit, UF.items.AppleJam});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.AppleJamPanCake),  new Object[] {UF.items.PanCake, UF.items.AppleJam});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.AppleJamToast),  new Object[] {UF.items.breadslice, UF.items.AppleJam});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.CaramelPanCake),  new Object[] {UF.items.PanCake, UF.items.caramel});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.CaramelToast),  new Object[] {UF.items.breadslice, UF.items.caramel});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.ChocolatePanCake),  new Object[] {UF.items.PanCake, UF.items.chocolatecandy});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.ChocolateToast),  new Object[] {UF.items.chocolatecandy, UF.items.breadslice});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.MelonJamBiscuit),  new Object[] {UF.items.MelonJam, UF.items.biscuit});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.MelonJamToast),  new Object[] {UF.items.MelonJam, UF.items.breadslice});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.MelonJamPanCake),  new Object[] {UF.items.PanCake, UF.items.MelonJam});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.SugarToast),  new Object[] {Items.sugar, UF.items.breadslice});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.SugarPancake),  new Object[] {Items.sugar, UF.items.PanCake});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.Donut),  new Object[] {Items.wheat, Items.wheat, Items.sugar, UF.items.milkbottle, new ItemStack(Items.dye, 1, 3)});
+		GameRegistry.addShapelessRecipe(new ItemStack(UF.items.Oreo),  new Object[] {UF.items.chocobiscuit, UF.items.chocobiscuit, Items.sugar, Items.sugar, UF.items.milkbottle});
 	}
 
     private void AddSmeltingRecipes() {
-    	AddSmeltingRecipe(UFItems.chocolatebottle, new ItemStack(UFItems.hotchocolatebottle));
-    	AddSmeltingRecipe(UFItems.sugarcube, new ItemStack(UFItems.caramel));
-    	AddSmeltingRecipe(Items.wheat_seeds, new ItemStack(UFItems.RoastedSeeds));
-    	AddSmeltingRecipe(Items.pumpkin_seeds, new ItemStack(UFItems.RoastedSeeds));
-    	AddSmeltingRecipe(Items.melon_seeds, new ItemStack(UFItems.RoastedSeeds));
-    	AddSmeltingRecipe(Items.egg, new ItemStack(UFItems.friedegg));
-    	AddSmeltingRecipe(UFItems.marshmallow, new ItemStack(UFItems.cmarshmallow));
-    	AddSmeltingRecipe(UFItems.MuttonRaw, new ItemStack(UFItems.MuttonCooked));
+    	AddSmeltingRecipe(UF.items.chocolatebottle, new ItemStack(UF.items.hotchocolatebottle));
+    	AddSmeltingRecipe(UF.items.sugarcube, new ItemStack(UF.items.caramel));
+    	AddSmeltingRecipe(Items.wheat_seeds, new ItemStack(UF.items.RoastedSeeds));
+    	AddSmeltingRecipe(Items.pumpkin_seeds, new ItemStack(UF.items.RoastedSeeds));
+    	AddSmeltingRecipe(Items.melon_seeds, new ItemStack(UF.items.RoastedSeeds));
+    	AddSmeltingRecipe(Items.egg, new ItemStack(UF.items.friedegg));
+    	AddSmeltingRecipe(UF.items.marshmallow, new ItemStack(UF.items.cmarshmallow));
+    	AddSmeltingRecipe(UF.items.MuttonRaw, new ItemStack(UF.items.MuttonCooked));
 		
 		// 1.2
-    	AddSmeltingRecipe(UFItems.SquidTentacleRaw, new ItemStack(UFItems.SquidTentacleCooked));
+    	AddSmeltingRecipe(UF.items.SquidTentacleRaw, new ItemStack(UF.items.SquidTentacleCooked));
 		
 		// 1.4
-    	AddSmeltingRecipe(UFItems.milkbottle, new ItemStack(UFItems.HotMilkBottle));
-    	AddSmeltingRecipe(UFItems.PanCakeDough, new ItemStack(UFItems.PanCake));
+    	AddSmeltingRecipe(UF.items.milkbottle, new ItemStack(UF.items.HotMilkBottle));
+    	AddSmeltingRecipe(UF.items.PanCakeDough, new ItemStack(UF.items.PanCake));
 	}
     
     private void AddSmeltingRecipe(Item input, ItemStack output, float xp) {

@@ -1,9 +1,9 @@
 package mods.usefulfood.items;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemMagicFruitSalad extends ItemBowl{
 
@@ -18,7 +18,6 @@ public class ItemMagicFruitSalad extends ItemBowl{
 
 	@SideOnly(Side.CLIENT)
 	public EnumRarity getRarity(ItemStack var1) {
-		return EnumRarity.rare;
+		return EnumRarity.RARE;
 	}
-
 }

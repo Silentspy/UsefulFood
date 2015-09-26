@@ -1,13 +1,9 @@
 package mods.usefulfood.items;
 
-import net.minecraft.entity.player.EntityPlayer;
+import mods.usefulfood.UF;
+import mods.usefulfood.UFItem2Model;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
-import mods.usefulfood.mod_usefulfood;
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemUF extends Item {
 
@@ -15,10 +11,10 @@ public class ItemUF extends Item {
 	
 	public ItemUF(String name) {
 		super();
-		this.setCreativeTab(mod_usefulfood.tabUsefulFood);
+		this.setCreativeTab(UF.tabUsefulFood);
 		this.setUnlocalizedName(name);
 		this.name = name;
-		this.setTextureName("usefulfood:" + name);
-		GameRegistry.registerItem(this, name, "UsefulFood");
+		GameRegistry.registerItem(this, name);
+		UF.getItem2Models().add(new UFItem2Model(this, name));
 	}
 }

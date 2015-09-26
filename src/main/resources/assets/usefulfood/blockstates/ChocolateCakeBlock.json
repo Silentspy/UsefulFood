@@ -1,0 +1,12 @@
+{
+    "variants":
+    {
+        "bites=0": {"model": "usefulfood:chocolatecake_uneaten"},
+        "bites=1": {"model": "usefulfood:chocolatecake_slice1"},
+        "bites=2": {"model": "usefulfood:chocolatecake_slice2"},
+        "bites=3": {"model": "usefulfood:chocolatecake_slice3"},
+        "bites=4": {"model": "usefulfood:chocolatecake_slice4"},
+        "bites=5": {"model": "usefulfood:chocolatecake_slice5"},
+        "bites=6": {"model": "usefulfood:chocolatecake_slice6"}
+    }
+}

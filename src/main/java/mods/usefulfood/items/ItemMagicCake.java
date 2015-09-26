@@ -6,8 +6,8 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemMagicCake extends ItemReedUF
 {
@@ -22,7 +22,7 @@ public class ItemMagicCake extends ItemReedUF
 	
 	@SideOnly(Side.CLIENT)
 	public EnumRarity getRarity(ItemStack var1) {
-		return EnumRarity.epic;
+		return EnumRarity.EPIC;
 	}
 	
 	@SideOnly(Side.CLIENT)

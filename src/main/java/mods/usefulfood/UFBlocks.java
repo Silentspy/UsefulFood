@@ -6,21 +6,20 @@ import net.minecraft.block.Block;
 
 public class UFBlocks {
 	
-	public static Block AppleCake;
-	public static Block ChocolateCake;
-	public static Block MagicCake;
-	public static Block CaramelCake;
+	public Block AppleCake;
+	public Block ChocolateCake;
+	public Block MagicCake;
+	public Block CaramelCake;
 	
-	public static Block ChocolateStillFluid;
-	
-	public UFBlocks() 
-	{
-		AppleCake = new SpecialCake("applecake", 18, 0.6F);
-		ChocolateCake = new SpecialCake("chocolatecake", 12, 0.5F);
-		MagicCake = new MagicCake("magiccake", 48, 0.5F);
+	public Block ChocolateStillFluid;
+
+	public UFBlocks init() {
+		AppleCake = new SpecialCake("AppleCakeBlock", 18, 0.6F);
+		ChocolateCake = new SpecialCake("ChocolateCakeBlock", 12, 0.5F);
+		MagicCake = new MagicCake("MagicCakeBlock", 48, 0.5F);
 		
 		// 1.4
-		CaramelCake = new SpecialCake("caramelcake", 19, 0.8F);
-		// ChocolateStillFluid = new ChocolateFluidStill(UFConfig.ChocolateFluidStill);
+		CaramelCake = new SpecialCake("CaramelCakeBlock", 19, 0.8F);
+		return this;
 	}
 }

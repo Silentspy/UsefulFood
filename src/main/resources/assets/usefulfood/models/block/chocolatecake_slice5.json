@@ -1,0 +1,22 @@
+{
+    "textures": {
+        "particle": "usefulfood:blocks/chocolatecake_side",
+        "bottom": "usefulfood:blocks/chocolatecake_bottom",
+        "top": "usefulfood:blocks/chocolatecake_top",
+        "side": "usefulfood:blocks/chocolatecake_side",
+        "inside": "usefulfood:blocks/chocolatecake_inner"
+    },
+    "elements": [
+        {   "from": [ 11, 0, 1 ],
+            "to": [ 15, 8, 15 ],
+            "faces": {
+                "down":  { "uv": [ 11, 1, 15, 15 ], "texture": "#bottom", "cullface": "down" },
+                "up":    { "uv": [ 11, 1, 15, 15 ], "texture": "#top" },
+                "north": { "uv": [  1, 8,  5, 16 ], "texture": "#side" },
+                "south": { "uv": [  1, 8,  5, 16 ], "texture": "#side" },
+                "west":  { "uv": [  1, 8, 15, 16 ], "texture": "#inside" },
+                "east":  { "uv": [  1, 8, 15, 16 ], "texture": "#side" }
+            }
+        }
+    ]
+}

@@ -5,7 +5,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
-import net.minecraft.stats.StatBase;
+import net.minecraft.stats.StatList;
 import net.minecraft.world.World;
 
 public class ItemTea extends ItemBottle {
@@ -17,22 +17,30 @@ public class ItemTea extends ItemBottle {
 		this.hearts = hearts;
 	}
 	
-	@Override
-	public ItemStack onEaten(ItemStack itemstack, World world, EntityPlayer player) {
-		if (!player.capabilities.isCreativeMode) {
-			--itemstack.stackSize;
-			if(itemstack.stackSize > 0) {
-				player.inventory.addItemStackToInventory(new ItemStack(Items.glass_bottle));
-			}
-		}
+	public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityPlayer playerIn)
+    {
+		if (!playerIn.capabilities.isCreativeMode)
+        {
+            --stack.stackSize;
+        }
 
-		if (!world.isRemote) {
-			player.heal(hearts);
-			if(removepoison) {
-				player.removePotionEffect(Potion.poison.id);
-			}
+        playerIn.triggerAchievement(StatList.objectUseStats[Item.getIdFromItem(this)]);
+
+        if (!playerIn.capabilities.isCreativeMode)
+        {
+            if (stack.stackSize <= 0)
+            {
+                return new ItemStack(Items.glass_bottle);
+            }
+
+            playerIn.inventory.addItemStackToInventory(new ItemStack(Items.glass_bottle));
+        }
+        
+        playerIn.heal(hearts);
+		if(removepoison) {
+			playerIn.removePotionEffect(Potion.poison.id);
 		}
-		
-		return itemstack.stackSize <= 0 ? new ItemStack(Items.glass_bottle) : itemstack;
-	}
+        worldIn.playSoundAtEntity(playerIn, "random.burp", 0.5F, worldIn.rand.nextFloat() * 0.1F + 0.9F);
+        return stack;
+    }
 }

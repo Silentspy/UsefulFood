@@ -2,21 +2,22 @@ package mods.usefulfood.items;
 
 import java.util.List;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.creativetab.CreativeTabs;
+import mods.usefulfood.UF;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import mods.usefulfood.mod_usefulfood;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemFoodDebug extends ItemUF {
+	
+	int tick = 0;
+	
 	public ItemFoodDebug(String name) {
 		super(name);
-		this.setCreativeTab(mod_usefulfood.tabUsefulFood);
+		this.setCreativeTab(UF.tabUsefulFood);
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -27,7 +28,7 @@ public class ItemFoodDebug extends ItemUF {
 	
 	@SideOnly(Side.CLIENT)
 	public EnumRarity getRarity(ItemStack var1) {
-		return EnumRarity.epic;
+		return EnumRarity.EPIC;
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -35,16 +36,21 @@ public class ItemFoodDebug extends ItemUF {
 		return true;
 	}
 	
-	public void onUpdate(ItemStack itemstack, World world, Entity entity, int par4, boolean par5) 
-	{	
-		if(par5 && (entity instanceof EntityPlayer)) {
-			   EntityPlayer player = (EntityPlayer)entity;
-			   if (!world.isRemote && !player.capabilities.isCreativeMode) {
-			      if (player.getFoodStats().getFoodLevel() >= 0) {
-			         player.getFoodStats().setFoodLevel(player.getFoodStats().getFoodLevel()-1);
-			         player.getFoodStats().setFoodSaturationLevel(0);
-			    }
+	public void onUpdate(ItemStack itemstack, World world, Entity entity, int par4, boolean isHeld) 
+	{
+		tick++;
+		
+		if(this.tick == 20) {
+			if(isHeld && (entity instanceof EntityPlayer)) {
+				   EntityPlayer player = (EntityPlayer)entity;
+				   if (!world.isRemote && !player.capabilities.isCreativeMode) {
+				      if (player.getFoodStats().getFoodLevel() >= 0) {
+				         player.getFoodStats().setFoodLevel(player.getFoodStats().getFoodLevel()-1);
+				         player.getFoodStats().setFoodSaturationLevel(0);
+				    }
+				}
 			}
+			this.tick = 0;
 		}
 	}
 }
