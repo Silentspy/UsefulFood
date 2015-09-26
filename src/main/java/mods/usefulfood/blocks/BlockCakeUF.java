@@ -23,7 +23,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class BlockCakeUF extends Block
 {
     public static final PropertyInteger BITES = PropertyInteger.create("bites", 0, 6);
-    private static final String __OBFID = "CL_00000211";
 
     protected BlockCakeUF()
     {
