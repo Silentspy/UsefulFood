@@ -13,7 +13,7 @@ public class ItemReedUF extends ItemReed
 	
 	public ItemReedUF(Block var2, String name) {
 		super(var2);
-		this.setMaxStackSize(1);
+		this.setMaxStackSize(16);
 		this.setCreativeTab(mod_usefulfood.tabUsefulFood);
 		this.setUnlocalizedName(name);
 		this.name = name;
