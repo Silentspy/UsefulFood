@@ -1,8 +1,5 @@
 package mods.usefulfood;
 
-import java.util.Arrays;
-
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraftforge.common.ChestGenHooks;

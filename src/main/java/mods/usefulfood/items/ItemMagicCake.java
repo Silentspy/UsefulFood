@@ -2,16 +2,16 @@ package mods.usefulfood.items;
 
 import java.util.List;
 
-import net.minecraft.block.Block;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import mods.usefulfood.blocks.SpecialCake;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemMagicCake extends ItemReedUF
+public class ItemMagicCake extends ItemCakeUF
 {
-	public ItemMagicCake(Block var2, String name) {
+	public ItemMagicCake(SpecialCake var2, String name) {
 		super(var2, name);
 	}
 	
@@ -25,6 +25,7 @@ public class ItemMagicCake extends ItemReedUF
 		return EnumRarity.epic;
 	}
 	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack is, EntityPlayer player, List l, boolean B)
 	{

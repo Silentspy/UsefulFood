@@ -2,16 +2,13 @@ package mods.usefulfood;
 
 import mods.usefulfood.blocks.MagicCake;
 import mods.usefulfood.blocks.SpecialCake;
-import net.minecraft.block.Block;
 
 public class UFBlocks {
 	
-	public static Block AppleCake;
-	public static Block ChocolateCake;
-	public static Block MagicCake;
-	public static Block CaramelCake;
-	
-	public static Block ChocolateStillFluid;
+	public static SpecialCake AppleCake;
+	public static SpecialCake ChocolateCake;
+	public static SpecialCake MagicCake;
+	public static SpecialCake CaramelCake;
 	
 	public UFBlocks() 
 	{

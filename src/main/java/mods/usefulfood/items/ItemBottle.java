@@ -1,14 +1,12 @@
 package mods.usefulfood.items;
 
+import mods.usefulfood.mod_usefulfood;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumAction;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.world.World;
-import mods.usefulfood.mod_usefulfood;
 
 public class ItemBottle extends ItemFoodUF {
 

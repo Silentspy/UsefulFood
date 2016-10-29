@@ -1,16 +1,12 @@
 package mods.usefulfood;
 
-import mods.usefulfood.fluids.UFFluid;
-import net.minecraft.block.Block;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fluids.Fluid;
-import net.minecraftforge.fluids.FluidRegistry;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.common.MinecraftForge;
 
 @Mod(modid = "UsefulFood", name = "UsefulFood", version = "1.4.5")
 public class mod_usefulfood {

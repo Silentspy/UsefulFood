@@ -6,9 +6,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
 
 public class ItemMagicIceCream extends ItemBowl{
 
@@ -26,6 +24,7 @@ public class ItemMagicIceCream extends ItemBowl{
 		return EnumRarity.rare;
 	}
 	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack is, EntityPlayer player, List l, boolean B)
 	{
