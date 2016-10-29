@@ -2,6 +2,7 @@ package mods.usefulfood;
 
 import mods.usefulfood.items.ItemBottle;
 import mods.usefulfood.items.ItemBowl;
+import mods.usefulfood.items.ItemCakeUF;
 import mods.usefulfood.items.ItemCheese;
 import mods.usefulfood.items.ItemFoodDebug;
 import mods.usefulfood.items.ItemFoodStick;
@@ -11,7 +12,6 @@ import mods.usefulfood.items.ItemMagicAppleJuice;
 import mods.usefulfood.items.ItemMagicCake;
 import mods.usefulfood.items.ItemMagicFruitSalad;
 import mods.usefulfood.items.ItemMagicIceCream;
-import mods.usefulfood.items.ItemReedUF;
 import mods.usefulfood.items.ItemSoupUF;
 import mods.usefulfood.items.ItemTea;
 import net.minecraft.init.Items;
@@ -137,8 +137,8 @@ public class UFItems
 		biscuit = new ItemFoodUF("Biscuit", 1, 0.3F, true);
 		trailmix = new ItemBowl("Trailmix", 4, 0.5F, false);
 
-		AppleCake = new ItemReedUF(UFBlocks.AppleCake, "AppleCake").setMaxStackSize(1);
-		ChocolateCake = new ItemReedUF(UFBlocks.ChocolateCake, "ChocolateCake").setMaxStackSize(1);
+		AppleCake = new ItemCakeUF(UFBlocks.AppleCake, "AppleCake").setMaxStackSize(1);
+		ChocolateCake = new ItemCakeUF(UFBlocks.ChocolateCake, "ChocolateCake").setMaxStackSize(1);
 		MagicCake = new ItemMagicCake(UFBlocks.MagicCake, "MagicCake").setMaxStackSize(1);
 
 		// 1.0
@@ -180,7 +180,7 @@ public class UFItems
 		FishSoup = new ItemSoupUF("FishSoup", 12, 0.6F);
 		Tea = new ItemTea("Tea", 2);
 		HotMilkBottle = new ItemBottle("HotMilkBottle", 1, 0.3F, true).setContainerItem(Items.glass_bottle);
-		CaramelCake = new ItemReedUF(UFBlocks.CaramelCake, "CaramelCake").setMaxStackSize(1);
+		CaramelCake = new ItemCakeUF(UFBlocks.CaramelCake, "CaramelCake").setMaxStackSize(1);
 		CheeseSandwich = new ItemFoodUF("CheeseSandwich", 5, 1.0F, false);
 		CaramelIceCream = new ItemBowl("CaramelIceCream", 8, 0.6F, true).setPotionEffect(Potion.moveSpeed.id, 10, 0, 1.0F);
 		Cereal = new ItemBowl("Cereal", 4, 0.5F, true);

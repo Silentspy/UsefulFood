@@ -2,10 +2,8 @@ package mods.usefulfood.items;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
-import net.minecraft.stats.StatBase;
 import net.minecraft.world.World;
 
 public class ItemTea extends ItemBottle {

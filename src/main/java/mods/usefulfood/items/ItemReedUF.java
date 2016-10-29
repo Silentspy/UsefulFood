@@ -1,12 +1,10 @@
 package mods.usefulfood.items;
 
 
+import cpw.mods.fml.common.registry.GameRegistry;
+import mods.usefulfood.mod_usefulfood;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemReed;
-import mods.usefulfood.mod_usefulfood;
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemReedUF extends ItemReed 
 {
@@ -15,7 +13,7 @@ public class ItemReedUF extends ItemReed
 	
 	public ItemReedUF(Block var2, String name) {
 		super(var2);
-		this.setMaxStackSize(1);
+		this.setMaxStackSize(16);
 		this.setCreativeTab(mod_usefulfood.tabUsefulFood);
 		this.setUnlocalizedName(name);
 		this.name = name;

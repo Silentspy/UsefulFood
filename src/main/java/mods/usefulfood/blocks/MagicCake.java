@@ -2,23 +2,26 @@ package mods.usefulfood.blocks;
 
 import java.util.Random;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class MagicCake extends SpecialCake {
 	public MagicCake(String name, int foodlevel, float saturation) {
 		super(name, foodlevel, saturation);
 	}
 
+	@Override
 	public void eatCakeSlice(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer)
     {
         if (par5EntityPlayer.canEat(false))
         {
-            par5EntityPlayer.getFoodStats().addStats(foodlevel, saturation);
+        	if (!par1World.isRemote) {
+				eatDecide(par1World, par2, par3, par4, par5EntityPlayer);
+			}
             par5EntityPlayer.addPotionEffect(new PotionEffect(Potion.regeneration.id, 200, 3));
             par5EntityPlayer.addPotionEffect(new PotionEffect(Potion.resistance.id, 2000, 0));
 			par5EntityPlayer.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 2000, 0));

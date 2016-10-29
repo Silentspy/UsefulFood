@@ -2,16 +2,15 @@ package mods.usefulfood.items;
 
 import java.util.List;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumRarity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemMagicAppleJuice extends ItemJuice {
 
@@ -50,6 +49,7 @@ public class ItemMagicAppleJuice extends ItemJuice {
 		return true;
 	}
 	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public void addInformation(ItemStack is, EntityPlayer player, List l, boolean B)
 	{
 		l.add("Makes you feel leg... wait for it.... endary!");

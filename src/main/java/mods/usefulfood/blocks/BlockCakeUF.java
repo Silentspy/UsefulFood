@@ -1,10 +1,9 @@
 package mods.usefulfood.blocks;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-
 import java.util.Random;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -15,7 +14,7 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlockCakeUF extends Block
+public abstract class BlockCakeUF extends Block
 {
     @SideOnly(Side.CLIENT)
     private IIcon cakeTopIcon;
@@ -150,23 +149,7 @@ public class BlockCakeUF extends Block
     /**
      * Heals the player and removes a slice from the cake.
      */
-    public void eatCakeSlice(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer)
-    {
-        if (par5EntityPlayer.canEat(false))
-        {
-            par5EntityPlayer.getFoodStats().addStats(2, 0.1F);
-            int l = par1World.getBlockMetadata(par2, par3, par4) + 1;
-
-            if (l >= 6)
-            {
-                par1World.setBlockToAir(par2, par3, par4);
-            }
-            else
-            {
-                par1World.setBlockMetadataWithNotify(par2, par3, par4, l, 2);
-            }
-        }
-    }
+    public abstract void eatCakeSlice(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer);
 
     /**
      * Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z

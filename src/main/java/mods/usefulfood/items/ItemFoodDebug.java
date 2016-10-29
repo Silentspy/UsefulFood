@@ -4,14 +4,12 @@ import java.util.List;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.creativetab.CreativeTabs;
+import mods.usefulfood.mod_usefulfood;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import mods.usefulfood.mod_usefulfood;
 
 public class ItemFoodDebug extends ItemUF {
 	public ItemFoodDebug(String name) {
@@ -19,6 +17,7 @@ public class ItemFoodDebug extends ItemUF {
 		this.setCreativeTab(mod_usefulfood.tabUsefulFood);
 	}
 	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack is, EntityPlayer player, List l, boolean B)
 	{

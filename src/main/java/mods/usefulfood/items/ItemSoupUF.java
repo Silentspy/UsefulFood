@@ -1,16 +1,24 @@
 package mods.usefulfood.items;
 
+import cpw.mods.fml.common.Loader;
+import cpw.mods.fml.common.Optional;
+import mods.usefulfood.mod_usefulfood;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumAction;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import mods.usefulfood.mod_usefulfood;
+import squeek.applecore.api.food.FoodValues;
+import squeek.applecore.api.food.IEdible;
+import squeek.applecore.api.food.ItemFoodProxy;
 
-public class ItemSoupUF extends ItemUF {
+@Optional.Interface(iface = "squeek.applecore.api.food.IEdible", modid = "AppleCore")
+public class ItemSoupUF extends ItemUF implements IEdible {
 	int foodlevel;
 	float saturation;
+
+	//Object because reasons
+	private Object foodValues;
 
 	public ItemSoupUF(String name, int var2, float var3) {
 		super(name);
@@ -26,7 +34,12 @@ public class ItemSoupUF extends ItemUF {
 		}
 
 		if (!world.isRemote) {
-			player.getFoodStats().addStats(foodlevel, 0);
+			if(Loader.isModLoaded("AppleCore")) {
+				eatAppleCore(itemstack, world, player);
+			} else {
+				eatVanilla(itemstack, world, player);
+			}
+			
 		}
 
 		return itemstack.stackSize <= 0 ? new ItemStack(Items.bowl) : itemstack;
@@ -55,5 +68,24 @@ public class ItemSoupUF extends ItemUF {
 		player.setItemInUse(itemstack, this.getMaxItemUseDuration(itemstack));
 		return itemstack;
 	}
+	
+	public void eatVanilla(ItemStack itemstack, World world, EntityPlayer player) {
+		player.getFoodStats().addStats(foodlevel, saturation);
+
+	}
+	
+	@Optional.Method(modid = "AppleCore")
+	public void eatAppleCore(ItemStack itemstack, World world, EntityPlayer player) {
+		player.getFoodStats().func_151686_a(new ItemFoodProxy(this), itemstack);
+
+	}
+
+	@Optional.Method(modid = "AppleCore")
+	@Override
+	public FoodValues getFoodValues(ItemStack itemStack) {
+		return (FoodValues)(foodValues==null?foodValues = new FoodValues(foodlevel, saturation):foodValues);
+	}
+	
+	
 
 }
